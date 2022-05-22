@@ -10,12 +10,12 @@ namespace HolonomicLib {
 
 namespace Math {
 
-    std::pair<double, double> rotateVector(double x, double y, double angle);
+    std::pair<double, double> rotateVector(double x, double y, okapi::QAngle angle);
 
 }
 
 
 namespace HolonomicMath {
-    HolonomicWheelSpeeds move(double ySpeed, double xSpeed, double zRotation, double imuAngle = 0);
+    HolonomicWheelSpeeds move(double ySpeed, double xSpeed, double zRotation, okapi::QAngle imuAngle);
 }
 }

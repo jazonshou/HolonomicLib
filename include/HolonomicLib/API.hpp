@@ -9,5 +9,6 @@ using namespace HolonomicLib;
 #include "HolonomicLib/HolonomicController.hpp"
 #include "HolonomicLib/HolonomicWheelSpeeds.hpp"
 #include "HolonomicLib/Math.hpp"
-#include "HolonomicLib/PIDController.hpp"
 #include "HolonomicLib/Units.hpp"
+#include "HolonomicLib/Pose2D.hpp"
+#include "HolonomicLib/TaskWrapper.hpp"

@@ -1,6 +1,8 @@
 #pragma once 
 #include "okapi/api/control/iterative/iterativePosPidController.hpp"
 #include "HolonomicWheelSpeeds.hpp"
+#include "Pose2D.hpp"
+#include "okapi/api/units/QSpeed.hpp"
 
 namespace HolonomicLib {
 

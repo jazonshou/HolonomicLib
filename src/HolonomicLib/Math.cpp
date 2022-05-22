@@ -3,26 +3,28 @@
 
 namespace HolonomicLib {
 
-namespace Math {
-    std::pair<double, double> rotateVector(double x, double y, okapi::QAngle angle) {
-        double cosA = std::cos(angle.convert(okapi::radian));
-        double sinA = std::sin(angle.convert(okapi::radian));
-        return std::make_pair<double, double> (x * cosA - y * sinA, x * sinA + y * cosA);
-    }
-}
-
 namespace HolonomicMath {
 
     HolonomicWheelSpeeds move(double ySpeed, double xSpeed, double zRotation, okapi::QAngle angle) {
         ySpeed = std::clamp(ySpeed, -1.0, 1.0);
-        xSpeed = std::clamp(xSpeed, -1.0, 1.0);
+        xSpeed = -std::clamp(xSpeed, -1.0, 1.0);
         zRotation = std::clamp(zRotation, -1.0, 1.0);
-        std::pair<double, double> speeds = Math::rotateVector(xSpeed, ySpeed, -angle);
+        double fwd = ySpeed * std::cos(angle.convert(okapi::radian)) - xSpeed * std::sin(angle.convert(okapi::radian));
+        double right = ySpeed * std::sin(angle.convert(okapi::radian)) + xSpeed * std::cos(angle.convert(okapi::radian));
 
-        double frontLeft = speeds.first + speeds.second + zRotation;
-        double frontRight = speeds.first - speeds.second - zRotation;
-        double backLeft = speeds.first - speeds.second + zRotation;
-        double backRight = speeds.first + speeds.second - zRotation;
+        double frontLeft = fwd - right + zRotation;
+        double frontRight = fwd + right - zRotation;
+        double backLeft = fwd + right + zRotation;
+        double backRight = fwd - right - zRotation;
+
+        double max = std::max(std::max(std::abs(frontLeft), std::abs(frontRight)), std::max(std::abs(backLeft), std::abs(backRight)));
+        if (max > 1.0) {
+            frontLeft /= max;
+            frontRight /= max;
+            backLeft /= max;
+            backRight /= max;
+        }
+
         return HolonomicWheelSpeeds(frontLeft, frontRight, backLeft, backRight);
     }
 

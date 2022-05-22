@@ -4,7 +4,7 @@ namespace HolonomicLib {}
 
 using namespace HolonomicLib;
 
-#include "HolonomicLib/AsyncHolonomicChassis.hpp"
+#include "HolonomicLib/AsyncHolonomicChassisController.hpp"
 #include "HolonomicLib/FeedforwardController.hpp"
 #include "HolonomicLib/HolonomicController.hpp"
 #include "HolonomicLib/HolonomicWheelSpeeds.hpp"
@@ -12,3 +12,4 @@ using namespace HolonomicLib;
 #include "HolonomicLib/Units.hpp"
 #include "HolonomicLib/Pose2D.hpp"
 #include "HolonomicLib/TaskWrapper.hpp"
+#include "HolonomicLib/StateMachine.hpp"

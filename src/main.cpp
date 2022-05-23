@@ -60,40 +60,62 @@ Motor leftFront = Motor(19, false, AbstractMotor::gearset::green, AbstractMotor:
 Motor rightFront = Motor(11, true, AbstractMotor::gearset::green, AbstractMotor::encoderUnits::degrees);
 Motor leftBack = Motor(10, false, AbstractMotor::gearset::green, AbstractMotor::encoderUnits::degrees);
 Motor rightBack = Motor(1, true, AbstractMotor::gearset::green, AbstractMotor::encoderUnits::degrees);
-RotationSensor leftEnc = RotationSensor(5);
-RotationSensor rightEnc = RotationSensor(6);
-RotationSensor midEnc = RotationSensor(7);
+ADIEncoder leftEnc = ADIEncoder('C', 'D');
+ADIEncoder rightEnc = ADIEncoder('A', 'B');
+ADIEncoder midEnc = ADIEncoder('E', 'F', true);
 IMU imu = IMU(12);
 
 std::shared_ptr<OdomChassisController> chassis = ChassisControllerBuilder()
     .withMotors(leftFront, rightFront, rightBack, leftBack)
     .withSensors(leftEnc, rightEnc, midEnc)
-    .withDimensions(AbstractMotor::gearset::green, {{4_in, 10.25_in}, imev5GreenTPR})
-    .withOdometry({{2.75_in, 7_in, 1_in, 2.75_in}, quadEncoderTPR})
+    .withDimensions(AbstractMotor::gearset::green, {{3.25_in, 10.25_in}, imev5GreenTPR})
+    .withOdometry({{2.75_in, 13.5_in, 7_in, 2.75_in}, quadEncoderTPR})
     .buildOdometry();
 
-std::shared_ptr<XDriveModel> model = std::dynamic_pointer_cast<XDriveModel> (chassis->getModel());
+std::shared_ptr<XDriveModel> model = std::static_pointer_cast<XDriveModel> (chassis->getModel());
+
+// std::shared_ptr<AsyncHolonomicChassisController> hol = AsyncHolonomicChassisControllerBuilder()
+//     .withOutput(chassis)
+//     .withControllers
+std::shared_ptr<IterativePosPIDController > xController = 
+    std::make_shared<IterativePosPIDController> (0.037, 0.0, 0.00065, 0, TimeUtilFactory::withSettledUtilParams(2, 2, 100_ms));
+std::shared_ptr<IterativePosPIDController> yController = 
+    std::make_shared<IterativePosPIDController> (0.037, 0.0, 0.00065, 0, TimeUtilFactory::withSettledUtilParams(2, 2, 100_ms));
+std::shared_ptr<IterativePosPIDController> thetaController = 
+    std::make_shared<IterativePosPIDController> (0.037, 0.0, 0.00065, 0, TimeUtilFactory::withSettledUtilParams(2, 2, 100_ms));
+
+
 
 void opcontrol() {
-    imu.calibrate();
-    pros::delay(2000);
+    std::shared_ptr<AsyncHolonomicChassisController> hol = 
+    AsyncHolonomicChassisControllerBuilder()
+        .withOutput(chassis)
+        .withControllers(xController, yController, thetaController)
+        .build();
 
-	Controller master = Controller();
+    hol->setTarget({10_in, 0_in, 0_deg}, true);
+
+    while(true) pros::delay(10);
+
+	// Controller master = Controller();
 	
-    while(true) {
-        HolonomicWheelSpeeds speeds = HolonomicMath::move(master.getAnalog(ControllerAnalog::leftY), master.getAnalog(ControllerAnalog::leftX), master.getAnalog(ControllerAnalog::rightX), imu.get() * degree);
-        (model->getTopLeftMotor())->moveVoltage(12000 * speeds.frontLeft);
-        (model->getTopRightMotor())->moveVoltage(12000 * speeds.frontRight);
-        (model->getBottomLeftMotor())->moveVoltage(12000 * speeds.backLeft);
-        (model->getBottomRightMotor())->moveVoltage(12000 * speeds.backRight);
+    // while(true) {
+    //     HolonomicWheelSpeeds speeds = HolonomicMath::move(master.getAnalog(ControllerAnalog::leftY), master.getAnalog(ControllerAnalog::leftX), master.getAnalog(ControllerAnalog::rightX), imu.get() * degree);
+    //     (model->getTopLeftMotor())->moveVoltage(12000 * speeds.frontLeft);
+    //     (model->getTopRightMotor())->moveVoltage(12000 * speeds.frontRight);
+    //     (model->getBottomLeftMotor())->moveVoltage(12000 * speeds.backLeft);
+    //     (model->getBottomRightMotor())->moveVoltage(12000 * speeds.backRight);
 
-        pros::lcd::print(1, "Front Left: %f", speeds.frontLeft);
-        pros::lcd::print(2, "Front Right: %f", speeds.frontRight);
-        pros::lcd::print(3, "Back Left: %f", speeds.backLeft);
-        pros::lcd::print(4, "Back Right: %f", speeds.backRight);
+    //     pros::lcd::print(1, "Left Enc: %f", leftEnc.get());
+    //     pros::lcd::print(2, "Mid Enc: %f", midEnc.get());
+    //     pros::lcd::print(3, "Right Enc: %f", rightEnc.get());
 
-        std::cout << "imu: " << imu.get() << std::endl;
+    //     pros::lcd::print(5, "X: %f", chassis->getState().x.convert(inch));
+    //     pros::lcd::print(6, "Y: %f", chassis->getState().y.convert(inch));
+    //     pros::lcd::print(7, "Theta: %f", chassis->getState().theta.convert(degree));
 
-        pros::delay(10);
-    }
+    //     std::cout << "imu: " << imu.get() << std::endl;
+
+    //     pros::delay(10);
+    // }
 }

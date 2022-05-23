@@ -1,12 +1,15 @@
 #pragma once
 #include "okapi/api/chassis/controller/odomChassisController.hpp"
 #include "okapi/api/chassis/controller/chassisController.hpp"
-#include "okapi/api/control/iterative/iterativeController.hpp"
+#include "okapi/api/control/iterative/iterativePosPidController.hpp"
 #include "okapi/api/util/timeUtil.hpp"
+#include "okapi/impl/util/timeUtilFactory.hpp"
 #include "okapi/api/device/motor/abstractMotor.hpp"
 #include "okapi/api/units/QAngle.hpp"
 #include "okapi/api/units/QLength.hpp"
 #include "okapi/api/units/QTime.hpp"
+
+#include <iostream>
 
 #include "StateMachine.hpp"
 #include "TaskWrapper.hpp"
@@ -28,17 +31,17 @@ template class StateMachine<ChassisState>;
 class AsyncHolonomicChassisController : public TaskWrapper, 
                                         public StateMachine<ChassisState> 
 {
-    protected:
+    protected: 
     AsyncHolonomicChassisController(std::shared_ptr<okapi::OdomChassisController> ichassis,
-                                    std::shared_ptr<okapi::IterativeController<double, double>> ixController,
-                                    std::shared_ptr<okapi::IterativeController<double, double>> iyController,
-                                    std::shared_ptr<okapi::IterativeController<double, double>> iturnController,
+                                    std::shared_ptr<okapi::IterativePosPIDController> ixController,
+                                    std::shared_ptr<okapi::IterativePosPIDController> iyController,
+                                    std::shared_ptr<okapi::IterativePosPIDController> iturnController,
                                     const okapi::TimeUtil& itimeUtil);
     
     friend class AsyncHolonomicChassisControllerBuilder;
 
     public: 
-    void setTarget(Pose2D &targetPose, bool waitUntilSettled = false);
+    void setTarget(Pose2D targetPose, bool waitUntilSettled = false);
     void setTarget(Trajectory &itrajectory, bool waitUntilSettled = false);
     void stop();
     void waitUntilSettled();
@@ -51,9 +54,9 @@ class AsyncHolonomicChassisController : public TaskWrapper,
     std::shared_ptr<okapi::AbstractMotor> rightFrontMotor;
     std::shared_ptr<okapi::AbstractMotor> rightBackMotor;
 
-    std::shared_ptr<okapi::IterativeController<double, double>> xController{nullptr};
-    std::shared_ptr<okapi::IterativeController<double, double>> yController{nullptr};
-    std::shared_ptr<okapi::IterativeController<double, double>> turnController{nullptr};
+    std::shared_ptr<okapi::IterativePosPIDController> xController{nullptr};
+    std::shared_ptr<okapi::IterativePosPIDController> yController{nullptr};
+    std::shared_ptr<okapi::IterativePosPIDController> turnController{nullptr};
 
     std::unique_ptr<HolonomicController> holonomicController;
 
@@ -80,17 +83,19 @@ class AsyncHolonomicChassisController : public TaskWrapper,
 class AsyncHolonomicChassisControllerBuilder {
     public: 
     AsyncHolonomicChassisControllerBuilder();
+    ~AsyncHolonomicChassisControllerBuilder() = default;
     AsyncHolonomicChassisControllerBuilder& withOutput(std::shared_ptr<okapi::OdomChassisController> ichassis);
     AsyncHolonomicChassisControllerBuilder& withControllers(
-                    std::shared_ptr<okapi::IterativeController<double, double>> ixController,
-                    std::shared_ptr<okapi::IterativeController<double, double>> iyController,
-                    std::shared_ptr<okapi::IterativeController<double, double>> iturnController);
+                    std::shared_ptr<okapi::IterativePosPIDController> ixController,
+                    std::shared_ptr<okapi::IterativePosPIDController> iyController,
+                    std::shared_ptr<okapi::IterativePosPIDController> iturnController);
+    std::shared_ptr<AsyncHolonomicChassisController> build();
     
     private:
     std::shared_ptr<okapi::OdomChassisController> chassis;
-    std::shared_ptr<okapi::IterativeController<double, double>> xController{nullptr};
-    std::shared_ptr<okapi::IterativeController<double, double>> yController{nullptr};
-    std::shared_ptr<okapi::IterativeController<double, double>> turnController{nullptr};
+    std::shared_ptr<okapi::IterativePosPIDController> xController{nullptr};
+    std::shared_ptr<okapi::IterativePosPIDController> yController{nullptr};
+    std::shared_ptr<okapi::IterativePosPIDController> turnController{nullptr};
 };
 
 }

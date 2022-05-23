@@ -7,21 +7,21 @@
 
 namespace HolonomicLib {
 
-HolonomicController::HolonomicController(std::shared_ptr<okapi::IterativePositionController<double, double>> ixController,
-                                         std::shared_ptr<okapi::IterativePositionController<double, double>> iyController,
-                                         std::shared_ptr<okapi::IterativePositionController<double, double>> ithetaController) 
+HolonomicController::HolonomicController(std::shared_ptr<okapi::IterativeController<double, double>> ixController,
+                                         std::shared_ptr<okapi::IterativeController<double, double>> iyController,
+                                         std::shared_ptr<okapi::IterativeController<double, double>> ithetaController) 
 {
-    xController = std::move(ixController);
-    yController = std::move(iyController);
-    thetaController = std::move(ithetaController);
+    xController = ixController;
+    yController = iyController;
+    thetaController = ithetaController;
 }
 
 bool HolonomicController::isSettled() {
     return xController->isSettled() && yController->isSettled() && thetaController->isSettled();
 }
 
-HolonomicWheelSpeeds HolonomicController::step(Pose2D &currPose, 
-                                               Pose2D &targetPose, 
+HolonomicWheelSpeeds HolonomicController::step(const Pose2D &currPose, 
+                                               const Pose2D &targetPose, 
                                                okapi::QSpeed targetLinVel)
 {
     double linVel = targetLinVel.convert(okapi::ftps);

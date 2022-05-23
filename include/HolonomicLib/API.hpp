@@ -13,3 +13,4 @@ using namespace HolonomicLib;
 #include "HolonomicLib/Pose2D.hpp"
 #include "HolonomicLib/TaskWrapper.hpp"
 #include "HolonomicLib/StateMachine.hpp"
+#include "HolonomicLib/Trajectory.hpp"

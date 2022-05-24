@@ -1,5 +1,4 @@
 #include "AsyncHolonomicChassisController.hpp"
-#include "okapi/api/chassis/model/xDriveModel.hpp"
 
 namespace HolonomicLib {
 
@@ -9,15 +8,8 @@ AsyncHolonomicChassisController::AsyncHolonomicChassisController(std::shared_ptr
                                     std::shared_ptr<okapi::IterativePosPIDController> iturnController,
                                     const okapi::TimeUtil& itimeUtil)
 {
-    std::cout << "im in the controller constructor!" << std::endl;
-
-    chassis = std::move(ichassis);
-    std::cout << "moved chassis" << std::endl;
-    leftFrontMotor = std::move((std::static_pointer_cast<okapi::XDriveModel>(chassis->getModel()))->getTopLeftMotor());
-    leftBackMotor = std::move((std::static_pointer_cast<okapi::XDriveModel>(chassis->getModel()))->getBottomLeftMotor());
-    rightFrontMotor = std::move((std::static_pointer_cast<okapi::XDriveModel>(chassis->getModel()))->getTopRightMotor());
-    rightBackMotor = std::move((std::static_pointer_cast<okapi::XDriveModel>(chassis->getModel()))->getBottomRightMotor());
-    std::cout << "moved motors" << std::endl;
+    chassis = std::move(std::static_pointer_cast<okapi::OdomChassisController>(ichassis));
+    model = std::static_pointer_cast<ExpandedXDriveModel>(ichassis->getModel());
 
     rate = std::move(itimeUtil.getRate());
     timer = std::move(itimeUtil.getTimer());
@@ -30,28 +22,23 @@ AsyncHolonomicChassisController::AsyncHolonomicChassisController(std::shared_ptr
     std::cout << "did controllers" << std::endl;
     
     //todo!!!!
-    // chassis->startOdomThread();
+    chassis->startOdomThread();
+    chassis->setDefaultStateMode(okapi::StateMode::FRAME_TRANSFORMATION);
 
-    auto holonomicController = std::make_unique<HolonomicController>(xController, yController, turnController);
+    // auto holonomicController = std::make_unique<HolonomicController>(xController, yController, turnController);
     std::cout << "made holonomic controller" << std::endl;
 }
 
 void AsyncHolonomicChassisController::setTarget(Pose2D targetPose, bool waitUntilSettled)
 {
-    std::cout << "i just set target" << std::endl;
     lock.take(5);
-    std::cout << "i took the lock" << std::endl;
     setState(ChassisState::TRANSLATING);
-    std::cout << "i set the state" << std::endl;
     resetControllers();
-    std::cout << "i reset the controllers" << std::endl;
     controllerFlipDisabled(false);
-    std::cout << "i flipped the controllers" << std::endl;
 
-    xController->setTarget(targetPose.x.convert(okapi::foot));
-    yController->setTarget(targetPose.y.convert(okapi::foot));
-    turnController->setTarget(targetPose.theta.convert(okapi::radian));
-    std::cout << "i set targets" << std::endl;
+    xController->setTarget(targetPose.x.convert(okapi::inch));
+    yController->setTarget(targetPose.y.convert(okapi::inch));
+    turnController->setTarget(targetPose.theta.convert(okapi::degree));
     lock.give();
 
     if(waitUntilSettled) this->waitUntilSettled();
@@ -67,6 +54,7 @@ void AsyncHolonomicChassisController::setTarget(Trajectory &itrajectory, bool wa
     initialPose = {currentOdomState.x, currentOdomState.y, currentOdomState.theta};
     maxTime = (trajectory.size() * 10 + 20) * okapi::millisecond;
     timer->placeMark();
+    std::cout << "target set " << std::endl;
     lock.give();
 
     if(waitUntilSettled) this->waitUntilSettled();
@@ -90,63 +78,71 @@ void AsyncHolonomicChassisController::setPose(Pose2D &ipose) {
     lock.give();
 }
 
+Pose2D AsyncHolonomicChassisController::getPose() {
+    return currentPose;
+}
+
 void AsyncHolonomicChassisController::loop() {
     std::cout << "in the loop" << std::endl;
     while(true) {
         lock.take(5);
         currentOdomState = chassis->getState();
-        currentPose = {currentOdomState.x, currentOdomState.y, currentOdomState.theta};
+        currentPose = {currentOdomState.x, currentOdomState.y, Math::rescale180(currentOdomState.theta)};
         okapi::QAngle currentAngle = currentOdomState.theta;
         okapi::QTime currentTime = timer->getDtFromMark();
 
         switch(getState()) {
             case ChassisState::IDLE:
             {
-                std::cout << "IDLE" << std::endl;
                 controllerFlipDisabled(true);
                 break;
             }
             
             case ChassisState::TRANSLATING:
             {
-                std::cout << "TRANSLATING" << std::endl;
-                double xOutput = xController->step(currentOdomState.x.convert(okapi::foot));
-                double yOutput = yController->step(currentOdomState.y.convert(okapi::foot));
-                double thetaOutput = turnController->step(currentAngle.convert(okapi::radian));
-                std::cout << "stepped" << std::endl;
+                double xOutput = xController->step(currentOdomState.x.convert(okapi::inch));
+                double yOutput = yController->step(currentOdomState.y.convert(okapi::inch));
+                double thetaOutput = turnController->step(currentAngle.convert(okapi::degree));
+                pros::lcd::print(5, "X Output: %f", xOutput);
+                pros::lcd::print(6, "Y Output: %f", yOutput);
                 
-                HolonomicWheelSpeeds speeds = HolonomicMath::move(yOutput, xOutput, thetaOutput, currentAngle);
-                std::cout << "calculated wheel speeds" << std::endl;
-
-                move(speeds);
-                std::cout << "moved" << std::endl;
+                model->cartesian(xOutput, yOutput, thetaOutput, currentAngle);
 
                 if(xController->isSettled() && yController->isSettled() && turnController->isSettled()) {
                     setState(ChassisState::IDLE);
                 }
-                std::cout << ":)" << std::endl;
                 break;
             }
 
             case ChassisState::PATHING:
             {
-                std::cout << "PATHING" << std::endl;
                 TrajectoryState desiredState = trajectory[(int)(currentTime.convert(okapi::millisecond) / 10)];
-                Pose2D desiredPose = {desiredState.x * okapi::inch, desiredState.y * okapi::inch, desiredState.theta * okapi::radian};
-                HolonomicWheelSpeeds speeds = 
-                    holonomicController->step(currentPose, desiredPose, desiredState.linVel * okapi::ftps);
-                move(speeds);
+                Pose2D desiredPose = {desiredState.x * okapi::foot, desiredState.y * okapi::foot, desiredState.theta * okapi::degree};
+                double desiredVel = desiredState.linVel * 12; //todo!!!!!
 
-                if(currentTime > maxTime && holonomicController->isSettled()) {
+                okapi::QAngle vectorAngle = okapi::atan2(desiredPose.y - currentPose.y, 
+                                                         desiredPose.x - currentPose.x);
+                double xFF = desiredVel * std::cos(vectorAngle.convert(okapi::radian));
+                double yFF = desiredVel * std::sin(vectorAngle.convert(okapi::radian));
+
+                turnController->setTarget(desiredPose.theta.convert(okapi::degree));
+                double thetaFF = turnController->step(currentPose.theta.convert(okapi::degree));
+
+                xController->setTarget(desiredPose.x.convert(okapi::inch));
+                double xFB = xController->step(currentPose.x.convert(okapi::inch));
+                yController->setTarget(desiredPose.y.convert(okapi::inch));
+                double yFB = yController->step(currentPose.y.convert(okapi::inch));
+
+                model->cartesian(xFB + xFF, yFB + yFF, thetaFF, currentAngle);
+
+                if(currentTime > maxTime /*&& holonomicController->isSettled()*/) {
                     setState(ChassisState::IDLE);
                 }
                 break;
             }
         }
-        std::cout << ":) almost there!" << std::endl;
         lock.give();
         rate->delayUntil(10);
-        std::cout << "we made it!!! :)" << std::endl;
     }
 }
 
@@ -162,12 +158,6 @@ void AsyncHolonomicChassisController::controllerFlipDisabled(bool isDisabled) {
     turnController->flipDisable(isDisabled);
 }
 
-void AsyncHolonomicChassisController::move(HolonomicWheelSpeeds &speeds) {
-    leftFrontMotor->moveVoltage(speeds.frontLeft * 12000);
-    leftBackMotor->moveVoltage(speeds.backLeft * 12000);
-    rightFrontMotor->moveVoltage(speeds.frontRight * 12000);
-    rightBackMotor->moveVoltage(speeds.backRight * 12000);
-}
 
 AsyncHolonomicChassisControllerBuilder::AsyncHolonomicChassisControllerBuilder()
 {}
@@ -203,10 +193,7 @@ AsyncHolonomicChassisControllerBuilder::build()
         std::move(turnController), 
         okapi::TimeUtilFactory::createDefault())
     );
-    
-    std::cout << "just made ret" << std::endl;
     ret->startTask();
-    std::cout << "built!" << std::endl;
     return std::move(ret);
 }
 

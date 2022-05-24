@@ -1,5 +1,6 @@
 #pragma once
 #include "okapi/api/chassis/controller/odomChassisController.hpp"
+#include "okapi/api/chassis/model/xDriveModel.hpp"
 #include "okapi/api/chassis/controller/chassisController.hpp"
 #include "okapi/api/control/iterative/iterativePosPidController.hpp"
 #include "okapi/api/util/timeUtil.hpp"
@@ -8,6 +9,7 @@
 #include "okapi/api/units/QAngle.hpp"
 #include "okapi/api/units/QLength.hpp"
 #include "okapi/api/units/QTime.hpp"
+#include "okapi/api/units/QSpeed.hpp"
 
 #include <iostream>
 
@@ -19,6 +21,7 @@
 #include "Trajectory.hpp"
 #include "HolonomicController.hpp"
 #include "Units.hpp"
+#include "ExpandedXDriveModel.hpp"
 
 namespace HolonomicLib {
 
@@ -46,19 +49,17 @@ class AsyncHolonomicChassisController : public TaskWrapper,
     void stop();
     void waitUntilSettled();
     void setPose(Pose2D &ipose);
+    Pose2D getPose();
 
     protected:
+    std::shared_ptr<ExpandedXDriveModel> model;
     std::shared_ptr<okapi::OdomChassisController> chassis;
-    std::shared_ptr<okapi::AbstractMotor> leftFrontMotor;
-    std::shared_ptr<okapi::AbstractMotor> leftBackMotor;
-    std::shared_ptr<okapi::AbstractMotor> rightFrontMotor;
-    std::shared_ptr<okapi::AbstractMotor> rightBackMotor;
 
     std::shared_ptr<okapi::IterativePosPIDController> xController{nullptr};
     std::shared_ptr<okapi::IterativePosPIDController> yController{nullptr};
     std::shared_ptr<okapi::IterativePosPIDController> turnController{nullptr};
 
-    std::unique_ptr<HolonomicController> holonomicController;
+    // std::unique_ptr<HolonomicController> holonomicController;
 
     std::unique_ptr<okapi::AbstractRate> rate;
     std::unique_ptr<okapi::AbstractTimer> timer;

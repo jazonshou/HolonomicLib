@@ -5,6 +5,7 @@ namespace HolonomicLib {}
 using namespace HolonomicLib;
 
 #include "HolonomicLib/AsyncHolonomicChassisController.hpp"
+#include "HolonomicLib/ExpandedXDriveModel.hpp"
 #include "HolonomicLib/FeedforwardController.hpp"
 #include "HolonomicLib/HolonomicController.hpp"
 #include "HolonomicLib/HolonomicWheelSpeeds.hpp"

@@ -7,6 +7,7 @@
 namespace okapi {
 
 constexpr QSpeed ftps = foot / second;
+constexpr QSpeed inps = inch / second;
 constexpr QAcceleration ftps2 = foot / (second * second);
 
 constexpr QSpeed operator"" _ftps(long double x) { 
@@ -14,6 +15,12 @@ constexpr QSpeed operator"" _ftps(long double x) {
 }
 constexpr QSpeed operator"" _ftps(unsigned long long int x) { 
     return static_cast<double>(x)*ftps; 
+}
+constexpr QSpeed operator"" _inps(long double x) { 
+    return static_cast<double>(x)*inps; 
+}
+constexpr QSpeed operator"" _inps(unsigned long long int x) { 
+    return static_cast<double>(x)*inps; 
 }
 constexpr QAcceleration operator"" _ftps2(long double x) { 
     return static_cast<double>(x)*ftps2; 

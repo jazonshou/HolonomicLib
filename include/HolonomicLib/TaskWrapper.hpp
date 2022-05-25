@@ -4,6 +4,10 @@
 
 namespace HolonomicLib {
 
+/**
+ * @brief All credit for this class goes to the lib7842
+ * 
+ */
 class TaskWrapper {
 protected:
     TaskWrapper() = default;

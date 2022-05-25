@@ -3,6 +3,9 @@
 
 namespace HolonomicLib {
 
+TrajectoryState::TrajectoryState(double ix, double iy, double itheta) : 
+    x(ix), y(iy), theta(itheta), linVel(0), linAccel(0) {}
+
 TrajectoryState::TrajectoryState(double ix, 
                                  double iy, 
                                  double itheta, 

@@ -8,15 +8,28 @@
 
 namespace HolonomicLib {
 
+/**
+ * @brief Math functions
+ * 
+ */
 namespace Math {
 
+/**
+ * @brief Rescales an angle to [-180, 180] (degrees)
+ * 
+ * @param angle angle to be rescaled
+ * @return rescaled angle
+ */
 okapi::QAngle rescale180(okapi::QAngle angle);
+
+/**
+ * @brief Rescales an angle to [-180, 180] (degrees)
+ * 
+ * @param angle angle to be rescaled
+ * @return rescaled angle
+ */
 double rescale180(double angle);
 
 }
 
-
-// namespace HolonomicMath {
-//     HolonomicWheelSpeeds move(double ySpeed, double xSpeed, double zRotation, okapi::QAngle imuAngle);
-// }
 }

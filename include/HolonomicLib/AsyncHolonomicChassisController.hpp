@@ -20,7 +20,6 @@
 #include "HolonomicWheelSpeeds.hpp"
 #include "Math.hpp"
 #include "Trajectory.hpp"
-#include "HolonomicController.hpp"
 #include "Units.hpp"
 #include "ExpandedXDriveModel.hpp"
 #include "FeedforwardController.hpp"

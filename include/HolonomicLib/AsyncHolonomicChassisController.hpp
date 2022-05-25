@@ -11,6 +11,7 @@
 #include "okapi/api/units/QTime.hpp"
 #include "okapi/api/units/QSpeed.hpp"
 
+
 #include <iostream>
 
 #include "StateMachine.hpp"
@@ -22,6 +23,7 @@
 #include "HolonomicController.hpp"
 #include "Units.hpp"
 #include "ExpandedXDriveModel.hpp"
+#include "FeedforwardController.hpp"
 
 namespace HolonomicLib {
 
@@ -36,9 +38,21 @@ class AsyncHolonomicChassisController : public TaskWrapper,
 {
     protected: 
     AsyncHolonomicChassisController(std::shared_ptr<okapi::OdomChassisController> ichassis,
-                                    std::shared_ptr<okapi::IterativePosPIDController> ixController,
-                                    std::shared_ptr<okapi::IterativePosPIDController> iyController,
-                                    std::shared_ptr<okapi::IterativePosPIDController> iturnController,
+                                    const okapi::IterativePosPIDController::Gains &itranslateGains,
+                                    const okapi::IterativePosPIDController::Gains &iturnGains,
+                                    const okapi::TimeUtil& itimeUtil);
+
+    AsyncHolonomicChassisController(std::shared_ptr<okapi::OdomChassisController> ichassis,
+                                    const okapi::IterativePosPIDController::Gains &itranslateGains,
+                                    const okapi::IterativePosPIDController::Gains &iturnGains,
+                                    const Pose2D &isettleTolerance,
+                                    const okapi::TimeUtil& itimeUtil);
+
+    // imagine this doesn't exist
+    AsyncHolonomicChassisController(std::shared_ptr<okapi::OdomChassisController> ichassis,
+                                    const okapi::IterativePosPIDController::Gains &itranslateGains,
+                                    const okapi::IterativePosPIDController::Gains &iturnGains,
+                                    const FeedforwardGains &itranslateFFGains,
                                     const okapi::TimeUtil& itimeUtil);
     
     friend class AsyncHolonomicChassisControllerBuilder;
@@ -50,16 +64,15 @@ class AsyncHolonomicChassisController : public TaskWrapper,
     void waitUntilSettled();
     void setPose(Pose2D &ipose);
     Pose2D getPose();
+    okapi::QSpeed getCurrentLinearSpeed();
 
     protected:
     std::shared_ptr<ExpandedXDriveModel> model;
     std::shared_ptr<okapi::OdomChassisController> chassis;
 
-    std::shared_ptr<okapi::IterativePosPIDController> xController{nullptr};
-    std::shared_ptr<okapi::IterativePosPIDController> yController{nullptr};
-    std::shared_ptr<okapi::IterativePosPIDController> turnController{nullptr};
-
-    // std::unique_ptr<HolonomicController> holonomicController;
+    std::unique_ptr<okapi::IterativePosPIDController> xController{nullptr};
+    std::unique_ptr<okapi::IterativePosPIDController> yController{nullptr};
+    std::unique_ptr<okapi::IterativePosPIDController> turnController{nullptr};
 
     std::unique_ptr<okapi::AbstractRate> rate;
     std::unique_ptr<okapi::AbstractTimer> timer;
@@ -69,6 +82,9 @@ class AsyncHolonomicChassisController : public TaskWrapper,
     Pose2D initialPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
     okapi::OdomState currentOdomState{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
     Pose2D currentPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
+    
+    Pose2D endPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
+    Pose2D settleTolerance{1 * okapi::inch, 1 * okapi::inch, 1 * okapi::degree};
 
     pros::Mutex lock;
 
@@ -77,8 +93,6 @@ class AsyncHolonomicChassisController : public TaskWrapper,
     private: 
     void resetControllers();
     void controllerFlipDisabled(bool isDisabled);
-
-    void move(HolonomicWheelSpeeds &speeds);
 };
 
 class AsyncHolonomicChassisControllerBuilder {
@@ -86,17 +100,21 @@ class AsyncHolonomicChassisControllerBuilder {
     AsyncHolonomicChassisControllerBuilder();
     ~AsyncHolonomicChassisControllerBuilder() = default;
     AsyncHolonomicChassisControllerBuilder& withOutput(std::shared_ptr<okapi::OdomChassisController> ichassis);
-    AsyncHolonomicChassisControllerBuilder& withControllers(
-                    std::shared_ptr<okapi::IterativePosPIDController> ixController,
-                    std::shared_ptr<okapi::IterativePosPIDController> iyController,
-                    std::shared_ptr<okapi::IterativePosPIDController> iturnController);
+    AsyncHolonomicChassisControllerBuilder& withPIDGains(const okapi::IterativePosPIDController::Gains &itranslateGains, 
+                                                         const okapi::IterativePosPIDController::Gains &iturnGains);
+    AsyncHolonomicChassisControllerBuilder& withTolerance(const Pose2D &isettleTolerance);
+    // AsyncHolonomicChassisControllerBuilder& withFFGains(const FeedforwardGains &itranslateGains);
     std::shared_ptr<AsyncHolonomicChassisController> build();
     
     private:
     std::shared_ptr<okapi::OdomChassisController> chassis;
-    std::shared_ptr<okapi::IterativePosPIDController> xController{nullptr};
-    std::shared_ptr<okapi::IterativePosPIDController> yController{nullptr};
-    std::shared_ptr<okapi::IterativePosPIDController> turnController{nullptr};
+    okapi::IterativePosPIDController::Gains pidTranslateGains; 
+    okapi::IterativePosPIDController::Gains pidTurnGains;
+    FeedforwardGains ffTranslateGains;
+    Pose2D settleTolerance{1 * okapi::inch, 1 * okapi::inch, 1 * okapi::degree};
+
+    bool pidInit{false};
+    bool outputInit{false};
 };
 
 }

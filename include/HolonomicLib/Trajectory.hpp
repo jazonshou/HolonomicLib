@@ -7,8 +7,9 @@ namespace HolonomicLib {
 struct TrajectoryState
 {
     TrajectoryState() = default;
-    TrajectoryState(double ix, double iy, double itheta, double ilinVel);
-    double x, y, theta, linVel;
+    TrajectoryState(double ix, double iy, double itheta, double ilinVel, 
+                    double ilinAccel);
+    double x, y, theta, linVel, linAccel;
 };
 
 class Trajectory {

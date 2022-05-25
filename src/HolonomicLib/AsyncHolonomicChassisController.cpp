@@ -2,10 +2,10 @@
 
 namespace HolonomicLib {
 
-AsyncHolonomicChassisController::AsyncHolonomicChassisController(std::shared_ptr<okapi::OdomChassisController> ichassis, 
-                                    std::shared_ptr<okapi::IterativePosPIDController> ixController,
-                                    std::shared_ptr<okapi::IterativePosPIDController> iyController,
-                                    std::shared_ptr<okapi::IterativePosPIDController> iturnController,
+AsyncHolonomicChassisController::AsyncHolonomicChassisController(
+                                    std::shared_ptr<okapi::OdomChassisController> ichassis,
+                                    const okapi::IterativePosPIDController::Gains &itranslateGains,
+                                    const okapi::IterativePosPIDController::Gains &iturnGains,
                                     const okapi::TimeUtil& itimeUtil)
 {
     chassis = std::move(std::static_pointer_cast<okapi::OdomChassisController>(ichassis));
@@ -14,19 +14,62 @@ AsyncHolonomicChassisController::AsyncHolonomicChassisController(std::shared_ptr
     rate = std::move(itimeUtil.getRate());
     timer = std::move(itimeUtil.getTimer());
 
-    std::cout << "did timers" << std::endl;
-
-    xController = std::move(ixController);
-    yController = std::move(iyController);
-    turnController = std::move(iturnController);
-    std::cout << "did controllers" << std::endl;
+    xController = std::make_unique<okapi::IterativePosPIDController>(itranslateGains, itimeUtil);
+    yController = std::make_unique<okapi::IterativePosPIDController>(itranslateGains, itimeUtil);
+    turnController = std::make_unique<okapi::IterativePosPIDController>(iturnGains, itimeUtil);
     
     //todo!!!!
     chassis->startOdomThread();
     chassis->setDefaultStateMode(okapi::StateMode::FRAME_TRANSFORMATION);
+}
 
-    // auto holonomicController = std::make_unique<HolonomicController>(xController, yController, turnController);
-    std::cout << "made holonomic controller" << std::endl;
+AsyncHolonomicChassisController::AsyncHolonomicChassisController(
+                                    std::shared_ptr<okapi::OdomChassisController> ichassis,
+                                    const okapi::IterativePosPIDController::Gains &itranslateGains,
+                                    const okapi::IterativePosPIDController::Gains &iturnGains,
+                                    const Pose2D &isettleTolerance,
+                                    const okapi::TimeUtil& itimeUtil) : 
+AsyncHolonomicChassisController(ichassis, itranslateGains, iturnGains, itimeUtil)
+{
+    settleTolerance = isettleTolerance;
+}
+
+// imagine this doesn't exist
+AsyncHolonomicChassisController::AsyncHolonomicChassisController(
+                                    std::shared_ptr<okapi::OdomChassisController> ichassis,
+                                    const okapi::IterativePosPIDController::Gains &itranslateGains,
+                                    const okapi::IterativePosPIDController::Gains &iturnGains,
+                                    const FeedforwardGains &itranslateFFGains,
+                                    const okapi::TimeUtil& itimeUtil)
+{
+    chassis = std::move(std::static_pointer_cast<okapi::OdomChassisController>(ichassis));
+    model = std::static_pointer_cast<ExpandedXDriveModel>(ichassis->getModel());
+
+    rate = std::move(itimeUtil.getRate());
+    timer = std::move(itimeUtil.getTimer());
+
+    xController = std::make_unique<okapi::IterativePosPIDController>(itranslateGains.kP, 
+                                                                     itranslateGains.kI, 
+                                                                     itranslateGains.kD, 
+                                                                     itranslateGains.kBias,
+                                                                     itimeUtil);
+    yController = std::make_unique<okapi::IterativePosPIDController>(itranslateGains.kP, 
+                                                                     itranslateGains.kI, 
+                                                                     itranslateGains.kD, 
+                                                                     itranslateGains.kBias,
+                                                                     itimeUtil);
+    turnController = std::make_unique<okapi::IterativePosPIDController>(iturnGains.kP, 
+                                                                        iturnGains.kI, 
+                                                                        iturnGains.kD, 
+                                                                        iturnGains.kBias,
+                                                                        itimeUtil);
+
+    // translateFFController = std::make_unique<FeedforwardController>(itranslateFFGains.kV, 
+    //                                                                 itranslateFFGains.kA);
+    // customFF = true;
+    
+    chassis->startOdomThread();
+    chassis->setDefaultStateMode(okapi::StateMode::FRAME_TRANSFORMATION);
 }
 
 void AsyncHolonomicChassisController::setTarget(Pose2D targetPose, bool waitUntilSettled)
@@ -54,7 +97,9 @@ void AsyncHolonomicChassisController::setTarget(Trajectory &itrajectory, bool wa
     initialPose = {currentOdomState.x, currentOdomState.y, currentOdomState.theta};
     maxTime = (trajectory.size() * 10 + 20) * okapi::millisecond;
     timer->placeMark();
-    std::cout << "target set " << std::endl;
+    endPose = {trajectory[trajectory.size() - 1].x * okapi::foot, 
+               trajectory[trajectory.size() - 1].y * okapi::foot, 
+               trajectory[trajectory.size() - 1].theta * okapi::degree};
     lock.give();
 
     if(waitUntilSettled) this->waitUntilSettled();
@@ -103,9 +148,7 @@ void AsyncHolonomicChassisController::loop() {
                 double xOutput = xController->step(currentOdomState.x.convert(okapi::inch));
                 double yOutput = yController->step(currentOdomState.y.convert(okapi::inch));
                 double thetaOutput = turnController->step(currentAngle.convert(okapi::degree));
-                pros::lcd::print(5, "X Output: %f", xOutput);
-                pros::lcd::print(6, "Y Output: %f", yOutput);
-                
+
                 model->cartesian(xOutput, yOutput, thetaOutput, currentAngle);
 
                 if(xController->isSettled() && yController->isSettled() && turnController->isSettled()) {
@@ -116,26 +159,31 @@ void AsyncHolonomicChassisController::loop() {
 
             case ChassisState::PATHING:
             {
-                TrajectoryState desiredState = trajectory[(int)(currentTime.convert(okapi::millisecond) / 10)];
+                int index = (int)(currentTime.convert(okapi::millisecond) / 10) >= trajectory.size() ? 
+                            trajectory.size() - 1 : (int)(currentTime.convert(okapi::millisecond) / 10);
+                TrajectoryState desiredState = trajectory[index];
+                
                 Pose2D desiredPose = {desiredState.x * okapi::foot, desiredState.y * okapi::foot, desiredState.theta * okapi::degree};
-                double desiredVel = desiredState.linVel * 12; //todo!!!!!
-
-                okapi::QAngle vectorAngle = okapi::atan2(desiredPose.y - currentPose.y, 
-                                                         desiredPose.x - currentPose.x);
-                double xFF = desiredVel * std::cos(vectorAngle.convert(okapi::radian));
-                double yFF = desiredVel * std::sin(vectorAngle.convert(okapi::radian));
-
-                turnController->setTarget(desiredPose.theta.convert(okapi::degree));
-                double thetaFF = turnController->step(currentPose.theta.convert(okapi::degree));
-
+                
+                // a very unprofessional way of converting from ftps to inps
+                double desiredVel = desiredState.linVel * 12; 
+                double desiredAccel = desiredState.linAccel * 12; 
+                
                 xController->setTarget(desiredPose.x.convert(okapi::inch));
                 double xFB = xController->step(currentPose.x.convert(okapi::inch));
                 yController->setTarget(desiredPose.y.convert(okapi::inch));
                 double yFB = yController->step(currentPose.y.convert(okapi::inch));
 
-                model->cartesian(xFB + xFF, yFB + yFF, thetaFF, currentAngle);
+                turnController->setTarget(desiredPose.theta.convert(okapi::degree));
+                double thetaFB = turnController->step(currentPose.theta.convert(okapi::degree));
 
-                if(currentTime > maxTime /*&& holonomicController->isSettled()*/) {
+                model->cartesian(xFB, yFB, thetaFB, currentAngle);
+                
+                // compares current position with last position
+                if(std::abs(std::abs(currentPose.x.convert(okapi::inch)) - std::abs(endPose.x.convert(okapi::inch))) < settleTolerance.x.convert(okapi::inch) &&
+                   std::abs(std::abs(currentPose.y.convert(okapi::inch)) - std::abs(endPose.y.convert(okapi::inch))) < settleTolerance.y.convert(okapi::inch) &&
+                   std::abs(std::abs(currentPose.theta.convert(okapi::degree)) - std::abs(endPose.theta.convert(okapi::degree))) < settleTolerance.theta.convert(okapi::degree)) 
+                {
                     setState(ChassisState::IDLE);
                 }
                 break;
@@ -164,37 +212,46 @@ AsyncHolonomicChassisControllerBuilder::AsyncHolonomicChassisControllerBuilder()
 
 AsyncHolonomicChassisControllerBuilder&
 AsyncHolonomicChassisControllerBuilder::withOutput(std::shared_ptr<okapi::OdomChassisController> ichassis) {
-    std::cout << "builder withOutput" << std::endl;
+    outputInit = true;
     chassis = std::move(ichassis);
     return *this;
 }
 
 AsyncHolonomicChassisControllerBuilder&
-AsyncHolonomicChassisControllerBuilder::withControllers(
-                    std::shared_ptr<okapi::IterativePosPIDController> ixController,
-                    std::shared_ptr<okapi::IterativePosPIDController> iyController,
-                    std::shared_ptr<okapi::IterativePosPIDController> iturnController) 
+AsyncHolonomicChassisControllerBuilder::withPIDGains(const okapi::IterativePosPIDController::Gains &itranslateGains,
+                                                     const okapi::IterativePosPIDController::Gains &iturnGains) 
 {
-    std::cout << "builder withControllers" << std::endl;
-    xController = std::move(ixController);
-    yController = std::move(iyController);
-    turnController = std::move(iturnController);
+    pidInit = true;
+    pidTranslateGains = itranslateGains;
+    pidTurnGains = iturnGains;
+    return *this;
+}
+
+AsyncHolonomicChassisControllerBuilder&
+AsyncHolonomicChassisControllerBuilder::withTolerance(const Pose2D &isettleTolerance) 
+{
+    settleTolerance = isettleTolerance;
     return *this;
 }
 
 std::shared_ptr<AsyncHolonomicChassisController>
 AsyncHolonomicChassisControllerBuilder::build() 
 {
-    std::cout << "builder build" << std::endl;
-    std::shared_ptr<AsyncHolonomicChassisController> ret(new AsyncHolonomicChassisController(
+    if(pidInit && outputInit) {
+        std::shared_ptr<AsyncHolonomicChassisController> ret(new AsyncHolonomicChassisController(
         std::move(chassis),
-        std::move(xController),
-        std::move(yController),
-        std::move(turnController), 
-        okapi::TimeUtilFactory::createDefault())
-    );
-    ret->startTask();
-    return std::move(ret);
+        pidTranslateGains,
+        pidTurnGains,
+        settleTolerance,
+        okapi::TimeUtilFactory::withSettledUtilParams(settleTolerance.x.convert(okapi::inch), 
+                                                      2, 
+                                                      100 * okapi::millisecond))
+        );
+        ret->startTask();
+        return std::move(ret);
+    } else {
+        throw std::runtime_error("AsyncHolonomicChassisControllerBuilder: you must at least give pid gains and a controller");
+    }
 }
 
 }

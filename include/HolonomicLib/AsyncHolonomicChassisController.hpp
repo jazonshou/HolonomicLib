@@ -63,7 +63,7 @@ class AsyncHolonomicChassisController : public TaskWrapper,
     void waitUntilSettled();
     void setPose(Pose2D &ipose);
     Pose2D getPose();
-    okapi::QSpeed getCurrentLinearSpeed();
+    bool isSettled();
 
     protected:
     std::shared_ptr<ExpandedXDriveModel> model;

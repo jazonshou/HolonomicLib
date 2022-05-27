@@ -79,9 +79,7 @@ void AsyncHolonomicChassisController::setTarget(Pose2D targetPose, bool waitUnti
     resetControllers();
     controllerFlipDisabled(false);
 
-    xController->setTarget(targetPose.x.convert(okapi::inch));
-    yController->setTarget(targetPose.y.convert(okapi::inch));
-    turnController->setTarget(targetPose.theta.convert(okapi::degree));
+    endPose = {targetPose.x, targetPose.y, targetPose.theta};
     lock.give();
 
     if(waitUntilSettled) this->waitUntilSettled();
@@ -127,6 +125,13 @@ Pose2D AsyncHolonomicChassisController::getPose() {
     return currentPose;
 }
 
+bool AsyncHolonomicChassisController::isSettled() {
+    return 
+    std::abs(std::abs(currentPose.x.convert(okapi::inch)) - std::abs(endPose.x.convert(okapi::inch))) < settleTolerance.x.convert(okapi::inch) &&
+    std::abs(std::abs(currentPose.y.convert(okapi::inch)) - std::abs(endPose.y.convert(okapi::inch))) < settleTolerance.y.convert(okapi::inch) &&
+    std::abs(std::abs(currentPose.theta.convert(okapi::degree)) - std::abs(endPose.theta.convert(okapi::degree))) < settleTolerance.theta.convert(okapi::degree);
+}
+
 void AsyncHolonomicChassisController::loop() {
     std::cout << "in the loop" << std::endl;
     while(true) {
@@ -145,13 +150,17 @@ void AsyncHolonomicChassisController::loop() {
             
             case ChassisState::TRANSLATING:
             {
+                xController->setTarget(endPose.x.convert(okapi::inch));
+                yController->setTarget(endPose.y.convert(okapi::inch));
+                turnController->setTarget(endPose.theta.convert(okapi::degree));
+
                 double xOutput = xController->step(currentOdomState.x.convert(okapi::inch));
                 double yOutput = yController->step(currentOdomState.y.convert(okapi::inch));
                 double thetaOutput = turnController->step(currentAngle.convert(okapi::degree));
 
                 model->cartesian(xOutput, yOutput, thetaOutput, currentAngle);
 
-                if(xController->isSettled() && yController->isSettled() && turnController->isSettled()) {
+                if(isSettled()) {
                     setState(ChassisState::IDLE);
                 }
                 break;
@@ -173,17 +182,13 @@ void AsyncHolonomicChassisController::loop() {
                 double xFB = xController->step(currentPose.x.convert(okapi::inch));
                 yController->setTarget(desiredPose.y.convert(okapi::inch));
                 double yFB = yController->step(currentPose.y.convert(okapi::inch));
-
                 turnController->setTarget(desiredPose.theta.convert(okapi::degree));
                 double thetaFB = turnController->step(currentPose.theta.convert(okapi::degree));
 
                 model->cartesian(xFB, yFB, thetaFB, currentAngle);
                 
                 // compares current position with last position
-                if(std::abs(std::abs(currentPose.x.convert(okapi::inch)) - std::abs(endPose.x.convert(okapi::inch))) < settleTolerance.x.convert(okapi::inch) &&
-                   std::abs(std::abs(currentPose.y.convert(okapi::inch)) - std::abs(endPose.y.convert(okapi::inch))) < settleTolerance.y.convert(okapi::inch) &&
-                   std::abs(std::abs(currentPose.theta.convert(okapi::degree)) - std::abs(endPose.theta.convert(okapi::degree))) < settleTolerance.theta.convert(okapi::degree)) 
-                {
+                if(isSettled()) {
                     setState(ChassisState::IDLE);
                 }
                 break;

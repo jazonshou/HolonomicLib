@@ -18,7 +18,6 @@ AsyncHolonomicChassisController::AsyncHolonomicChassisController(
     yController = std::make_unique<okapi::IterativePosPIDController>(itranslateGains, itimeUtil);
     turnController = std::make_unique<okapi::IterativePosPIDController>(iturnGains, itimeUtil);
     
-    //todo!!!!
     chassis->startOdomThread();
     chassis->setDefaultStateMode(okapi::StateMode::FRAME_TRANSFORMATION);
 }

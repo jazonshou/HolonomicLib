@@ -25,19 +25,15 @@ struct TrajectoryState
      */
     TrajectoryState(double ix, double iy, double itheta);
 
-    /**
-     * @brief Construct a new Trajectory State object
-     * 
-     * @param ix desired x position
-     * @param iy desired y position
-     * @param itheta desired angle
-     * @param ilinVel desired linear velocity
-     * @param ilinAccel desired linear acceleration
-     */
-    TrajectoryState(double ix, double iy, double itheta, double ilinVel, 
-                    double ilinAccel);
+    double x, y, theta;
+};
 
-    double x, y, theta, linVel, linAccel;
+struct TimedTrajectoryState 
+{
+    TimedTrajectoryState() = default;
+    TimedTrajectoryState(double itime, double ix, double iy, double itheta);
+
+    double time, x, y, theta;
 };
 
 /**
@@ -75,6 +71,17 @@ class Trajectory {
      * 
      * @return size of the trajectory
      */
+    int size() const;
+};
+
+class TimedTrajectory {
+    private: 
+    std::vector<TimedTrajectoryState> trajectory;
+
+    public:
+    TimedTrajectory() = default;
+    TimedTrajectory(const std::initializer_list<TimedTrajectoryState> &itrajectory);
+    TimedTrajectoryState operator[] (int index) const;
     int size() const;
 };
 

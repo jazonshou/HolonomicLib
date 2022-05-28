@@ -11,7 +11,6 @@
 #include "okapi/api/units/QTime.hpp"
 #include "okapi/api/units/QSpeed.hpp"
 
-
 #include <iostream>
 
 #include "StateMachine.hpp"
@@ -97,6 +96,8 @@ class AsyncHolonomicChassisController : public TaskWrapper,
      */
     void setTarget(Trajectory &itrajectory, bool waitUntilSettled = false);
 
+    void setTarget(TimedTrajectory &itrajectory, bool waitUntilSettled = false);
+
     /**
      * @brief Stops chassis
      * 
@@ -140,15 +141,20 @@ class AsyncHolonomicChassisController : public TaskWrapper,
 
     std::unique_ptr<okapi::AbstractRate> rate;
     std::unique_ptr<okapi::AbstractTimer> timer;
-    okapi::QTime maxTime{0.0};
+    okapi::QTime delayTime{0.0};
 
-    Trajectory trajectory;
+    Trajectory trajectory; 
     Pose2D initialPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
     okapi::OdomState currentOdomState{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
     Pose2D currentPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
     
     Pose2D endPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
     Pose2D settleTolerance{1 * okapi::inch, 1 * okapi::inch, 1 * okapi::degree};
+
+    TimedTrajectory timedTrajectory;
+    bool timedTrajectoryEnabled{false};
+
+    int index{0};
 
     pros::Mutex lock;
 

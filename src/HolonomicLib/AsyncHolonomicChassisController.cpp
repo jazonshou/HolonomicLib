@@ -92,11 +92,31 @@ void AsyncHolonomicChassisController::setTarget(Trajectory &itrajectory, bool wa
     controllerFlipDisabled(false);
     trajectory = itrajectory;
     initialPose = {currentOdomState.x, currentOdomState.y, currentOdomState.theta};
-    maxTime = (trajectory.size() * 10 + 20) * okapi::millisecond;
     timer->placeMark();
     endPose = {trajectory[trajectory.size() - 1].x * okapi::foot, 
                trajectory[trajectory.size() - 1].y * okapi::foot, 
                trajectory[trajectory.size() - 1].theta * okapi::degree};
+    timedTrajectoryEnabled = false;
+    index = 0;
+    lock.give();
+
+    if(waitUntilSettled) this->waitUntilSettled();
+}
+
+void AsyncHolonomicChassisController::setTarget(TimedTrajectory &itrajectory, bool waitUntilSettled)
+{
+    lock.take(5);
+    setState(ChassisState::PATHING);
+    resetControllers();
+    controllerFlipDisabled(false);
+    timedTrajectory = itrajectory;
+    initialPose = {currentOdomState.x, currentOdomState.y, currentOdomState.theta};
+    timer->placeMark();
+    endPose = {timedTrajectory[timedTrajectory.size() - 1].x * okapi::foot, 
+               timedTrajectory[timedTrajectory.size() - 1].y * okapi::foot, 
+               timedTrajectory[timedTrajectory.size() - 1].theta * okapi::degree};
+    timedTrajectoryEnabled = true;
+    index = 0;
     lock.give();
 
     if(waitUntilSettled) this->waitUntilSettled();
@@ -167,16 +187,23 @@ void AsyncHolonomicChassisController::loop() {
 
             case ChassisState::PATHING:
             {
-                int index = (int)(currentTime.convert(okapi::millisecond) / 10) >= trajectory.size() ? 
-                            trajectory.size() - 1 : (int)(currentTime.convert(okapi::millisecond) / 10);
-                TrajectoryState desiredState = trajectory[index];
-                
-                Pose2D desiredPose = {desiredState.x * okapi::foot, desiredState.y * okapi::foot, desiredState.theta * okapi::degree};
-                
-                // a very unprofessional way of converting from ftps to inps
-                double desiredVel = desiredState.linVel * 12; 
-                double desiredAccel = desiredState.linAccel * 12; 
-                
+                // int index = (int)(currentTime.convert(okapi::millisecond) / 10) >= trajectory.size() ? 
+                //             trajectory.size() - 1 : (int)(currentTime.convert(okapi::millisecond) / 10);
+                Pose2D desiredPose = {0 * okapi::inch, 0.0 * okapi::inch, 0.0 * okapi::degree};
+                if(timedTrajectoryEnabled) {
+                    TimedTrajectoryState desiredState = timedTrajectory[index >= timedTrajectory.size() ? timedTrajectory.size() - 1 : index];
+                    desiredPose = {desiredState.x * okapi::foot, desiredState.y * okapi::foot, desiredState.theta * okapi::degree};
+                    if(index < timedTrajectory.size() - 1) {
+                        delayTime = (timedTrajectory[index + 1].time - timedTrajectory[index].time) * okapi::second;
+                    } else {
+                        delayTime = 10 * okapi::millisecond;
+                    }
+                } else {
+                    TrajectoryState desiredState = trajectory[index >= trajectory.size() ? trajectory.size() - 1 : index];
+                    desiredPose = {desiredState.x * okapi::foot, desiredState.y * okapi::foot, desiredState.theta * okapi::degree};
+                }
+                                
+                // feed to PID controllers
                 xController->setTarget(desiredPose.x.convert(okapi::inch));
                 double xFB = xController->step(currentPose.x.convert(okapi::inch));
                 yController->setTarget(desiredPose.y.convert(okapi::inch));
@@ -186,6 +213,8 @@ void AsyncHolonomicChassisController::loop() {
 
                 model->cartesian(xFB, yFB, thetaFB, currentAngle);
                 
+                index++;
+
                 // compares current position with last position
                 if(isSettled()) {
                     setState(ChassisState::IDLE);
@@ -194,7 +223,7 @@ void AsyncHolonomicChassisController::loop() {
             }
         }
         lock.give();
-        rate->delayUntil(10);
+        rate->delayUntil(delayTime.convert(okapi::millisecond));
     }
 }
 

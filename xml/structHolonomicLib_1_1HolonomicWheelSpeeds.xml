@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structHolonomicLib_1_1HolonomicWheelSpeeds" kind="struct" language="C++" prot="public">
+    <compoundname>HolonomicLib::HolonomicWheelSpeeds</compoundname>
+    <includes refid="HolonomicWheelSpeeds_8hpp" local="no">HolonomicWheelSpeeds.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structHolonomicLib_1_1HolonomicWheelSpeeds_1a069695b5397a1a278b143e6e028b29c1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::HolonomicWheelSpeeds::frontLeft</definition>
+        <argsstring></argsstring>
+        <name>frontLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/HolonomicWheelSpeeds.hpp" line="11" column="12" bodyfile="include/HolonomicLib/HolonomicWheelSpeeds.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1HolonomicWheelSpeeds_1ac2d2e310dc6251c2db5781880118a8ff" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::HolonomicWheelSpeeds::frontRight</definition>
+        <argsstring></argsstring>
+        <name>frontRight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/HolonomicWheelSpeeds.hpp" line="11" column="22" bodyfile="include/HolonomicLib/HolonomicWheelSpeeds.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1HolonomicWheelSpeeds_1a5c722bc28937f8fdac7d7caabe478fae" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::HolonomicWheelSpeeds::backLeft</definition>
+        <argsstring></argsstring>
+        <name>backLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/HolonomicWheelSpeeds.hpp" line="11" column="33" bodyfile="include/HolonomicLib/HolonomicWheelSpeeds.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1HolonomicWheelSpeeds_1acfd4883d9dc74f8f3eb0e34d07391daf" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::HolonomicWheelSpeeds::backRight</definition>
+        <argsstring></argsstring>
+        <name>backRight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/HolonomicWheelSpeeds.hpp" line="11" column="42" bodyfile="include/HolonomicLib/HolonomicWheelSpeeds.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structHolonomicLib_1_1HolonomicWheelSpeeds_1a45dc2bf59e7a483157ed35a115627ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::HolonomicWheelSpeeds::HolonomicWheelSpeeds</definition>
+        <argsstring>()=default</argsstring>
+        <name>HolonomicWheelSpeeds</name>
+        <briefdescription>
+<para>Construct a new Holonomic Wheel Speeds object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/HolonomicWheelSpeeds.hpp" line="17" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structHolonomicLib_1_1HolonomicWheelSpeeds_1ad396dd14708fd2a4f078211a56fd2892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::HolonomicWheelSpeeds::HolonomicWheelSpeeds</definition>
+        <argsstring>(double frontleft, double frontRight, double backLeft, double backRight)</argsstring>
+        <name>HolonomicWheelSpeeds</name>
+        <param>
+          <type>double</type>
+          <declname>frontleft</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>frontRight</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>backLeft</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>backRight</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Holonomic Wheel Speeds object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frontleft</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>front left motor speed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frontRight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>front right motor speed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>backLeft</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>back left motor speed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>backRight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>back right motor speed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/HolonomicWheelSpeeds.hpp" line="27" column="5" bodyfile="src/HolonomicLib/HolonomicWheelSpeeds.cpp" bodystart="5" bodyend="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct for wheel speeds. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/HolonomicLib/HolonomicWheelSpeeds.hpp" line="10" column="1" bodyfile="include/HolonomicLib/HolonomicWheelSpeeds.hpp" bodystart="9" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a5c722bc28937f8fdac7d7caabe478fae" prot="public" virt="non-virtual"><scope>HolonomicLib::HolonomicWheelSpeeds</scope><name>backLeft</name></member>
+      <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1acfd4883d9dc74f8f3eb0e34d07391daf" prot="public" virt="non-virtual"><scope>HolonomicLib::HolonomicWheelSpeeds</scope><name>backRight</name></member>
+      <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a069695b5397a1a278b143e6e028b29c1" prot="public" virt="non-virtual"><scope>HolonomicLib::HolonomicWheelSpeeds</scope><name>frontLeft</name></member>
+      <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1ac2d2e310dc6251c2db5781880118a8ff" prot="public" virt="non-virtual"><scope>HolonomicLib::HolonomicWheelSpeeds</scope><name>frontRight</name></member>
+      <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a45dc2bf59e7a483157ed35a115627ef7" prot="public" virt="non-virtual"><scope>HolonomicLib::HolonomicWheelSpeeds</scope><name>HolonomicWheelSpeeds</name></member>
+      <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1ad396dd14708fd2a4f078211a56fd2892" prot="public" virt="non-virtual"><scope>HolonomicLib::HolonomicWheelSpeeds</scope><name>HolonomicWheelSpeeds</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

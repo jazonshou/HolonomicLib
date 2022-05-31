@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structHolonomicLib_1_1TrajectoryState" kind="struct" language="C++" prot="public">
+    <compoundname>HolonomicLib::TrajectoryState</compoundname>
+    <includes refid="Trajectory_8hpp" local="no">Trajectory.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structHolonomicLib_1_1TrajectoryState_1afc62ff7bc58e49b33cd5ffc30725f2a9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::TrajectoryState::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="28" column="12" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1TrajectoryState_1a1a5db51ff9cc12b334dd3b49b91bf6b2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::TrajectoryState::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="28" column="14" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1TrajectoryState_1a1c97729ca4d202938ab3efb39264b47d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::TrajectoryState::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="28" column="16" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structHolonomicLib_1_1TrajectoryState_1a8e9786d738c836b0b9bfa451560a4b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::TrajectoryState::TrajectoryState</definition>
+        <argsstring>()=default</argsstring>
+        <name>TrajectoryState</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classHolonomicLib_1_1Trajectory" kindref="compound">Trajectory</ref> State object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="17" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structHolonomicLib_1_1TrajectoryState_1a845fcea5d1d8804fb03dc4cdfb0a973e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::TrajectoryState::TrajectoryState</definition>
+        <argsstring>(double ix, double iy, double itheta)</argsstring>
+        <name>TrajectoryState</name>
+        <param>
+          <type>double</type>
+          <declname>ix</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>iy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>itheta</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classHolonomicLib_1_1Trajectory" kindref="compound">Trajectory</ref> State object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classHolonomicLib_1_1Trajectory" kindref="compound">Trajectory</ref> State.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired x position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired y position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>itheta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="26" column="5" bodyfile="src/HolonomicLib/Trajectory.cpp" bodystart="7" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct for trajectory states. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/HolonomicLib/Trajectory.hpp" line="12" column="1" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="11" bodyend="29"/>
+    <listofallmembers>
+      <member refid="structHolonomicLib_1_1TrajectoryState_1a1c97729ca4d202938ab3efb39264b47d" prot="public" virt="non-virtual"><scope>HolonomicLib::TrajectoryState</scope><name>theta</name></member>
+      <member refid="structHolonomicLib_1_1TrajectoryState_1a8e9786d738c836b0b9bfa451560a4b3a" prot="public" virt="non-virtual"><scope>HolonomicLib::TrajectoryState</scope><name>TrajectoryState</name></member>
+      <member refid="structHolonomicLib_1_1TrajectoryState_1a845fcea5d1d8804fb03dc4cdfb0a973e" prot="public" virt="non-virtual"><scope>HolonomicLib::TrajectoryState</scope><name>TrajectoryState</name></member>
+      <member refid="structHolonomicLib_1_1TrajectoryState_1afc62ff7bc58e49b33cd5ffc30725f2a9" prot="public" virt="non-virtual"><scope>HolonomicLib::TrajectoryState</scope><name>x</name></member>
+      <member refid="structHolonomicLib_1_1TrajectoryState_1a1a5db51ff9cc12b334dd3b49b91bf6b2" prot="public" virt="non-virtual"><scope>HolonomicLib::TrajectoryState</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

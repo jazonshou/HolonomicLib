@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceHolonomicLib_1_1Math" kind="namespace" language="C++">
+    <compoundname>HolonomicLib::Math</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceHolonomicLib_1_1Math_1a0fb99343562aa2641143d2dc2b142a2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>okapi::QAngle</type>
+        <definition>okapi::QAngle HolonomicLib::Math::rescale180</definition>
+        <argsstring>(okapi::QAngle angle)</argsstring>
+        <name>rescale180</name>
+        <param>
+          <type>okapi::QAngle</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>Rescales an angle to [-180, 180] (degrees) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle to be rescaled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>rescaled angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HolonomicLib/Math.cpp" line="8" column="15" bodyfile="src/HolonomicLib/Math.cpp" bodystart="8" bodyend="10" declfile="include/HolonomicLib/Math.hpp" declline="23" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceHolonomicLib_1_1Math_1ab5fb5c02303211011c1cf5988960f006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HolonomicLib::Math::rescale180</definition>
+        <argsstring>(double angle)</argsstring>
+        <name>rescale180</name>
+        <param>
+          <type>double</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>Rescales an angle to [-180, 180] (degrees) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle to be rescaled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>rescaled angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HolonomicLib/Math.cpp" line="12" column="8" bodyfile="src/HolonomicLib/Math.cpp" bodystart="12" bodyend="14" declfile="include/HolonomicLib/Math.hpp" declline="31" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="namespaceHolonomicLib_1_1Math" kindref="compound">Math</ref> functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/HolonomicLib/Math.hpp" line="15" column="14"/>
+  </compounddef>
+</doxygen>

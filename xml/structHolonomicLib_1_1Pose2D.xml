@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structHolonomicLib_1_1Pose2D" kind="struct" language="C++" prot="public">
+    <compoundname>HolonomicLib::Pose2D</compoundname>
+    <includes refid="Pose2D_8hpp" local="no">Pose2D.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" prot="public" static="no" mutable="no">
+        <type>okapi::QLength</type>
+        <definition>okapi::QLength HolonomicLib::Pose2D::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Pose2D.hpp" line="13" column="20" bodyfile="include/HolonomicLib/Pose2D.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" prot="public" static="no" mutable="no">
+        <type>okapi::QLength</type>
+        <definition>okapi::QLength HolonomicLib::Pose2D::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Pose2D.hpp" line="13" column="22" bodyfile="include/HolonomicLib/Pose2D.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" prot="public" static="no" mutable="no">
+        <type>okapi::QAngle</type>
+        <definition>okapi::QAngle HolonomicLib::Pose2D::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Pose2D.hpp" line="14" column="19" bodyfile="include/HolonomicLib/Pose2D.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structHolonomicLib_1_1Pose2D_1a1a1e4b3ce6e1f8f7c12608807b7e92bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::Pose2D::Pose2D</definition>
+        <argsstring>()=default</argsstring>
+        <name>Pose2D</name>
+        <briefdescription>
+<para>Construct a new Pose 2D object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Pose2D.hpp" line="20" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structHolonomicLib_1_1Pose2D_1a92c346fc3b144f908f1f1ea274f18799" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::Pose2D::Pose2D</definition>
+        <argsstring>(okapi::QLength ix, okapi::QLength iy, okapi::QAngle itheta)</argsstring>
+        <name>Pose2D</name>
+        <param>
+          <type>okapi::QLength</type>
+          <declname>ix</declname>
+        </param>
+        <param>
+          <type>okapi::QLength</type>
+          <declname>iy</declname>
+        </param>
+        <param>
+          <type>okapi::QAngle</type>
+          <declname>itheta</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Pose 2D object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>itheta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Pose2D.hpp" line="29" column="5" bodyfile="src/HolonomicLib/Pose2D.cpp" bodystart="5" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct for position. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/HolonomicLib/Pose2D.hpp" line="12" column="1" bodyfile="include/HolonomicLib/Pose2D.hpp" bodystart="11" bodyend="30"/>
+    <listofallmembers>
+      <member refid="structHolonomicLib_1_1Pose2D_1a1a1e4b3ce6e1f8f7c12608807b7e92bd" prot="public" virt="non-virtual"><scope>HolonomicLib::Pose2D</scope><name>Pose2D</name></member>
+      <member refid="structHolonomicLib_1_1Pose2D_1a92c346fc3b144f908f1f1ea274f18799" prot="public" virt="non-virtual"><scope>HolonomicLib::Pose2D</scope><name>Pose2D</name></member>
+      <member refid="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" prot="public" virt="non-virtual"><scope>HolonomicLib::Pose2D</scope><name>theta</name></member>
+      <member refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" prot="public" virt="non-virtual"><scope>HolonomicLib::Pose2D</scope><name>x</name></member>
+      <member refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" prot="public" virt="non-virtual"><scope>HolonomicLib::Pose2D</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

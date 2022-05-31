@@ -1,0 +1,107 @@
+\hypertarget{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}{}\doxysection{Holonomic\+Lib\+::Async\+Holonomic\+Chassis\+Controller\+Builder Class Reference}
+\label{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}\index{HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}}
+
+
+{\ttfamily \#include $<$Async\+Holonomic\+Chassis\+Controller.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a20e0ec6814a2c7c5611ae09127b7a4e9}{Async\+Holonomic\+Chassis\+Controller\+Builder}} ()
+\item 
+\mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a3d7f66586749bc1c714921677ba1080d}{$\sim$\+Async\+Holonomic\+Chassis\+Controller\+Builder}} ()=default
+\item 
+\mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}{Async\+Holonomic\+Chassis\+Controller\+Builder}} \& \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a1310698fb52b0b241824432cb71db553}{with\+Output}} (std\+::shared\+\_\+ptr$<$ okapi\+::\+Odom\+Chassis\+Controller $>$ ichassis)
+\begin{DoxyCompactList}\small\item\em Adds output controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}{Async\+Holonomic\+Chassis\+Controller\+Builder}} \& \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_ae9757cff1ff7301d02a6b7ce87751986}{with\+P\+I\+D\+Gains}} (const okapi\+::\+Iterative\+Pos\+P\+I\+D\+Controller\+::\+Gains \&itranslate\+Gains, const okapi\+::\+Iterative\+Pos\+P\+I\+D\+Controller\+::\+Gains \&iturn\+Gains)
+\begin{DoxyCompactList}\small\item\em Adds P\+ID gains. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}{Async\+Holonomic\+Chassis\+Controller\+Builder}} \& \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a1f2d1aa80932b6e6ad17d17c2a7ce93e}{with\+Tolerance}} (const \mbox{\hyperlink{structHolonomicLib_1_1Pose2D}{Pose2D}} \&isettle\+Tolerance)
+\begin{DoxyCompactList}\small\item\em Adds tolerance. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController}{Async\+Holonomic\+Chassis\+Controller}} $>$ \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a5b6a56ec82a7def66fc20910a09a819e}{build}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a20e0ec6814a2c7c5611ae09127b7a4e9}\label{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a20e0ec6814a2c7c5611ae09127b7a4e9}} 
+\index{HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}!AsyncHolonomicChassisControllerBuilder@{AsyncHolonomicChassisControllerBuilder}}
+\index{AsyncHolonomicChassisControllerBuilder@{AsyncHolonomicChassisControllerBuilder}!HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}}
+\doxysubsubsection{\texorpdfstring{AsyncHolonomicChassisControllerBuilder()}{AsyncHolonomicChassisControllerBuilder()}}
+{\footnotesize\ttfamily Holonomic\+Lib\+::\+Async\+Holonomic\+Chassis\+Controller\+Builder\+::\+Async\+Holonomic\+Chassis\+Controller\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a3d7f66586749bc1c714921677ba1080d}\label{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a3d7f66586749bc1c714921677ba1080d}} 
+\index{HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}!````~AsyncHolonomicChassisControllerBuilder@{$\sim$AsyncHolonomicChassisControllerBuilder}}
+\index{````~AsyncHolonomicChassisControllerBuilder@{$\sim$AsyncHolonomicChassisControllerBuilder}!HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}}
+\doxysubsubsection{\texorpdfstring{$\sim$AsyncHolonomicChassisControllerBuilder()}{~AsyncHolonomicChassisControllerBuilder()}}
+{\footnotesize\ttfamily Holonomic\+Lib\+::\+Async\+Holonomic\+Chassis\+Controller\+Builder\+::$\sim$\+Async\+Holonomic\+Chassis\+Controller\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a5b6a56ec82a7def66fc20910a09a819e}\label{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a5b6a56ec82a7def66fc20910a09a819e}} 
+\index{HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}!build@{build}}
+\index{build@{build}!HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController}{Async\+Holonomic\+Chassis\+Controller}} $>$ Holonomic\+Lib\+::\+Async\+Holonomic\+Chassis\+Controller\+Builder\+::build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a1310698fb52b0b241824432cb71db553}\label{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a1310698fb52b0b241824432cb71db553}} 
+\index{HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}!withOutput@{withOutput}}
+\index{withOutput@{withOutput}!HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}}
+\doxysubsubsection{\texorpdfstring{withOutput()}{withOutput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}{Async\+Holonomic\+Chassis\+Controller\+Builder}} \& Holonomic\+Lib\+::\+Async\+Holonomic\+Chassis\+Controller\+Builder\+::with\+Output (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ okapi\+::\+Odom\+Chassis\+Controller $>$}]{ichassis }\end{DoxyParamCaption})}
+
+
+
+Adds output controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ichassis} & output controller (M\+U\+ST BE okapi\+::\+Odom\+Chassis\+Controller) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_ae9757cff1ff7301d02a6b7ce87751986}\label{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_ae9757cff1ff7301d02a6b7ce87751986}} 
+\index{HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}!withPIDGains@{withPIDGains}}
+\index{withPIDGains@{withPIDGains}!HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}}
+\doxysubsubsection{\texorpdfstring{withPIDGains()}{withPIDGains()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}{Async\+Holonomic\+Chassis\+Controller\+Builder}} \& Holonomic\+Lib\+::\+Async\+Holonomic\+Chassis\+Controller\+Builder\+::with\+P\+I\+D\+Gains (\begin{DoxyParamCaption}\item[{const okapi\+::\+Iterative\+Pos\+P\+I\+D\+Controller\+::\+Gains \&}]{itranslate\+Gains,  }\item[{const okapi\+::\+Iterative\+Pos\+P\+I\+D\+Controller\+::\+Gains \&}]{iturn\+Gains }\end{DoxyParamCaption})}
+
+
+
+Adds P\+ID gains. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em itranslate\+Gains} & movement gains \\
+\hline
+{\em iturn\+Gains} & turn gains \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a1f2d1aa80932b6e6ad17d17c2a7ce93e}\label{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_a1f2d1aa80932b6e6ad17d17c2a7ce93e}} 
+\index{HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}!withTolerance@{withTolerance}}
+\index{withTolerance@{withTolerance}!HolonomicLib::AsyncHolonomicChassisControllerBuilder@{HolonomicLib::AsyncHolonomicChassisControllerBuilder}}
+\doxysubsubsection{\texorpdfstring{withTolerance()}{withTolerance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}{Async\+Holonomic\+Chassis\+Controller\+Builder}} \& Holonomic\+Lib\+::\+Async\+Holonomic\+Chassis\+Controller\+Builder\+::with\+Tolerance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structHolonomicLib_1_1Pose2D}{Pose2D}} \&}]{isettle\+Tolerance }\end{DoxyParamCaption})}
+
+
+
+Adds tolerance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isettle\+Tolerance} & pose tolerance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Holonomic\+Lib/\mbox{\hyperlink{AsyncHolonomicChassisController_8hpp}{Async\+Holonomic\+Chassis\+Controller.\+hpp}}\item 
+src/\+Holonomic\+Lib/\mbox{\hyperlink{AsyncHolonomicChassisController_8cpp}{Async\+Holonomic\+Chassis\+Controller.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structHolonomicLib_1_1FeedforwardGains" kind="struct" language="C++" prot="public">
+    <compoundname>HolonomicLib::FeedforwardGains</compoundname>
+    <includes refid="FeedforwardController_8hpp" local="no">FeedforwardController.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structHolonomicLib_1_1FeedforwardGains_1a8212e1fd81ad3596114faf38523f5b6e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::FeedforwardGains::kV</definition>
+        <argsstring></argsstring>
+        <name>kV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/FeedforwardController.hpp" line="13" column="12" bodyfile="include/HolonomicLib/FeedforwardController.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1FeedforwardGains_1ac1d1101ea2782188857ef06f97f18247" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::FeedforwardGains::kA</definition>
+        <argsstring></argsstring>
+        <name>kA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/FeedforwardController.hpp" line="13" column="15" bodyfile="include/HolonomicLib/FeedforwardController.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structHolonomicLib_1_1FeedforwardGains_1af36cd7005a92930c7c24a40e000912ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::FeedforwardGains::FeedforwardGains</definition>
+        <argsstring>()=default</argsstring>
+        <name>FeedforwardGains</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/FeedforwardController.hpp" line="14" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structHolonomicLib_1_1FeedforwardGains_1ad3ce50f61adc9b7fe4d43d6ce4d9bf7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::FeedforwardGains::FeedforwardGains</definition>
+        <argsstring>(double ikV, double ikA)</argsstring>
+        <name>FeedforwardGains</name>
+        <param>
+          <type>double</type>
+          <declname>ikV</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ikA</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/FeedforwardController.hpp" line="15" column="5" bodyfile="src/HolonomicLib/FeedforwardController.cpp" bodystart="5" bodyend="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct for FF gains. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/HolonomicLib/FeedforwardController.hpp" line="12" column="23" bodyfile="include/HolonomicLib/FeedforwardController.hpp" bodystart="12" bodyend="16"/>
+    <listofallmembers>
+      <member refid="structHolonomicLib_1_1FeedforwardGains_1af36cd7005a92930c7c24a40e000912ae" prot="public" virt="non-virtual"><scope>HolonomicLib::FeedforwardGains</scope><name>FeedforwardGains</name></member>
+      <member refid="structHolonomicLib_1_1FeedforwardGains_1ad3ce50f61adc9b7fe4d43d6ce4d9bf7d" prot="public" virt="non-virtual"><scope>HolonomicLib::FeedforwardGains</scope><name>FeedforwardGains</name></member>
+      <member refid="structHolonomicLib_1_1FeedforwardGains_1ac1d1101ea2782188857ef06f97f18247" prot="public" virt="non-virtual"><scope>HolonomicLib::FeedforwardGains</scope><name>kA</name></member>
+      <member refid="structHolonomicLib_1_1FeedforwardGains_1a8212e1fd81ad3596114faf38523f5b6e" prot="public" virt="non-virtual"><scope>HolonomicLib::FeedforwardGains</scope><name>kV</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

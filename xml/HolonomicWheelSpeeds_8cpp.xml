@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="HolonomicWheelSpeeds_8cpp" kind="file" language="C++">
+    <compoundname>HolonomicWheelSpeeds.cpp</compoundname>
+    <includes refid="HolonomicWheelSpeeds_8hpp" local="yes">HolonomicWheelSpeeds.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/HolonomicLib/HolonomicWheelSpeeds.cpp</label>
+        <link refid="HolonomicWheelSpeeds_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HolonomicWheelSpeeds.hpp</label>
+        <link refid="HolonomicWheelSpeeds_8hpp"/>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceHolonomicLib">HolonomicLib</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HolonomicWheelSpeeds_8hpp" kindref="compound">HolonomicWheelSpeeds.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHolonomicLib" kindref="compound">HolonomicLib</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><ref refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a45dc2bf59e7a483157ed35a115627ef7" kindref="member">HolonomicWheelSpeeds::HolonomicWheelSpeeds</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>frontleft,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>frontRight,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>backLeft,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>backRight)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a069695b5397a1a278b143e6e028b29c1" kindref="member">frontLeft</ref><sp/>=<sp/>frontleft;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;frontRight<sp/>=<sp/><ref refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1ac2d2e310dc6251c2db5781880118a8ff" kindref="member">frontRight</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;backLeft<sp/>=<sp/><ref refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a5c722bc28937f8fdac7d7caabe478fae" kindref="member">backLeft</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;backRight<sp/>=<sp/><ref refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1acfd4883d9dc74f8f3eb0e34d07391daf" kindref="member">backRight</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/HolonomicLib/HolonomicWheelSpeeds.cpp"/>
+  </compounddef>
+</doxygen>

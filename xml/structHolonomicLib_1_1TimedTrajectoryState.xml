@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structHolonomicLib_1_1TimedTrajectoryState" kind="struct" language="C++" prot="public">
+    <compoundname>HolonomicLib::TimedTrajectoryState</compoundname>
+    <includes refid="Trajectory_8hpp" local="no">Trajectory.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structHolonomicLib_1_1TimedTrajectoryState_1ae2fb2ee9682d40f4f29759cd5ceb0d97" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::TimedTrajectoryState::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="36" column="12" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1TimedTrajectoryState_1a6575f178b64ccb9b2df3042488bf2cac" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::TimedTrajectoryState::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="36" column="17" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1TimedTrajectoryState_1a979bff025a498f73b7045ca03cef9e3d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::TimedTrajectoryState::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="36" column="19" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHolonomicLib_1_1TimedTrajectoryState_1aaed13eb81625320ca9f6e65279456614" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HolonomicLib::TimedTrajectoryState::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="36" column="21" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structHolonomicLib_1_1TimedTrajectoryState_1a3331d67760d74d75ebf01d57be544dcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::TimedTrajectoryState::TimedTrajectoryState</definition>
+        <argsstring>()=default</argsstring>
+        <name>TimedTrajectoryState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structHolonomicLib_1_1TimedTrajectoryState_1a2e6dc77b4d9fa2629581c52a211b8c21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::TimedTrajectoryState::TimedTrajectoryState</definition>
+        <argsstring>(double itime, double ix, double iy, double itheta)</argsstring>
+        <name>TimedTrajectoryState</name>
+        <param>
+          <type>double</type>
+          <declname>itime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ix</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>iy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>itheta</declname>
+        </param>
+        <briefdescription>
+<para>Timed <ref refid="classHolonomicLib_1_1Trajectory" kindref="compound">Trajectory</ref> State. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Trajectory.hpp" line="34" column="5" bodyfile="src/HolonomicLib/Trajectory.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/HolonomicLib/Trajectory.hpp" line="32" column="1" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="31" bodyend="37"/>
+    <listofallmembers>
+      <member refid="structHolonomicLib_1_1TimedTrajectoryState_1aaed13eb81625320ca9f6e65279456614" prot="public" virt="non-virtual"><scope>HolonomicLib::TimedTrajectoryState</scope><name>theta</name></member>
+      <member refid="structHolonomicLib_1_1TimedTrajectoryState_1ae2fb2ee9682d40f4f29759cd5ceb0d97" prot="public" virt="non-virtual"><scope>HolonomicLib::TimedTrajectoryState</scope><name>time</name></member>
+      <member refid="structHolonomicLib_1_1TimedTrajectoryState_1a3331d67760d74d75ebf01d57be544dcb" prot="public" virt="non-virtual"><scope>HolonomicLib::TimedTrajectoryState</scope><name>TimedTrajectoryState</name></member>
+      <member refid="structHolonomicLib_1_1TimedTrajectoryState_1a2e6dc77b4d9fa2629581c52a211b8c21" prot="public" virt="non-virtual"><scope>HolonomicLib::TimedTrajectoryState</scope><name>TimedTrajectoryState</name></member>
+      <member refid="structHolonomicLib_1_1TimedTrajectoryState_1a6575f178b64ccb9b2df3042488bf2cac" prot="public" virt="non-virtual"><scope>HolonomicLib::TimedTrajectoryState</scope><name>x</name></member>
+      <member refid="structHolonomicLib_1_1TimedTrajectoryState_1a979bff025a498f73b7045ca03cef9e3d" prot="public" virt="non-virtual"><scope>HolonomicLib::TimedTrajectoryState</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

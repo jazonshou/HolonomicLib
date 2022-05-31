@@ -1,0 +1,79 @@
+\hypertarget{namespaceHolonomicLib}{}\doxysection{Holonomic\+Lib Namespace Reference}
+\label{namespaceHolonomicLib}\index{HolonomicLib@{HolonomicLib}}
+
+
+Currently not used.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceHolonomicLib_1_1Math}{Math}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespaceHolonomicLib_1_1Math}{Math}} functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController}{Async\+Holonomic\+Chassis\+Controller}}
+\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}{Async\+Holonomic\+Chassis\+Controller\+Builder}}
+\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1ExpandedXDriveModel}{Expanded\+X\+Drive\+Model}}
+\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1FeedforwardController}{Feedforward\+Controller}}
+\begin{DoxyCompactList}\small\item\em FF controller class. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structHolonomicLib_1_1FeedforwardGains}{Feedforward\+Gains}}
+\begin{DoxyCompactList}\small\item\em Struct for FF gains. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structHolonomicLib_1_1HolonomicWheelSpeeds}{Holonomic\+Wheel\+Speeds}}
+\begin{DoxyCompactList}\small\item\em Struct for wheel speeds. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structHolonomicLib_1_1Pose2D}{Pose2D}}
+\begin{DoxyCompactList}\small\item\em Struct for position. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1StateMachine}{State\+Machine}}
+\begin{DoxyCompactList}\small\item\em Template Wrapper class which allows easy state machine (有限狀態機) implementation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1TaskWrapper}{Task\+Wrapper}}
+\begin{DoxyCompactList}\small\item\em All credit for this class goes to the lib7842. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1TimedTrajectory}{Timed\+Trajectory}}
+\item 
+struct \mbox{\hyperlink{structHolonomicLib_1_1TimedTrajectoryState}{Timed\+Trajectory\+State}}
+\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}}
+\begin{DoxyCompactList}\small\item\em Class for trajectory (vector of trajectory states) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structHolonomicLib_1_1TrajectoryState}{Trajectory\+State}}
+\begin{DoxyCompactList}\small\item\em Struct for trajectory states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bd}{Chassis\+State}} \{ \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763}{Chassis\+State\+::\+P\+A\+T\+H\+I\+NG}}, 
+\mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3}{Chassis\+State\+::\+T\+R\+A\+N\+S\+L\+A\+T\+I\+NG}}, 
+\mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaa5daf7f2ebbba4975d61dab1c40188c7}{Chassis\+State\+::\+I\+D\+LE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for the different Chassis states P\+A\+T\+H\+I\+NG -\/ The robot is following a path T\+R\+A\+N\+S\+L\+A\+T\+I\+NG -\/ The robot is translating via P\+ID I\+D\+LE -\/ No robot movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Currently not used. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bd}\label{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bd}} 
+\index{HolonomicLib@{HolonomicLib}!ChassisState@{ChassisState}}
+\index{ChassisState@{ChassisState}!HolonomicLib@{HolonomicLib}}
+\doxysubsubsection{\texorpdfstring{ChassisState}{ChassisState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bd}{Holonomic\+Lib\+::\+Chassis\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enum for the different Chassis states P\+A\+T\+H\+I\+NG -\/ The robot is following a path T\+R\+A\+N\+S\+L\+A\+T\+I\+NG -\/ The robot is translating via P\+ID I\+D\+LE -\/ No robot movement. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PATHING@{PATHING}!HolonomicLib@{HolonomicLib}}\index{HolonomicLib@{HolonomicLib}!PATHING@{PATHING}}}\mbox{\Hypertarget{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763}\label{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763}} 
+P\+A\+T\+H\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSLATING@{TRANSLATING}!HolonomicLib@{HolonomicLib}}\index{HolonomicLib@{HolonomicLib}!TRANSLATING@{TRANSLATING}}}\mbox{\Hypertarget{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3}\label{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3}} 
+T\+R\+A\+N\+S\+L\+A\+T\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IDLE@{IDLE}!HolonomicLib@{HolonomicLib}}\index{HolonomicLib@{HolonomicLib}!IDLE@{IDLE}}}\mbox{\Hypertarget{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaa5daf7f2ebbba4975d61dab1c40188c7}\label{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaa5daf7f2ebbba4975d61dab1c40188c7}} 
+I\+D\+LE&\\
+\hline
+
+\end{DoxyEnumFields}

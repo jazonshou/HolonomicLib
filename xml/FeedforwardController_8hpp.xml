@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="FeedforwardController_8hpp" kind="file" language="C++">
+    <compoundname>FeedforwardController.hpp</compoundname>
+    <includes local="yes">okapi/api/units/QAcceleration.hpp</includes>
+    <includes local="yes">okapi/api/units/QSpeed.hpp</includes>
+    <includedby refid="API_8hpp" local="yes">include/HolonomicLib/API.hpp</includedby>
+    <includedby refid="AsyncHolonomicChassisController_8hpp" local="yes">include/HolonomicLib/AsyncHolonomicChassisController.hpp</includedby>
+    <includedby refid="FeedforwardController_8cpp" local="yes">src/HolonomicLib/FeedforwardController.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/HolonomicLib/FeedforwardController.hpp</label>
+        <link refid="FeedforwardController_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>okapi/api/units/QAcceleration.hpp</label>
+      </node>
+      <node id="3">
+        <label>okapi/api/units/QSpeed.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/HolonomicLib/FeedforwardController.hpp</label>
+        <link refid="FeedforwardController_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/HolonomicLib/AsyncHolonomicChassisController.hpp</label>
+        <link refid="AsyncHolonomicChassisController_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/HolonomicLib/FeedforwardController.cpp</label>
+        <link refid="FeedforwardController_8cpp"/>
+      </node>
+      <node id="2">
+        <label>include/HolonomicLib/API.hpp</label>
+        <link refid="API_8hpp"/>
+      </node>
+      <node id="4">
+        <label>src/HolonomicLib/AsyncHolonomicChassisController.cpp</label>
+        <link refid="AsyncHolonomicChassisController_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structHolonomicLib_1_1FeedforwardGains" prot="public">HolonomicLib::FeedforwardGains</innerclass>
+    <innerclass refid="classHolonomicLib_1_1FeedforwardController" prot="public">HolonomicLib::FeedforwardController</innerclass>
+    <innernamespace refid="namespaceHolonomicLib">HolonomicLib</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QAcceleration.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QSpeed.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHolonomicLib" kindref="compound">HolonomicLib</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structHolonomicLib_1_1FeedforwardGains" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structHolonomicLib_1_1FeedforwardGains" kindref="compound">FeedforwardGains</ref><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="structHolonomicLib_1_1FeedforwardGains_1a8212e1fd81ad3596114faf38523f5b6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structHolonomicLib_1_1FeedforwardGains_1a8212e1fd81ad3596114faf38523f5b6e" kindref="member">kV</ref>,<sp/><ref refid="structHolonomicLib_1_1FeedforwardGains_1ac1d1101ea2782188857ef06f97f18247" kindref="member">kA</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1FeedforwardGains_1af36cd7005a92930c7c24a40e000912ae" kindref="member">FeedforwardGains</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1FeedforwardGains_1af36cd7005a92930c7c24a40e000912ae" kindref="member">FeedforwardGains</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ikV,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ikA);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classHolonomicLib_1_1FeedforwardController" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classHolonomicLib_1_1FeedforwardController" kindref="compound">FeedforwardController</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>kA,<sp/>kV;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHolonomicLib_1_1FeedforwardController_1a74b4c8e3c0e4a480072484d21a05da6f" kindref="member">FeedforwardController</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ikV);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHolonomicLib_1_1FeedforwardController_1a74b4c8e3c0e4a480072484d21a05da6f" kindref="member">FeedforwardController</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ikV,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ikA);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHolonomicLib_1_1FeedforwardController_1a74b4c8e3c0e4a480072484d21a05da6f" kindref="member">FeedforwardController</ref>(<ref refid="structHolonomicLib_1_1FeedforwardGains" kindref="compound">FeedforwardGains</ref><sp/>&amp;gains);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1FeedforwardController_1aa40ea1eaf0bfcbbc3ec271d08f2be542" kindref="member">setGain</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ikV,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ikA);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1FeedforwardController_1a0766ef6466040f1767744f5b4f78ef3b" kindref="member">getkA</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1FeedforwardController_1a26282c11b4a218fc9568466f33b3eb2d" kindref="member">getkV</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1FeedforwardController_1af0c7b1dfbd1d748670a984bec7b89592" kindref="member">step</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vel,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>accel);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/HolonomicLib/FeedforwardController.hpp"/>
+  </compounddef>
+</doxygen>

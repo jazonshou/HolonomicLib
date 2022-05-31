@@ -1,0 +1,43 @@
+\hypertarget{AsyncHolonomicChassisController_8hpp}{}\doxysection{include/\+Holonomic\+Lib/\+Async\+Holonomic\+Chassis\+Controller.hpp File Reference}
+\label{AsyncHolonomicChassisController_8hpp}\index{include/HolonomicLib/AsyncHolonomicChassisController.hpp@{include/HolonomicLib/AsyncHolonomicChassisController.hpp}}
+{\ttfamily \#include \char`\"{}okapi/api/chassis/controller/odom\+Chassis\+Controller.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/api/chassis/model/x\+Drive\+Model.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/api/chassis/controller/chassis\+Controller.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/api/control/iterative/iterative\+Pos\+Pid\+Controller.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/api/util/time\+Util.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/impl/util/time\+Util\+Factory.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/api/device/motor/abstract\+Motor.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/api/units/\+Q\+Angle.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/api/units/\+Q\+Length.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/api/units/\+Q\+Time.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}okapi/api/units/\+Q\+Speed.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}State\+Machine.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Task\+Wrapper.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pose2\+D.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Holonomic\+Wheel\+Speeds.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Math.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Trajectory.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Units.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Expanded\+X\+Drive\+Model.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Feedforward\+Controller.\+hpp\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController}{Holonomic\+Lib\+::\+Async\+Holonomic\+Chassis\+Controller}}
+\item 
+class \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder}{Holonomic\+Lib\+::\+Async\+Holonomic\+Chassis\+Controller\+Builder}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceHolonomicLib}{Holonomic\+Lib}}
+\begin{DoxyCompactList}\small\item\em Currently not used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bd}{Holonomic\+Lib\+::\+Chassis\+State}} \{ \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763}{Holonomic\+Lib\+::\+Chassis\+State\+::\+P\+A\+T\+H\+I\+NG}}, 
+\mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3}{Holonomic\+Lib\+::\+Chassis\+State\+::\+T\+R\+A\+N\+S\+L\+A\+T\+I\+NG}}, 
+\mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaa5daf7f2ebbba4975d61dab1c40188c7}{Holonomic\+Lib\+::\+Chassis\+State\+::\+I\+D\+LE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for the different Chassis states P\+A\+T\+H\+I\+NG -\/ The robot is following a path T\+R\+A\+N\+S\+L\+A\+T\+I\+NG -\/ The robot is translating via P\+ID I\+D\+LE -\/ No robot movement. \end{DoxyCompactList}\end{DoxyCompactItemize}

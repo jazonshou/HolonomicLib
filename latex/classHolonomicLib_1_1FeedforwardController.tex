@@ -1,0 +1,155 @@
+\hypertarget{classHolonomicLib_1_1FeedforwardController}{}\doxysection{Holonomic\+Lib\+::Feedforward\+Controller Class Reference}
+\label{classHolonomicLib_1_1FeedforwardController}\index{HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}}
+
+
+FF controller class.  
+
+
+
+
+{\ttfamily \#include $<$Feedforward\+Controller.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHolonomicLib_1_1FeedforwardController_a74b4c8e3c0e4a480072484d21a05da6f}{Feedforward\+Controller}} (double ikV)
+\begin{DoxyCompactList}\small\item\em Construct a new Feedforward Controller object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHolonomicLib_1_1FeedforwardController_a8e929ca036539f686e440047f1289a23}{Feedforward\+Controller}} (double ikV, double ikA)
+\begin{DoxyCompactList}\small\item\em Construct a new Feedforward Controller object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHolonomicLib_1_1FeedforwardController_ab6805ea869555e373c38f6b14a4671f2}{Feedforward\+Controller}} (\mbox{\hyperlink{structHolonomicLib_1_1FeedforwardGains}{Feedforward\+Gains}} \&gains)
+\begin{DoxyCompactList}\small\item\em Construct a new Feedforward Controller object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHolonomicLib_1_1FeedforwardController_aa40ea1eaf0bfcbbc3ec271d08f2be542}{set\+Gain}} (double ikV, double ikA)
+\begin{DoxyCompactList}\small\item\em Sets gains. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classHolonomicLib_1_1FeedforwardController_a0766ef6466040f1767744f5b4f78ef3b}{getkA}} () const
+\begin{DoxyCompactList}\small\item\em Returns velocity gain. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classHolonomicLib_1_1FeedforwardController_a26282c11b4a218fc9568466f33b3eb2d}{getkV}} () const
+\begin{DoxyCompactList}\small\item\em Returns acceleration gain. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classHolonomicLib_1_1FeedforwardController_af0c7b1dfbd1d748670a984bec7b89592}{step}} (double vel, double accel)
+\begin{DoxyCompactList}\small\item\em Updates the controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+FF controller class. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHolonomicLib_1_1FeedforwardController_a74b4c8e3c0e4a480072484d21a05da6f}\label{classHolonomicLib_1_1FeedforwardController_a74b4c8e3c0e4a480072484d21a05da6f}} 
+\index{HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}!FeedforwardController@{FeedforwardController}}
+\index{FeedforwardController@{FeedforwardController}!HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}}
+\doxysubsubsection{\texorpdfstring{FeedforwardController()}{FeedforwardController()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Holonomic\+Lib\+::\+Feedforward\+Controller\+::\+Feedforward\+Controller (\begin{DoxyParamCaption}\item[{double}]{ikV }\end{DoxyParamCaption})}
+
+
+
+Construct a new Feedforward Controller object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ikV} & velocity gain \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHolonomicLib_1_1FeedforwardController_a8e929ca036539f686e440047f1289a23}\label{classHolonomicLib_1_1FeedforwardController_a8e929ca036539f686e440047f1289a23}} 
+\index{HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}!FeedforwardController@{FeedforwardController}}
+\index{FeedforwardController@{FeedforwardController}!HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}}
+\doxysubsubsection{\texorpdfstring{FeedforwardController()}{FeedforwardController()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Holonomic\+Lib\+::\+Feedforward\+Controller\+::\+Feedforward\+Controller (\begin{DoxyParamCaption}\item[{double}]{ikV,  }\item[{double}]{ikA }\end{DoxyParamCaption})}
+
+
+
+Construct a new Feedforward Controller object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ikV} & velocity gain \\
+\hline
+{\em ikA} & acceleration gain \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHolonomicLib_1_1FeedforwardController_ab6805ea869555e373c38f6b14a4671f2}\label{classHolonomicLib_1_1FeedforwardController_ab6805ea869555e373c38f6b14a4671f2}} 
+\index{HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}!FeedforwardController@{FeedforwardController}}
+\index{FeedforwardController@{FeedforwardController}!HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}}
+\doxysubsubsection{\texorpdfstring{FeedforwardController()}{FeedforwardController()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Holonomic\+Lib\+::\+Feedforward\+Controller\+::\+Feedforward\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structHolonomicLib_1_1FeedforwardGains}{Feedforward\+Gains}} \&}]{gains }\end{DoxyParamCaption})}
+
+
+
+Construct a new Feedforward Controller object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gains} & velocity and acceleration gains \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHolonomicLib_1_1FeedforwardController_a0766ef6466040f1767744f5b4f78ef3b}\label{classHolonomicLib_1_1FeedforwardController_a0766ef6466040f1767744f5b4f78ef3b}} 
+\index{HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}!getkA@{getkA}}
+\index{getkA@{getkA}!HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}}
+\doxysubsubsection{\texorpdfstring{getkA()}{getkA()}}
+{\footnotesize\ttfamily double Holonomic\+Lib\+::\+Feedforward\+Controller\+::getkA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns velocity gain. 
+
+\begin{DoxyReturn}{Returns}
+velocity gain 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHolonomicLib_1_1FeedforwardController_a26282c11b4a218fc9568466f33b3eb2d}\label{classHolonomicLib_1_1FeedforwardController_a26282c11b4a218fc9568466f33b3eb2d}} 
+\index{HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}!getkV@{getkV}}
+\index{getkV@{getkV}!HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}}
+\doxysubsubsection{\texorpdfstring{getkV()}{getkV()}}
+{\footnotesize\ttfamily double Holonomic\+Lib\+::\+Feedforward\+Controller\+::getkV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns acceleration gain. 
+
+\begin{DoxyReturn}{Returns}
+acceleration gain 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHolonomicLib_1_1FeedforwardController_aa40ea1eaf0bfcbbc3ec271d08f2be542}\label{classHolonomicLib_1_1FeedforwardController_aa40ea1eaf0bfcbbc3ec271d08f2be542}} 
+\index{HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}!setGain@{setGain}}
+\index{setGain@{setGain}!HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}}
+\doxysubsubsection{\texorpdfstring{setGain()}{setGain()}}
+{\footnotesize\ttfamily void Holonomic\+Lib\+::\+Feedforward\+Controller\+::set\+Gain (\begin{DoxyParamCaption}\item[{double}]{ikV,  }\item[{double}]{ikA }\end{DoxyParamCaption})}
+
+
+
+Sets gains. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ikV} & velocity gain \\
+\hline
+{\em ikA} & acceleration gain \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHolonomicLib_1_1FeedforwardController_af0c7b1dfbd1d748670a984bec7b89592}\label{classHolonomicLib_1_1FeedforwardController_af0c7b1dfbd1d748670a984bec7b89592}} 
+\index{HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}!step@{step}}
+\index{step@{step}!HolonomicLib::FeedforwardController@{HolonomicLib::FeedforwardController}}
+\doxysubsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily double Holonomic\+Lib\+::\+Feedforward\+Controller\+::step (\begin{DoxyParamCaption}\item[{double}]{vel,  }\item[{double}]{accel }\end{DoxyParamCaption})}
+
+
+
+Updates the controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & desired velocity \\
+\hline
+{\em accel} & desired acceleration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+output power based on controller 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Holonomic\+Lib/\mbox{\hyperlink{FeedforwardController_8hpp}{Feedforward\+Controller.\+hpp}}\item 
+src/\+Holonomic\+Lib/\mbox{\hyperlink{FeedforwardController_8cpp}{Feedforward\+Controller.\+cpp}}\end{DoxyCompactItemize}

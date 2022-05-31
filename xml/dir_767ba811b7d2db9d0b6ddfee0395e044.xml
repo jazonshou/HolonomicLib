@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_767ba811b7d2db9d0b6ddfee0395e044" kind="dir">
+    <compoundname>include/HolonomicLib</compoundname>
+    <innerfile refid="API_8hpp">API.hpp</innerfile>
+    <innerfile refid="AsyncHolonomicChassisController_8hpp">AsyncHolonomicChassisController.hpp</innerfile>
+    <innerfile refid="ExpandedXDriveModel_8hpp">ExpandedXDriveModel.hpp</innerfile>
+    <innerfile refid="FeedforwardController_8hpp">FeedforwardController.hpp</innerfile>
+    <innerfile refid="HolonomicWheelSpeeds_8hpp">HolonomicWheelSpeeds.hpp</innerfile>
+    <innerfile refid="Math_8hpp">Math.hpp</innerfile>
+    <innerfile refid="Pose2D_8hpp">Pose2D.hpp</innerfile>
+    <innerfile refid="StateMachine_8hpp">StateMachine.hpp</innerfile>
+    <innerfile refid="TaskWrapper_8hpp">TaskWrapper.hpp</innerfile>
+    <innerfile refid="Trajectory_8hpp">Trajectory.hpp</innerfile>
+    <innerfile refid="Units_8hpp">Units.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/HolonomicLib/"/>
+  </compounddef>
+</doxygen>

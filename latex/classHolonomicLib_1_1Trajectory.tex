@@ -1,0 +1,97 @@
+\hypertarget{classHolonomicLib_1_1Trajectory}{}\doxysection{Holonomic\+Lib\+::Trajectory Class Reference}
+\label{classHolonomicLib_1_1Trajectory}\index{HolonomicLib::Trajectory@{HolonomicLib::Trajectory}}
+
+
+Class for trajectory (vector of trajectory states)  
+
+
+
+
+{\ttfamily \#include $<$Trajectory.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHolonomicLib_1_1Trajectory_a4c5d918b8660643b6fdac317e9e6d7d0}{Trajectory}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHolonomicLib_1_1Trajectory_ab01f3d2b0be12742a5381d33e42b2c8f}{Trajectory}} (const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{structHolonomicLib_1_1TrajectoryState}{Trajectory\+State}} $>$ \&itrajectory)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structHolonomicLib_1_1TrajectoryState}{Trajectory\+State}} \mbox{\hyperlink{classHolonomicLib_1_1Trajectory_a1218f6d4c7fb44b66696800eeb156165}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns the trajectory state based on given index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classHolonomicLib_1_1Trajectory_a7cee92f600642bffc139ecd966f49681}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the size of the trajectory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for trajectory (vector of trajectory states) 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHolonomicLib_1_1Trajectory_a4c5d918b8660643b6fdac317e9e6d7d0}\label{classHolonomicLib_1_1Trajectory_a4c5d918b8660643b6fdac317e9e6d7d0}} 
+\index{HolonomicLib::Trajectory@{HolonomicLib::Trajectory}!Trajectory@{Trajectory}}
+\index{Trajectory@{Trajectory}!HolonomicLib::Trajectory@{HolonomicLib::Trajectory}}
+\doxysubsubsection{\texorpdfstring{Trajectory()}{Trajectory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Holonomic\+Lib\+::\+Trajectory\+::\+Trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new \mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}} object. 
+
+\mbox{\Hypertarget{classHolonomicLib_1_1Trajectory_ab01f3d2b0be12742a5381d33e42b2c8f}\label{classHolonomicLib_1_1Trajectory_ab01f3d2b0be12742a5381d33e42b2c8f}} 
+\index{HolonomicLib::Trajectory@{HolonomicLib::Trajectory}!Trajectory@{Trajectory}}
+\index{Trajectory@{Trajectory}!HolonomicLib::Trajectory@{HolonomicLib::Trajectory}}
+\doxysubsubsection{\texorpdfstring{Trajectory()}{Trajectory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Holonomic\+Lib\+::\+Trajectory\+::\+Trajectory (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{structHolonomicLib_1_1TrajectoryState}{Trajectory\+State}} $>$ \&}]{itrajectory }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}} object. 
+
+\mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em itrajectory} & list of trajectory states \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHolonomicLib_1_1Trajectory_a1218f6d4c7fb44b66696800eeb156165}\label{classHolonomicLib_1_1Trajectory_a1218f6d4c7fb44b66696800eeb156165}} 
+\index{HolonomicLib::Trajectory@{HolonomicLib::Trajectory}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!HolonomicLib::Trajectory@{HolonomicLib::Trajectory}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structHolonomicLib_1_1TrajectoryState}{Trajectory\+State}} Holonomic\+Lib\+::\+Trajectory\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the trajectory state based on given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the trajectory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+trajectory state at the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHolonomicLib_1_1Trajectory_a7cee92f600642bffc139ecd966f49681}\label{classHolonomicLib_1_1Trajectory_a7cee92f600642bffc139ecd966f49681}} 
+\index{HolonomicLib::Trajectory@{HolonomicLib::Trajectory}!size@{size}}
+\index{size@{size}!HolonomicLib::Trajectory@{HolonomicLib::Trajectory}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Holonomic\+Lib\+::\+Trajectory\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the size of the trajectory. 
+
+\begin{DoxyReturn}{Returns}
+size of the trajectory 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Holonomic\+Lib/\mbox{\hyperlink{Trajectory_8hpp}{Trajectory.\+hpp}}\item 
+src/\+Holonomic\+Lib/\mbox{\hyperlink{Trajectory_8cpp}{Trajectory.\+cpp}}\end{DoxyCompactItemize}

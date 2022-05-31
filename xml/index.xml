@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classHolonomicLib_1_1AsyncHolonomicChassisController" kind="class"><name>HolonomicLib::AsyncHolonomicChassisController</name>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a39298643fed60a60698cf137a433a869" kind="friend"><name>AsyncHolonomicChassisControllerBuilder</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1af3f45c6f5ab27d02c7a896e42de6bacf" kind="variable"><name>model</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a9e957edd5ba5a6b97db19e5a35da3be1" kind="variable"><name>chassis</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1af1d95cc7acd8b3c10b83ffcb18763cbf" kind="variable"><name>xController</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a6331d3e6176bbba4928397de53951587" kind="variable"><name>yController</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a35e7fb858907a0f69e5a8811180465cb" kind="variable"><name>turnController</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1ad0ac308bb0e13b1c5073331d73837c0e" kind="variable"><name>rate</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1ae926a61b5d1bb75d978914fe173f73ab" kind="variable"><name>timer</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a11d2dd008802aecd56e3a0d4b34e8369" kind="variable"><name>delayTime</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a3cc8ebdf34757bfbf44bb7f8799b466e" kind="variable"><name>trajectory</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a5a15bfa8df9ecbce31ca07ce55bbbfea" kind="variable"><name>initialPose</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1ad2bf5ee58e0866db70a82dc68a67186d" kind="variable"><name>currentOdomState</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a8ddc964faf9dd6942305e6fbb2a783c1" kind="variable"><name>currentPose</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1aacf390977de28b9a0fa2f59a977419eb" kind="variable"><name>endPose</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1ac05ed6d7299a1512b5b4d0f15fc1dc2e" kind="variable"><name>settleTolerance</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a33367b32d444678c890b2c326f0c5a9a" kind="variable"><name>timedTrajectory</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a8bbcf44d16d151ea5ea4846d745225c2" kind="variable"><name>timedTrajectoryEnabled</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1aa54abc5771999cf9d0308ee322a5ea6d" kind="variable"><name>index</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a876a5a913b687017ca4f99d44d37d1fb" kind="variable"><name>lock</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a8d7db6773963de4167e25363dfe8cd7d" kind="function"><name>AsyncHolonomicChassisController</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a7a5fbd5a7fc3b55392728563345dcb83" kind="function"><name>AsyncHolonomicChassisController</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1ac3d0b081a3f22ad6bcff417b48cec3a2" kind="function"><name>AsyncHolonomicChassisController</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1ae24362f0e83484242658d5adc7c54304" kind="function"><name>loop</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a195be649bfac66424e54a4018c62c89b" kind="function"><name>setTarget</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a2e1f4ed7cdb6a3ccfb646dce52732bf7" kind="function"><name>setTarget</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a7715f435461cbe32a3210d3e55b184d9" kind="function"><name>setTarget</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a2cbd8303b80c220e95c1a7cb72fcf78d" kind="function"><name>stop</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a0816021af47ab98099d2944712c8d35c" kind="function"><name>waitUntilSettled</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a939cb341c80737753bbc6031448e7a04" kind="function"><name>setPose</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a3d0965b11e7593e2bd83116fcf17815d" kind="function"><name>getPose</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a0577b6fa6502e975d93b0ec96458351d" kind="function"><name>isSettled</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1ae1edcd9d7d6bd7ebaef38acc0096bbb7" kind="function"><name>resetControllers</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a89c48cc246063fee066986fce0395e76" kind="function"><name>controllerFlipDisabled</name></member>
+  </compound>
+  <compound refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kind="class"><name>HolonomicLib::AsyncHolonomicChassisControllerBuilder</name>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3fdabd718ae50ab35b0490c24002c91e" kind="variable"><name>chassis</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ab7642926450d3e9f283ec22bf9716aba" kind="variable"><name>pidTranslateGains</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1adb6401088d17a02bc47d46da18f55b88" kind="variable"><name>pidTurnGains</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1abd331dc0b016ddba117be410683a278d" kind="variable"><name>ffTranslateGains</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1af4077e21a886a0dcdfb3e3777e559ed5" kind="variable"><name>settleTolerance</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a4b1ab8878ce2eb6a6de132698807ba65" kind="variable"><name>pidInit</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a05a605134f0440ec65d9ba63114ddbeb" kind="variable"><name>outputInit</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a20e0ec6814a2c7c5611ae09127b7a4e9" kind="function"><name>AsyncHolonomicChassisControllerBuilder</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3d7f66586749bc1c714921677ba1080d" kind="function"><name>~AsyncHolonomicChassisControllerBuilder</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a1310698fb52b0b241824432cb71db553" kind="function"><name>withOutput</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ae9757cff1ff7301d02a6b7ce87751986" kind="function"><name>withPIDGains</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a1f2d1aa80932b6e6ad17d17c2a7ce93e" kind="function"><name>withTolerance</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a5b6a56ec82a7def66fc20910a09a819e" kind="function"><name>build</name></member>
+  </compound>
+  <compound refid="classHolonomicLib_1_1ExpandedXDriveModel" kind="class"><name>HolonomicLib::ExpandedXDriveModel</name>
+    <member refid="classHolonomicLib_1_1ExpandedXDriveModel_1ab6b7dce7bfc491336de1631944a662ea" kind="function"><name>cartesian</name></member>
+    <member refid="classHolonomicLib_1_1ExpandedXDriveModel_1ad283446428ec63ca9afdbd05b9e44d41" kind="function"><name>polar</name></member>
+  </compound>
+  <compound refid="classHolonomicLib_1_1FeedforwardController" kind="class"><name>HolonomicLib::FeedforwardController</name>
+    <member refid="classHolonomicLib_1_1FeedforwardController_1abb52150c8fa092207e41218b32c9f7a6" kind="variable"><name>kA</name></member>
+    <member refid="classHolonomicLib_1_1FeedforwardController_1a0bd9ec1d57efc5d757de339dfed379cc" kind="variable"><name>kV</name></member>
+    <member refid="classHolonomicLib_1_1FeedforwardController_1a74b4c8e3c0e4a480072484d21a05da6f" kind="function"><name>FeedforwardController</name></member>
+    <member refid="classHolonomicLib_1_1FeedforwardController_1a8e929ca036539f686e440047f1289a23" kind="function"><name>FeedforwardController</name></member>
+    <member refid="classHolonomicLib_1_1FeedforwardController_1ab6805ea869555e373c38f6b14a4671f2" kind="function"><name>FeedforwardController</name></member>
+    <member refid="classHolonomicLib_1_1FeedforwardController_1aa40ea1eaf0bfcbbc3ec271d08f2be542" kind="function"><name>setGain</name></member>
+    <member refid="classHolonomicLib_1_1FeedforwardController_1a0766ef6466040f1767744f5b4f78ef3b" kind="function"><name>getkA</name></member>
+    <member refid="classHolonomicLib_1_1FeedforwardController_1a26282c11b4a218fc9568466f33b3eb2d" kind="function"><name>getkV</name></member>
+    <member refid="classHolonomicLib_1_1FeedforwardController_1af0c7b1dfbd1d748670a984bec7b89592" kind="function"><name>step</name></member>
+  </compound>
+  <compound refid="structHolonomicLib_1_1FeedforwardGains" kind="struct"><name>HolonomicLib::FeedforwardGains</name>
+    <member refid="structHolonomicLib_1_1FeedforwardGains_1a8212e1fd81ad3596114faf38523f5b6e" kind="variable"><name>kV</name></member>
+    <member refid="structHolonomicLib_1_1FeedforwardGains_1ac1d1101ea2782188857ef06f97f18247" kind="variable"><name>kA</name></member>
+    <member refid="structHolonomicLib_1_1FeedforwardGains_1af36cd7005a92930c7c24a40e000912ae" kind="function"><name>FeedforwardGains</name></member>
+    <member refid="structHolonomicLib_1_1FeedforwardGains_1ad3ce50f61adc9b7fe4d43d6ce4d9bf7d" kind="function"><name>FeedforwardGains</name></member>
+  </compound>
+  <compound refid="structHolonomicLib_1_1HolonomicWheelSpeeds" kind="struct"><name>HolonomicLib::HolonomicWheelSpeeds</name>
+    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a069695b5397a1a278b143e6e028b29c1" kind="variable"><name>frontLeft</name></member>
+    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1ac2d2e310dc6251c2db5781880118a8ff" kind="variable"><name>frontRight</name></member>
+    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a5c722bc28937f8fdac7d7caabe478fae" kind="variable"><name>backLeft</name></member>
+    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1acfd4883d9dc74f8f3eb0e34d07391daf" kind="variable"><name>backRight</name></member>
+    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a45dc2bf59e7a483157ed35a115627ef7" kind="function"><name>HolonomicWheelSpeeds</name></member>
+    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1ad396dd14708fd2a4f078211a56fd2892" kind="function"><name>HolonomicWheelSpeeds</name></member>
+  </compound>
+  <compound refid="structHolonomicLib_1_1Pose2D" kind="struct"><name>HolonomicLib::Pose2D</name>
+    <member refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" kind="variable"><name>x</name></member>
+    <member refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" kind="variable"><name>y</name></member>
+    <member refid="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" kind="variable"><name>theta</name></member>
+    <member refid="structHolonomicLib_1_1Pose2D_1a1a1e4b3ce6e1f8f7c12608807b7e92bd" kind="function"><name>Pose2D</name></member>
+    <member refid="structHolonomicLib_1_1Pose2D_1a92c346fc3b144f908f1f1ea274f18799" kind="function"><name>Pose2D</name></member>
+  </compound>
+  <compound refid="classHolonomicLib_1_1StateMachine" kind="class"><name>HolonomicLib::StateMachine</name>
+    <member refid="classHolonomicLib_1_1StateMachine_1a233ae568fdc07a83aac306dc1755e393" kind="variable"><name>state</name></member>
+    <member refid="classHolonomicLib_1_1StateMachine_1a4bd9da043aeb954d960cdd40ec340703" kind="variable"><name>stateLock</name></member>
+    <member refid="classHolonomicLib_1_1StateMachine_1a6f0aa72f5b506a45f1ca137ccb2a24e4" kind="function"><name>StateMachine</name></member>
+    <member refid="classHolonomicLib_1_1StateMachine_1a7b4775f3279fd7004c2d6f6e46178639" kind="function"><name>getState</name></member>
+    <member refid="classHolonomicLib_1_1StateMachine_1a9dbf72721774a28d20d5f38cc28f4016" kind="function"><name>setState</name></member>
+  </compound>
+  <compound refid="classHolonomicLib_1_1TaskWrapper" kind="class"><name>HolonomicLib::TaskWrapper</name>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1a5d511ce2504fd4494d8d57848053647e" kind="variable"><name>task</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1a7c86cdfa2cb0c99bf7169b820aa078eb" kind="function"><name>TaskWrapper</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1a251cca2526a0f4c87e60fc4e48e4a2d6" kind="function"><name>TaskWrapper</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1a09f915ceb1e5dacd86beef177b6b4e70" kind="function"><name>TaskWrapper</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1a5499e201e0a8d84717ff10ee78cbeaa4" kind="function"><name>~TaskWrapper</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1aae903bdf162e10c1af03c2907e6056bb" kind="function"><name>loop</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1a089e272b1a57bacb73fd8641d45e37ef" kind="function"><name>startTask</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1ae7e853972219642cd24ab3e67fdb6066" kind="function"><name>resumeTask</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1ac0923845cff95c58e808e584dacff2ec" kind="function"><name>pauseTask</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1a754156c423dcfb09dc4342e2833f3bef" kind="function"><name>stopTask</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1af58e45d5f1fca9352d755f5b4d5024e2" kind="function"><name>getName</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1a28e60f47edfca4d94c5484aaac72af61" kind="function"><name>trampoline</name></member>
+  </compound>
+  <compound refid="classHolonomicLib_1_1TimedTrajectory" kind="class"><name>HolonomicLib::TimedTrajectory</name>
+    <member refid="classHolonomicLib_1_1TimedTrajectory_1a35d06853387dea082a4dec6d6c4a4125" kind="variable"><name>trajectory</name></member>
+    <member refid="classHolonomicLib_1_1TimedTrajectory_1a9f97df7d5e200efd8a2a00d690cc92cf" kind="function"><name>TimedTrajectory</name></member>
+    <member refid="classHolonomicLib_1_1TimedTrajectory_1a1768fd1132e7def0a352364223ffdee8" kind="function"><name>TimedTrajectory</name></member>
+    <member refid="classHolonomicLib_1_1TimedTrajectory_1a21dff7b36c119897caa558c5951fd0bf" kind="function"><name>operator[]</name></member>
+    <member refid="classHolonomicLib_1_1TimedTrajectory_1aff4b60640c1e19add4d1752dbe0e0bb5" kind="function"><name>size</name></member>
+  </compound>
+  <compound refid="structHolonomicLib_1_1TimedTrajectoryState" kind="struct"><name>HolonomicLib::TimedTrajectoryState</name>
+    <member refid="structHolonomicLib_1_1TimedTrajectoryState_1ae2fb2ee9682d40f4f29759cd5ceb0d97" kind="variable"><name>time</name></member>
+    <member refid="structHolonomicLib_1_1TimedTrajectoryState_1a6575f178b64ccb9b2df3042488bf2cac" kind="variable"><name>x</name></member>
+    <member refid="structHolonomicLib_1_1TimedTrajectoryState_1a979bff025a498f73b7045ca03cef9e3d" kind="variable"><name>y</name></member>
+    <member refid="structHolonomicLib_1_1TimedTrajectoryState_1aaed13eb81625320ca9f6e65279456614" kind="variable"><name>theta</name></member>
+    <member refid="structHolonomicLib_1_1TimedTrajectoryState_1a3331d67760d74d75ebf01d57be544dcb" kind="function"><name>TimedTrajectoryState</name></member>
+    <member refid="structHolonomicLib_1_1TimedTrajectoryState_1a2e6dc77b4d9fa2629581c52a211b8c21" kind="function"><name>TimedTrajectoryState</name></member>
+  </compound>
+  <compound refid="classHolonomicLib_1_1Trajectory" kind="class"><name>HolonomicLib::Trajectory</name>
+    <member refid="classHolonomicLib_1_1Trajectory_1a496c0b6f5d52a2a8bd06b98b26988493" kind="variable"><name>trajectory</name></member>
+    <member refid="classHolonomicLib_1_1Trajectory_1a4c5d918b8660643b6fdac317e9e6d7d0" kind="function"><name>Trajectory</name></member>
+    <member refid="classHolonomicLib_1_1Trajectory_1ab01f3d2b0be12742a5381d33e42b2c8f" kind="function"><name>Trajectory</name></member>
+    <member refid="classHolonomicLib_1_1Trajectory_1a1218f6d4c7fb44b66696800eeb156165" kind="function"><name>operator[]</name></member>
+    <member refid="classHolonomicLib_1_1Trajectory_1a7cee92f600642bffc139ecd966f49681" kind="function"><name>size</name></member>
+  </compound>
+  <compound refid="structHolonomicLib_1_1TrajectoryState" kind="struct"><name>HolonomicLib::TrajectoryState</name>
+    <member refid="structHolonomicLib_1_1TrajectoryState_1afc62ff7bc58e49b33cd5ffc30725f2a9" kind="variable"><name>x</name></member>
+    <member refid="structHolonomicLib_1_1TrajectoryState_1a1a5db51ff9cc12b334dd3b49b91bf6b2" kind="variable"><name>y</name></member>
+    <member refid="structHolonomicLib_1_1TrajectoryState_1a1c97729ca4d202938ab3efb39264b47d" kind="variable"><name>theta</name></member>
+    <member refid="structHolonomicLib_1_1TrajectoryState_1a8e9786d738c836b0b9bfa451560a4b3a" kind="function"><name>TrajectoryState</name></member>
+    <member refid="structHolonomicLib_1_1TrajectoryState_1a845fcea5d1d8804fb03dc4cdfb0a973e" kind="function"><name>TrajectoryState</name></member>
+  </compound>
+  <compound refid="namespaceHolonomicLib" kind="namespace"><name>HolonomicLib</name>
+    <member refid="namespaceHolonomicLib_1afed0dfbd97b270c1dc11f0b884f915bd" kind="enum"><name>ChassisState</name></member>
+    <member refid="namespaceHolonomicLib_1afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763" kind="enumvalue"><name>PATHING</name></member>
+    <member refid="namespaceHolonomicLib_1afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3" kind="enumvalue"><name>TRANSLATING</name></member>
+    <member refid="namespaceHolonomicLib_1afed0dfbd97b270c1dc11f0b884f915bdaa5daf7f2ebbba4975d61dab1c40188c7" kind="enumvalue"><name>IDLE</name></member>
+  </compound>
+  <compound refid="namespaceHolonomicLib_1_1Math" kind="namespace"><name>HolonomicLib::Math</name>
+    <member refid="namespaceHolonomicLib_1_1Math_1a0fb99343562aa2641143d2dc2b142a2e" kind="function"><name>rescale180</name></member>
+    <member refid="namespaceHolonomicLib_1_1Math_1ab5fb5c02303211011c1cf5988960f006" kind="function"><name>rescale180</name></member>
+  </compound>
+  <compound refid="namespaceokapi" kind="namespace"><name>okapi</name>
+    <member refid="namespaceokapi_1a30f013aa551aac0ae451bd47a66eb9aa" kind="variable"><name>ftps</name></member>
+    <member refid="namespaceokapi_1a3b08571da937064af1863c3e67a035e3" kind="variable"><name>inps</name></member>
+    <member refid="namespaceokapi_1adf30f5ceb33ac8b226604addd84c1c10" kind="variable"><name>ftps2</name></member>
+    <member refid="namespaceokapi_1af974a5bd83071b61bd61d60ba770e00b" kind="function"><name>operator&quot;&quot;_ftps</name></member>
+    <member refid="namespaceokapi_1a7165d0b1f642bbfb971cecf05b55e65d" kind="function"><name>operator&quot;&quot;_ftps</name></member>
+    <member refid="namespaceokapi_1a84bc5ae52babd0fb406274f8f510a353" kind="function"><name>operator&quot;&quot;_inps</name></member>
+    <member refid="namespaceokapi_1a1ec6697a6730118f316e6bf0f85cde8f" kind="function"><name>operator&quot;&quot;_inps</name></member>
+    <member refid="namespaceokapi_1ad4bde7551a338ff4e04e21e485ba77c4" kind="function"><name>operator&quot;&quot;_ftps2</name></member>
+    <member refid="namespaceokapi_1a0edb749f3b45df9ad37b1fd6627901de" kind="function"><name>operator&quot;&quot;_ftps2</name></member>
+  </compound>
+  <compound refid="API_8hpp" kind="file"><name>API.hpp</name>
+  </compound>
+  <compound refid="AsyncHolonomicChassisController_8hpp" kind="file"><name>AsyncHolonomicChassisController.hpp</name>
+  </compound>
+  <compound refid="ExpandedXDriveModel_8hpp" kind="file"><name>ExpandedXDriveModel.hpp</name>
+  </compound>
+  <compound refid="FeedforwardController_8hpp" kind="file"><name>FeedforwardController.hpp</name>
+  </compound>
+  <compound refid="HolonomicWheelSpeeds_8hpp" kind="file"><name>HolonomicWheelSpeeds.hpp</name>
+  </compound>
+  <compound refid="Math_8hpp" kind="file"><name>Math.hpp</name>
+    <member refid="Math_8hpp_1a525335710b53cb064ca56b936120431e" kind="define"><name>_USE_MATH_DEFINES</name></member>
+  </compound>
+  <compound refid="Pose2D_8hpp" kind="file"><name>Pose2D.hpp</name>
+  </compound>
+  <compound refid="StateMachine_8hpp" kind="file"><name>StateMachine.hpp</name>
+  </compound>
+  <compound refid="TaskWrapper_8hpp" kind="file"><name>TaskWrapper.hpp</name>
+  </compound>
+  <compound refid="Trajectory_8hpp" kind="file"><name>Trajectory.hpp</name>
+  </compound>
+  <compound refid="Units_8hpp" kind="file"><name>Units.hpp</name>
+  </compound>
+  <compound refid="AsyncHolonomicChassisController_8cpp" kind="file"><name>AsyncHolonomicChassisController.cpp</name>
+  </compound>
+  <compound refid="ExpandedXDriveModel_8cpp" kind="file"><name>ExpandedXDriveModel.cpp</name>
+  </compound>
+  <compound refid="FeedforwardController_8cpp" kind="file"><name>FeedforwardController.cpp</name>
+  </compound>
+  <compound refid="HolonomicWheelSpeeds_8cpp" kind="file"><name>HolonomicWheelSpeeds.cpp</name>
+  </compound>
+  <compound refid="Math_8cpp" kind="file"><name>Math.cpp</name>
+  </compound>
+  <compound refid="Pose2D_8cpp" kind="file"><name>Pose2D.cpp</name>
+  </compound>
+  <compound refid="TaskWrapper_8cpp" kind="file"><name>TaskWrapper.cpp</name>
+  </compound>
+  <compound refid="Trajectory_8cpp" kind="file"><name>Trajectory.cpp</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a6fdf87a854d764e35055a6163e4ac9a2" kind="variable"><name>path</name></member>
+    <member refid="main_8cpp_1a3a0f89da927d907fefeb553f0d8218e5" kind="variable"><name>leftFront</name></member>
+    <member refid="main_8cpp_1a8e4548cfc3be44256bfae777fc70c79d" kind="variable"><name>rightFront</name></member>
+    <member refid="main_8cpp_1a3f88bd50df9dd04b7994cd2afe3bc79f" kind="variable"><name>leftBack</name></member>
+    <member refid="main_8cpp_1a15916928512f68450630a1c58594460b" kind="variable"><name>rightBack</name></member>
+    <member refid="main_8cpp_1aea046a8c0356a012ebd573d5dc1110bf" kind="variable"><name>leftEnc</name></member>
+    <member refid="main_8cpp_1a1d247ea5729762fbcfdf5920dd96409d" kind="variable"><name>rightEnc</name></member>
+    <member refid="main_8cpp_1a2ad763499a239efc00359e22b53870df" kind="variable"><name>midEnc</name></member>
+    <member refid="main_8cpp_1a047a89b0208974c18d5c49656240616a" kind="variable"><name>imu</name></member>
+    <member refid="main_8cpp_1a2aaa5a2ecb33ce62d94d3be910e5e156" kind="variable"><name>chassis</name></member>
+    <member refid="main_8cpp_1a447d2702c6372345291f2ff4e3c95fc1" kind="variable"><name>model</name></member>
+    <member refid="main_8cpp_1a25a40b6614565f755233080a384c35f1" kind="function"><name>initialize</name></member>
+    <member refid="main_8cpp_1a4e1a74721457de1f01d41566400fb3e5" kind="function"><name>disabled</name></member>
+    <member refid="main_8cpp_1a870462d80a8efe920f8c95ee313cb9e5" kind="function"><name>competition_initialize</name></member>
+    <member refid="main_8cpp_1a3c7ca506bbc071fa740de13805b7f376" kind="function"><name>autonomous</name></member>
+    <member refid="main_8cpp_1ac57194c628bb97b849be48d79c99c4ac" kind="function"><name>opcontrol</name></member>
+  </compound>
+  <compound refid="dir_767ba811b7d2db9d0b6ddfee0395e044" kind="dir"><name>include/HolonomicLib</name>
+  </compound>
+  <compound refid="dir_f51c6f9d76a7c473e6c96ac38054188f" kind="dir"><name>src/HolonomicLib</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

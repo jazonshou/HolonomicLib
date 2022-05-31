@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="Units_8hpp" kind="file" language="C++">
+    <compoundname>Units.hpp</compoundname>
+    <includes local="yes">okapi/api/units/QAcceleration.hpp</includes>
+    <includes local="yes">okapi/api/units/QSpeed.hpp</includes>
+    <includes local="yes">okapi/api/units/QLength.hpp</includes>
+    <includes local="yes">okapi/api/units/QTime.hpp</includes>
+    <includedby refid="API_8hpp" local="yes">include/HolonomicLib/API.hpp</includedby>
+    <includedby refid="AsyncHolonomicChassisController_8hpp" local="yes">include/HolonomicLib/AsyncHolonomicChassisController.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>okapi/api/units/QAcceleration.hpp</label>
+      </node>
+      <node id="3">
+        <label>okapi/api/units/QSpeed.hpp</label>
+      </node>
+      <node id="4">
+        <label>okapi/api/units/QLength.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/HolonomicLib/Units.hpp</label>
+        <link refid="Units_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>okapi/api/units/QTime.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/HolonomicLib/AsyncHolonomicChassisController.hpp</label>
+        <link refid="AsyncHolonomicChassisController_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/HolonomicLib/API.hpp</label>
+        <link refid="API_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/HolonomicLib/Units.hpp</label>
+        <link refid="Units_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/HolonomicLib/AsyncHolonomicChassisController.cpp</label>
+        <link refid="AsyncHolonomicChassisController_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceokapi">okapi</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QAcceleration.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QSpeed.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QLength.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QTime.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespaceokapi" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceokapi" kindref="compound">okapi</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespaceokapi_1a30f013aa551aac0ae451bd47a66eb9aa" refkind="member"><highlight class="normal">constexpr<sp/>QSpeed<sp/><ref refid="namespaceokapi_1a30f013aa551aac0ae451bd47a66eb9aa" kindref="member">ftps</ref><sp/>=<sp/>foot<sp/>/<sp/>second;</highlight></codeline>
+<codeline lineno="10" refid="namespaceokapi_1a3b08571da937064af1863c3e67a035e3" refkind="member"><highlight class="normal">constexpr<sp/>QSpeed<sp/><ref refid="namespaceokapi_1a3b08571da937064af1863c3e67a035e3" kindref="member">inps</ref><sp/>=<sp/>inch<sp/>/<sp/>second;</highlight></codeline>
+<codeline lineno="11" refid="namespaceokapi_1adf30f5ceb33ac8b226604addd84c1c10" refkind="member"><highlight class="normal">constexpr<sp/>QAcceleration<sp/><ref refid="namespaceokapi_1adf30f5ceb33ac8b226604addd84c1c10" kindref="member">ftps2</ref><sp/>=<sp/>foot<sp/>/<sp/>(second<sp/>*<sp/>second);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="namespaceokapi_1af974a5bd83071b61bd61d60ba770e00b" refkind="member"><highlight class="normal">constexpr<sp/>QSpeed<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>_ftps(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(x)*<ref refid="namespaceokapi_1a30f013aa551aac0ae451bd47a66eb9aa" kindref="member">ftps</ref>;<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16" refid="namespaceokapi_1a7165d0b1f642bbfb971cecf05b55e65d" refkind="member"><highlight class="normal">constexpr<sp/>QSpeed<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>_ftps(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(x)*<ref refid="namespaceokapi_1a30f013aa551aac0ae451bd47a66eb9aa" kindref="member">ftps</ref>;<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19" refid="namespaceokapi_1a84bc5ae52babd0fb406274f8f510a353" refkind="member"><highlight class="normal">constexpr<sp/>QSpeed<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>_inps(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(x)*<ref refid="namespaceokapi_1a3b08571da937064af1863c3e67a035e3" kindref="member">inps</ref>;<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22" refid="namespaceokapi_1a1ec6697a6730118f316e6bf0f85cde8f" refkind="member"><highlight class="normal">constexpr<sp/>QSpeed<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>_inps(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(x)*<ref refid="namespaceokapi_1a3b08571da937064af1863c3e67a035e3" kindref="member">inps</ref>;<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25" refid="namespaceokapi_1ad4bde7551a338ff4e04e21e485ba77c4" refkind="member"><highlight class="normal">constexpr<sp/>QAcceleration<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>_ftps2(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(x)*<ref refid="namespaceokapi_1adf30f5ceb33ac8b226604addd84c1c10" kindref="member">ftps2</ref>;<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28" refid="namespaceokapi_1a0edb749f3b45df9ad37b1fd6627901de" refkind="member"><highlight class="normal">constexpr<sp/>QAcceleration<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>_ftps2(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(x)*<ref refid="namespaceokapi_1adf30f5ceb33ac8b226604addd84c1c10" kindref="member">ftps2</ref>;<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/HolonomicLib/Units.hpp"/>
+  </compounddef>
+</doxygen>

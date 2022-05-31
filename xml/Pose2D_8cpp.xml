@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="Pose2D_8cpp" kind="file" language="C++">
+    <compoundname>Pose2D.cpp</compoundname>
+    <includes refid="Pose2D_8hpp" local="yes">Pose2D.hpp</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>okapi/api/units/QAngle.hpp</label>
+      </node>
+      <node id="3">
+        <label>okapi/api/units/QLength.hpp</label>
+      </node>
+      <node id="1">
+        <label>src/HolonomicLib/Pose2D.cpp</label>
+        <link refid="Pose2D_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Pose2D.hpp</label>
+        <link refid="Pose2D_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceHolonomicLib">HolonomicLib</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Pose2D_8hpp" kindref="compound">Pose2D.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHolonomicLib" kindref="compound">HolonomicLib</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><ref refid="structHolonomicLib_1_1Pose2D_1a1a1e4b3ce6e1f8f7c12608807b7e92bd" kindref="member">Pose2D::Pose2D</ref>(okapi::QLength<sp/>ix,<sp/>okapi::QLength<sp/>iy,<sp/>okapi::QAngle<sp/>itheta)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" kindref="member">x</ref><sp/>=<sp/>ix;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" kindref="member">y</ref><sp/>=<sp/>iy;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" kindref="member">theta</ref><sp/>=<sp/>itheta;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/HolonomicLib/Pose2D.cpp"/>
+  </compounddef>
+</doxygen>

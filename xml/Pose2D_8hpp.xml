@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="Pose2D_8hpp" kind="file" language="C++">
+    <compoundname>Pose2D.hpp</compoundname>
+    <includes local="yes">okapi/api/units/QLength.hpp</includes>
+    <includes local="yes">okapi/api/units/QAngle.hpp</includes>
+    <includedby refid="API_8hpp" local="yes">include/HolonomicLib/API.hpp</includedby>
+    <includedby refid="AsyncHolonomicChassisController_8hpp" local="yes">include/HolonomicLib/AsyncHolonomicChassisController.hpp</includedby>
+    <includedby refid="Pose2D_8cpp" local="yes">src/HolonomicLib/Pose2D.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>okapi/api/units/QAngle.hpp</label>
+      </node>
+      <node id="2">
+        <label>okapi/api/units/QLength.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/HolonomicLib/Pose2D.hpp</label>
+        <link refid="Pose2D_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/HolonomicLib/AsyncHolonomicChassisController.hpp</label>
+        <link refid="AsyncHolonomicChassisController_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/HolonomicLib/API.hpp</label>
+        <link refid="API_8hpp"/>
+      </node>
+      <node id="4">
+        <label>src/HolonomicLib/AsyncHolonomicChassisController.cpp</label>
+        <link refid="AsyncHolonomicChassisController_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/HolonomicLib/Pose2D.cpp</label>
+        <link refid="Pose2D_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/HolonomicLib/Pose2D.hpp</label>
+        <link refid="Pose2D_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structHolonomicLib_1_1Pose2D" prot="public">HolonomicLib::Pose2D</innerclass>
+    <innernamespace refid="namespaceHolonomicLib">HolonomicLib</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QLength.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QAngle.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHolonomicLib" kindref="compound">HolonomicLib</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="structHolonomicLib_1_1Pose2D" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structHolonomicLib_1_1Pose2D" kindref="compound">Pose2D</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>okapi::QLength<sp/><ref refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" kindref="member">x</ref>,<sp/><ref refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="14" refid="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>okapi::QAngle<sp/><ref refid="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" kindref="member">theta</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a1a1e4b3ce6e1f8f7c12608807b7e92bd" kindref="member">Pose2D</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a1a1e4b3ce6e1f8f7c12608807b7e92bd" kindref="member">Pose2D</ref>(okapi::QLength<sp/>ix,<sp/>okapi::QLength<sp/>iy,<sp/>okapi::QAngle<sp/>itheta);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/HolonomicLib/Pose2D.hpp"/>
+  </compounddef>
+</doxygen>

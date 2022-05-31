@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="TaskWrapper_8hpp" kind="file" language="C++">
+    <compoundname>TaskWrapper.hpp</compoundname>
+    <includes local="yes">pros/rtos.hpp</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="API_8hpp" local="yes">include/HolonomicLib/API.hpp</includedby>
+    <includedby refid="AsyncHolonomicChassisController_8hpp" local="yes">include/HolonomicLib/AsyncHolonomicChassisController.hpp</includedby>
+    <includedby refid="TaskWrapper_8cpp" local="yes">src/HolonomicLib/TaskWrapper.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>pros/rtos.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/HolonomicLib/TaskWrapper.hpp</label>
+        <link refid="TaskWrapper_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/HolonomicLib/AsyncHolonomicChassisController.hpp</label>
+        <link refid="AsyncHolonomicChassisController_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/HolonomicLib/API.hpp</label>
+        <link refid="API_8hpp"/>
+      </node>
+      <node id="4">
+        <label>src/HolonomicLib/AsyncHolonomicChassisController.cpp</label>
+        <link refid="AsyncHolonomicChassisController_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/HolonomicLib/TaskWrapper.cpp</label>
+        <link refid="TaskWrapper_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/HolonomicLib/TaskWrapper.hpp</label>
+        <link refid="TaskWrapper_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classHolonomicLib_1_1TaskWrapper" prot="public">HolonomicLib::TaskWrapper</innerclass>
+    <innernamespace refid="namespaceHolonomicLib">HolonomicLib</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/rtos.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHolonomicLib" kindref="compound">HolonomicLib</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classHolonomicLib_1_1TaskWrapper" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classHolonomicLib_1_1TaskWrapper" kindref="compound">TaskWrapper</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a7c86cdfa2cb0c99bf7169b820aa078eb" kindref="member">TaskWrapper</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a7c86cdfa2cb0c99bf7169b820aa078eb" kindref="member">TaskWrapper</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper" kindref="compound">TaskWrapper</ref>&amp;<sp/>itask)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a7c86cdfa2cb0c99bf7169b820aa078eb" kindref="member">TaskWrapper</ref>(<ref refid="classHolonomicLib_1_1TaskWrapper" kindref="compound">TaskWrapper</ref>&amp;&amp;<sp/>itask)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a5499e201e0a8d84717ff10ee78cbeaa4" kindref="member">~TaskWrapper</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1aae903bdf162e10c1af03c2907e6056bb" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a089e272b1a57bacb73fd8641d45e37ef" kindref="member">startTask</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/>iname<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TaskWrapper&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1ae7e853972219642cd24ab3e67fdb6066" kindref="member">resumeTask</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1ac0923845cff95c58e808e584dacff2ec" kindref="member">pauseTask</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a754156c423dcfb09dc4342e2833f3bef" kindref="member">stopTask</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1af58e45d5f1fca9352d755f5b4d5024e2" kindref="member">getName</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>trampoline(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>iparam);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;pros::Task&gt;<sp/>task<sp/>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/HolonomicLib/TaskWrapper.hpp"/>
+  </compounddef>
+</doxygen>

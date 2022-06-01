@@ -70,7 +70,16 @@ class AsyncHolonomicChassisController : public TaskWrapper,
                                     const Pose2D &isettleTolerance,
                                     const okapi::TimeUtil& itimeUtil);
 
-    // imagine this doesn't exist
+    /**
+     * @brief Imagine this whole thing just doesn't exist...
+     *        in other words, don't use this constructor, im honestly just too lazy to delete it
+     * 
+     * @param ichassis dont
+     * @param itranslateGains use 
+     * @param iturnGains this
+     * @param itranslateFFGains please
+     * @param itimeUtil thanks
+     */
     AsyncHolonomicChassisController(std::shared_ptr<okapi::OdomChassisController> ichassis,
                                     const okapi::IterativePosPIDController::Gains &itranslateGains,
                                     const okapi::IterativePosPIDController::Gains &iturnGains,
@@ -89,13 +98,19 @@ class AsyncHolonomicChassisController : public TaskWrapper,
     void setTarget(Pose2D targetPose, bool waitUntilSettled = false);
 
     /**
-     * @brief Sets desired controller target (Trajectory)
+     * @brief Sets desired controller target (Trajectory - used with old Pathplanner)
      * 
      * @param itrajectory trajectory to be followed
      * @param waitUntilSettled if true, the controller will delay until the chassis has settled
      */
     void setTarget(Trajectory &itrajectory, bool waitUntilSettled = false);
 
+    /**
+     * @brief Sets desired controller target (TimedTrajectory - used with new Pathplanner)
+     * 
+     * @param itrajectory trajectory to be followed
+     * @param waitUntilSettled if true, the controller will delay until the chassis has settled
+     */
     void setTarget(TimedTrajectory &itrajectory, bool waitUntilSettled = false);
 
     /**

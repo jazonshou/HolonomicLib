@@ -13,7 +13,7 @@ x = 0.0
 y = 0.0
 prev_time = 0.0
 
-out = 'Trajectory ' + path_name + ' = {\n'
+out = 'TimedTrajectory ' + path_name + ' = {\n'
 
 for row in path:
     # x_vel = (float(row[2]) * math.cos(math.radians(float(row[8]))) * 3.28084) / (float(row[0]) - prev_time + 0.000000001)

@@ -97,9 +97,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a195be649bfac66424e54a4018c62c89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets desired controller target (Pose)  <a href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a195be649bfac66424e54a4018c62c89b">More...</a><br /></td></tr>
 <tr class="separator:a195be649bfac66424e54a4018c62c89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e1f4ed7cdb6a3ccfb646dce52732bf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a2e1f4ed7cdb6a3ccfb646dce52732bf7">setTarget</a> (<a class="el" href="classHolonomicLib_1_1Trajectory.html">Trajectory</a> &amp;itrajectory, bool <a class="el" href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a0816021af47ab98099d2944712c8d35c">waitUntilSettled</a>=false)</td></tr>
-<tr class="memdesc:a2e1f4ed7cdb6a3ccfb646dce52732bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets desired controller target (<a class="el" href="classHolonomicLib_1_1Trajectory.html" title="Class for trajectory (vector of trajectory states)">Trajectory</a>)  <a href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a2e1f4ed7cdb6a3ccfb646dce52732bf7">More...</a><br /></td></tr>
+<tr class="memdesc:a2e1f4ed7cdb6a3ccfb646dce52732bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets desired controller target (<a class="el" href="classHolonomicLib_1_1Trajectory.html" title="Class for trajectory (vector of trajectory states)">Trajectory</a> - used with old Pathplanner)  <a href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a2e1f4ed7cdb6a3ccfb646dce52732bf7">More...</a><br /></td></tr>
 <tr class="separator:a2e1f4ed7cdb6a3ccfb646dce52732bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7715f435461cbe32a3210d3e55b184d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a7715f435461cbe32a3210d3e55b184d9">setTarget</a> (<a class="el" href="classHolonomicLib_1_1TimedTrajectory.html">TimedTrajectory</a> &amp;itrajectory, bool <a class="el" href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a0816021af47ab98099d2944712c8d35c">waitUntilSettled</a>=false)</td></tr>
+<tr class="memdesc:a7715f435461cbe32a3210d3e55b184d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets desired controller target (<a class="el" href="classHolonomicLib_1_1TimedTrajectory.html">TimedTrajectory</a> - used with new Pathplanner)  <a href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a7715f435461cbe32a3210d3e55b184d9">More...</a><br /></td></tr>
 <tr class="separator:a7715f435461cbe32a3210d3e55b184d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cbd8303b80c220e95c1a7cb72fcf78d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a2cbd8303b80c220e95c1a7cb72fcf78d">stop</a> ()</td></tr>
 <tr class="memdesc:a2cbd8303b80c220e95c1a7cb72fcf78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops chassis.  <a href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a2cbd8303b80c220e95c1a7cb72fcf78d">More...</a><br /></td></tr>
@@ -150,6 +151,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a7a5fbd5a7fc3b55392728563345dcb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Async Holonomic Chassis Controller object.  <a href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#a7a5fbd5a7fc3b55392728563345dcb83">More...</a><br /></td></tr>
 <tr class="separator:a7a5fbd5a7fc3b55392728563345dcb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3d0b081a3f22ad6bcff417b48cec3a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#ac3d0b081a3f22ad6bcff417b48cec3a2">AsyncHolonomicChassisController</a> (std::shared_ptr&lt; okapi::OdomChassisController &gt; ichassis, const okapi::IterativePosPIDController::Gains &amp;itranslateGains, const okapi::IterativePosPIDController::Gains &amp;iturnGains, const <a class="el" href="structHolonomicLib_1_1FeedforwardGains.html">FeedforwardGains</a> &amp;itranslateFFGains, const okapi::TimeUtil &amp;itimeUtil)</td></tr>
+<tr class="memdesc:ac3d0b081a3f22ad6bcff417b48cec3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imagine this whole thing just doesn't exist...  <a href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#ac3d0b081a3f22ad6bcff417b48cec3a2">More...</a><br /></td></tr>
 <tr class="separator:ac3d0b081a3f22ad6bcff417b48cec3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae24362f0e83484242658d5adc7c54304"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#ae24362f0e83484242658d5adc7c54304">loop</a> () override</td></tr>
 <tr class="memdesc:ae24362f0e83484242658d5adc7c54304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this function to implement a custom task loop.  <a href="classHolonomicLib_1_1AsyncHolonomicChassisController.html#ae24362f0e83484242658d5adc7c54304">More...</a><br /></td></tr>
@@ -386,6 +388,19 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Imagine this whole thing just doesn't exist... </p>
+<p>in other words, don't use this constructor, im honestly just too lazy to delete it</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ichassis</td><td>dont </td></tr>
+    <tr><td class="paramname">itranslateGains</td><td>use </td></tr>
+    <tr><td class="paramname">iturnGains</td><td>this </td></tr>
+    <tr><td class="paramname">itranslateFFGains</td><td>please </td></tr>
+    <tr><td class="paramname">itimeUtil</td><td>thanks </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -548,6 +563,15 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets desired controller target (<a class="el" href="classHolonomicLib_1_1TimedTrajectory.html">TimedTrajectory</a> - used with new Pathplanner) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">itrajectory</td><td>trajectory to be followed </td></tr>
+    <tr><td class="paramname">waitUntilSettled</td><td>if true, the controller will delay until the chassis has settled </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a2e1f4ed7cdb6a3ccfb646dce52732bf7"></a>
@@ -576,7 +600,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets desired controller target (<a class="el" href="classHolonomicLib_1_1Trajectory.html" title="Class for trajectory (vector of trajectory states)">Trajectory</a>) </p>
+<p>Sets desired controller target (<a class="el" href="classHolonomicLib_1_1Trajectory.html" title="Class for trajectory (vector of trajectory states)">Trajectory</a> - used with old Pathplanner) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">itrajectory</td><td>trajectory to be followed </td></tr>

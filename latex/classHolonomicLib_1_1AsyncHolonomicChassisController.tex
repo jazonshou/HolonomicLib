@@ -16,9 +16,9 @@ Inheritance diagram for Holonomic\+Lib\+::Async\+Holonomic\+Chassis\+Controller\
 void \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a195be649bfac66424e54a4018c62c89b}{set\+Target}} (\mbox{\hyperlink{structHolonomicLib_1_1Pose2D}{Pose2D}} target\+Pose, bool \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a0816021af47ab98099d2944712c8d35c}{wait\+Until\+Settled}}=false)
 \begin{DoxyCompactList}\small\item\em Sets desired controller target (Pose) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a2e1f4ed7cdb6a3ccfb646dce52732bf7}{set\+Target}} (\mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}} \&itrajectory, bool \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a0816021af47ab98099d2944712c8d35c}{wait\+Until\+Settled}}=false)
-\begin{DoxyCompactList}\small\item\em Sets desired controller target (\mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}}) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sets desired controller target (\mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}} -\/ used with old Pathplanner) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a7715f435461cbe32a3210d3e55b184d9}{set\+Target}} (\mbox{\hyperlink{classHolonomicLib_1_1TimedTrajectory}{Timed\+Trajectory}} \&itrajectory, bool \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a0816021af47ab98099d2944712c8d35c}{wait\+Until\+Settled}}=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets desired controller target (\mbox{\hyperlink{classHolonomicLib_1_1TimedTrajectory}{Timed\+Trajectory}} -\/ used with new Pathplanner) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a2cbd8303b80c220e95c1a7cb72fcf78d}{stop}} ()
 \begin{DoxyCompactList}\small\item\em Stops chassis. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a0816021af47ab98099d2944712c8d35c}{wait\+Until\+Settled}} ()
@@ -37,7 +37,7 @@ bool \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a0577
 \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_a7a5fbd5a7fc3b55392728563345dcb83}{Async\+Holonomic\+Chassis\+Controller}} (std\+::shared\+\_\+ptr$<$ okapi\+::\+Odom\+Chassis\+Controller $>$ ichassis, const okapi\+::\+Iterative\+Pos\+P\+I\+D\+Controller\+::\+Gains \&itranslate\+Gains, const okapi\+::\+Iterative\+Pos\+P\+I\+D\+Controller\+::\+Gains \&iturn\+Gains, const \mbox{\hyperlink{structHolonomicLib_1_1Pose2D}{Pose2D}} \&isettle\+Tolerance, const okapi\+::\+Time\+Util \&itime\+Util)
 \begin{DoxyCompactList}\small\item\em Construct a new Async Holonomic Chassis Controller object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_ac3d0b081a3f22ad6bcff417b48cec3a2}{Async\+Holonomic\+Chassis\+Controller}} (std\+::shared\+\_\+ptr$<$ okapi\+::\+Odom\+Chassis\+Controller $>$ ichassis, const okapi\+::\+Iterative\+Pos\+P\+I\+D\+Controller\+::\+Gains \&itranslate\+Gains, const okapi\+::\+Iterative\+Pos\+P\+I\+D\+Controller\+::\+Gains \&iturn\+Gains, const \mbox{\hyperlink{structHolonomicLib_1_1FeedforwardGains}{Feedforward\+Gains}} \&itranslate\+F\+F\+Gains, const okapi\+::\+Time\+Util \&itime\+Util)
-\item 
+\begin{DoxyCompactList}\small\item\em Imagine this whole thing just doesn\textquotesingle{}t exist... \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHolonomicLib_1_1AsyncHolonomicChassisController_ae24362f0e83484242658d5adc7c54304}{loop}} () override
 \begin{DoxyCompactList}\small\item\em Override this function to implement a custom task loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
@@ -139,6 +139,25 @@ Construct a new Async Holonomic Chassis Controller object.
 
 
 
+Imagine this whole thing just doesn\textquotesingle{}t exist... 
+
+in other words, don\textquotesingle{}t use this constructor, im honestly just too lazy to delete it
+
+
+\begin{DoxyParams}{Parameters}
+{\em ichassis} & dont \\
+\hline
+{\em itranslate\+Gains} & use \\
+\hline
+{\em iturn\+Gains} & this \\
+\hline
+{\em itranslate\+F\+F\+Gains} & please \\
+\hline
+{\em itime\+Util} & thanks \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classHolonomicLib_1_1AsyncHolonomicChassisController_a3d0965b11e7593e2bd83116fcf17815d}\label{classHolonomicLib_1_1AsyncHolonomicChassisController_a3d0965b11e7593e2bd83116fcf17815d}} 
 \index{HolonomicLib::AsyncHolonomicChassisController@{HolonomicLib::AsyncHolonomicChassisController}!getPose@{getPose}}
@@ -218,6 +237,17 @@ Sets desired controller target (Pose)
 \doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily void Holonomic\+Lib\+::\+Async\+Holonomic\+Chassis\+Controller\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHolonomicLib_1_1TimedTrajectory}{Timed\+Trajectory}} \&}]{itrajectory,  }\item[{bool}]{wait\+Until\+Settled = {\ttfamily false} }\end{DoxyParamCaption})}
 
+
+
+Sets desired controller target (\mbox{\hyperlink{classHolonomicLib_1_1TimedTrajectory}{Timed\+Trajectory}} -\/ used with new Pathplanner) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em itrajectory} & trajectory to be followed \\
+\hline
+{\em wait\+Until\+Settled} & if true, the controller will delay until the chassis has settled \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classHolonomicLib_1_1AsyncHolonomicChassisController_a2e1f4ed7cdb6a3ccfb646dce52732bf7}\label{classHolonomicLib_1_1AsyncHolonomicChassisController_a2e1f4ed7cdb6a3ccfb646dce52732bf7}} 
 \index{HolonomicLib::AsyncHolonomicChassisController@{HolonomicLib::AsyncHolonomicChassisController}!setTarget@{setTarget}}
 \index{setTarget@{setTarget}!HolonomicLib::AsyncHolonomicChassisController@{HolonomicLib::AsyncHolonomicChassisController}}
@@ -226,7 +256,7 @@ Sets desired controller target (Pose)
 
 
 
-Sets desired controller target (\mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}}) 
+Sets desired controller target (\mbox{\hyperlink{classHolonomicLib_1_1Trajectory}{Trajectory}} -\/ used with old Pathplanner) 
 
 
 \begin{DoxyParams}{Parameters}

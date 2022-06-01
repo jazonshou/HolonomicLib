@@ -18,3 +18,4 @@ temp.errors
 # Pathplanner
 *.csv
 *.path
+Pathplanner/

@@ -196,6 +196,12 @@ class AsyncHolonomicChassisControllerBuilder {
      */
     AsyncHolonomicChassisControllerBuilder& withTolerance(const Pose2D &isettleTolerance);
     // AsyncHolonomicChassisControllerBuilder& withFFGains(const FeedforwardGains &itranslateGains);
+    
+    /**
+     * @brief Create AsyncHolonomicChassisController object
+     * 
+     * @return controller
+     */
     std::shared_ptr<AsyncHolonomicChassisController> build();
     
     private:

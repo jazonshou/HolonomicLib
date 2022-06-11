@@ -1,10 +1,7 @@
 #pragma once
 #define _USE_MATH_DEFINES
-#include "HolonomicWheelSpeeds.hpp"
 #include <utility>
 #include "okapi/api/units/QAngle.hpp"
-#include "math.h"
-
 
 namespace HolonomicLib {
 

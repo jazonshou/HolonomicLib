@@ -4,11 +4,10 @@ namespace HolonomicLib {}
 
 using namespace HolonomicLib;
 
-#include "HolonomicLib/AsyncHolonomicChassisController.hpp"
-#include "HolonomicLib/HolonomicWheelSpeeds.hpp"
-#include "HolonomicLib/Math.hpp"
-#include "HolonomicLib/Units.hpp"
-#include "HolonomicLib/Pose2D.hpp"
-#include "HolonomicLib/TaskWrapper.hpp"
-#include "HolonomicLib/StateMachine.hpp"
-#include "HolonomicLib/Trajectory.hpp"
+#include "HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp"
+#include "HolonomicLib/Pathing/Pose2D.hpp"
+#include "HolonomicLib/Pathing/Trajectory.hpp"
+#include "HolonomicLib/Utility/Math.hpp"
+#include "HolonomicLib/Utility/Units.hpp"
+#include "HolonomicLib/Utility/TaskWrapper.hpp"
+#include "HolonomicLib/Utility/StateMachine.hpp"

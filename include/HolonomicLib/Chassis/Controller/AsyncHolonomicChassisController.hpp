@@ -1,25 +1,19 @@
 #pragma once
+#include <iostream>
+
 #include "okapi/api/chassis/controller/odomChassisController.hpp"
 #include "okapi/api/chassis/model/xDriveModel.hpp"
-#include "okapi/api/chassis/controller/chassisController.hpp"
 #include "okapi/api/control/iterative/iterativePosPidController.hpp"
 #include "okapi/api/util/timeUtil.hpp"
 #include "okapi/impl/util/timeUtilFactory.hpp"
 #include "okapi/api/device/motor/abstractMotor.hpp"
-#include "okapi/api/units/QAngle.hpp"
-#include "okapi/api/units/QLength.hpp"
-#include "okapi/api/units/QTime.hpp"
-#include "okapi/api/units/QSpeed.hpp"
 
-#include <iostream>
-
-#include "StateMachine.hpp"
-#include "TaskWrapper.hpp"
-#include "Pose2D.hpp"
-#include "HolonomicWheelSpeeds.hpp"
-#include "Math.hpp"
-#include "Trajectory.hpp"
-#include "Units.hpp"
+#include "HolonomicLib/Utility/Units.hpp"
+#include "HolonomicLib/Utility/Math.hpp"
+#include "HolonomicLib/Utility/StateMachine.hpp"
+#include "HolonomicLib/Utility/TaskWrapper.hpp"
+#include "HolonomicLib/Pathing/Pose2D.hpp"
+#include "HolonomicLib/Pathing/Trajectory.hpp"
 
 namespace HolonomicLib {
 

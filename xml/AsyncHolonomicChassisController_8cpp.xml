@@ -4,6 +4,9 @@
     <compoundname>AsyncHolonomicChassisController.cpp</compoundname>
     <includes refid="AsyncHolonomicChassisController_8hpp" local="yes">AsyncHolonomicChassisController.hpp</includes>
     <incdepgraph>
+      <node id="20">
+        <label>HolonomicWheelSpeeds.hpp</label>
+      </node>
       <node id="28">
         <label>okapi/api/units/QAcceleration.hpp</label>
       </node>
@@ -110,10 +113,6 @@
       </node>
       <node id="26">
         <label>vector</label>
-      </node>
-      <node id="20">
-        <label>HolonomicWheelSpeeds.hpp</label>
-        <link refid="HolonomicWheelSpeeds_8hpp"/>
       </node>
       <node id="12">
         <label>okapi/api/units/QTime.hpp</label>

@@ -4,7 +4,6 @@
     <compoundname>HolonomicLib</compoundname>
     <innerclass refid="classHolonomicLib_1_1AsyncHolonomicChassisController" prot="public">HolonomicLib::AsyncHolonomicChassisController</innerclass>
     <innerclass refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" prot="public">HolonomicLib::AsyncHolonomicChassisControllerBuilder</innerclass>
-    <innerclass refid="structHolonomicLib_1_1HolonomicWheelSpeeds" prot="public">HolonomicLib::HolonomicWheelSpeeds</innerclass>
     <innerclass refid="structHolonomicLib_1_1Pose2D" prot="public">HolonomicLib::Pose2D</innerclass>
     <innerclass refid="classHolonomicLib_1_1StateMachine" prot="public">HolonomicLib::StateMachine</innerclass>
     <innerclass refid="classHolonomicLib_1_1TaskWrapper" prot="public">HolonomicLib::TaskWrapper</innerclass>

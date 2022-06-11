@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pausetask_150',['pauseTask',['../classHolonomicLib_1_1TaskWrapper.html#ac0923845cff95c58e808e584dacff2ec',1,'HolonomicLib::TaskWrapper']]],
-  ['pose2d_151',['Pose2D',['../structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd',1,'HolonomicLib::Pose2D::Pose2D()=default'],['../structHolonomicLib_1_1Pose2D.html#a92c346fc3b144f908f1f1ea274f18799',1,'HolonomicLib::Pose2D::Pose2D(okapi::QLength ix, okapi::QLength iy, okapi::QAngle itheta)']]]
+  ['rescale180_141',['rescale180',['../namespaceHolonomicLib_1_1Math.html#a0fb99343562aa2641143d2dc2b142a2e',1,'HolonomicLib::Math::rescale180(okapi::QAngle angle)'],['../namespaceHolonomicLib_1_1Math.html#ab5fb5c02303211011c1cf5988960f006',1,'HolonomicLib::Math::rescale180(double angle)']]],
+  ['resumetask_142',['resumeTask',['../classHolonomicLib_1_1TaskWrapper.html#ae7e853972219642cd24ab3e67fdb6066',1,'HolonomicLib::TaskWrapper']]]
 ];

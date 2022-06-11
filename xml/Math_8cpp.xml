@@ -5,6 +5,9 @@
     <includes refid="Math_8hpp" local="yes">Math.hpp</includes>
     <includes local="no">algorithm</includes>
     <incdepgraph>
+      <node id="3">
+        <label>HolonomicWheelSpeeds.hpp</label>
+      </node>
       <node id="5">
         <label>okapi/api/units/QAngle.hpp</label>
       </node>
@@ -27,10 +30,6 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>HolonomicWheelSpeeds.hpp</label>
-        <link refid="HolonomicWheelSpeeds_8hpp"/>
       </node>
       <node id="4">
         <label>utility</label>

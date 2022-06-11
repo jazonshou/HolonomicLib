@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['waituntilsettled_167',['waitUntilSettled',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a0816021af47ab98099d2944712c8d35c',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['withoutput_168',['withOutput',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#a1310698fb52b0b241824432cb71db553',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
-  ['withpidgains_169',['withPIDGains',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#ae9757cff1ff7301d02a6b7ce87751986',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
-  ['withtolerance_170',['withTolerance',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#a1f2d1aa80932b6e6ad17d17c2a7ce93e',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]]
+  ['_7easyncholonomicchassiscontrollerbuilder_160',['~AsyncHolonomicChassisControllerBuilder',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#a3d7f66586749bc1c714921677ba1080d',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
+  ['_7etaskwrapper_161',['~TaskWrapper',['../classHolonomicLib_1_1TaskWrapper.html#a5499e201e0a8d84717ff10ee78cbeaa4',1,'HolonomicLib::TaskWrapper']]]
 ];

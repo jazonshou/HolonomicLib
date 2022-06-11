@@ -49,14 +49,6 @@
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a1f2d1aa80932b6e6ad17d17c2a7ce93e" kind="function"><name>withTolerance</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a5b6a56ec82a7def66fc20910a09a819e" kind="function"><name>build</name></member>
   </compound>
-  <compound refid="structHolonomicLib_1_1HolonomicWheelSpeeds" kind="struct"><name>HolonomicLib::HolonomicWheelSpeeds</name>
-    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a069695b5397a1a278b143e6e028b29c1" kind="variable"><name>frontLeft</name></member>
-    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1ac2d2e310dc6251c2db5781880118a8ff" kind="variable"><name>frontRight</name></member>
-    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a5c722bc28937f8fdac7d7caabe478fae" kind="variable"><name>backLeft</name></member>
-    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1acfd4883d9dc74f8f3eb0e34d07391daf" kind="variable"><name>backRight</name></member>
-    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a45dc2bf59e7a483157ed35a115627ef7" kind="function"><name>HolonomicWheelSpeeds</name></member>
-    <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1ad396dd14708fd2a4f078211a56fd2892" kind="function"><name>HolonomicWheelSpeeds</name></member>
-  </compound>
   <compound refid="structHolonomicLib_1_1Pose2D" kind="struct"><name>HolonomicLib::Pose2D</name>
     <member refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" kind="variable"><name>x</name></member>
     <member refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" kind="variable"><name>y</name></member>
@@ -139,8 +131,6 @@
   </compound>
   <compound refid="AsyncHolonomicChassisController_8hpp" kind="file"><name>AsyncHolonomicChassisController.hpp</name>
   </compound>
-  <compound refid="HolonomicWheelSpeeds_8hpp" kind="file"><name>HolonomicWheelSpeeds.hpp</name>
-  </compound>
   <compound refid="Math_8hpp" kind="file"><name>Math.hpp</name>
     <member refid="Math_8hpp_1a525335710b53cb064ca56b936120431e" kind="define"><name>_USE_MATH_DEFINES</name></member>
   </compound>
@@ -155,8 +145,6 @@
   <compound refid="Units_8hpp" kind="file"><name>Units.hpp</name>
   </compound>
   <compound refid="AsyncHolonomicChassisController_8cpp" kind="file"><name>AsyncHolonomicChassisController.cpp</name>
-  </compound>
-  <compound refid="HolonomicWheelSpeeds_8cpp" kind="file"><name>HolonomicWheelSpeeds.cpp</name>
   </compound>
   <compound refid="Math_8cpp" kind="file"><name>Math.cpp</name>
   </compound>

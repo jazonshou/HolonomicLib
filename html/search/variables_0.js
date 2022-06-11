@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['backleft_173',['backLeft',['../structHolonomicLib_1_1HolonomicWheelSpeeds.html#a5c722bc28937f8fdac7d7caabe478fae',1,'HolonomicLib::HolonomicWheelSpeeds']]],
-  ['backright_174',['backRight',['../structHolonomicLib_1_1HolonomicWheelSpeeds.html#acfd4883d9dc74f8f3eb0e34d07391daf',1,'HolonomicLib::HolonomicWheelSpeeds']]]
+  ['chassis_162',['chassis',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a9e957edd5ba5a6b97db19e5a35da3be1',1,'HolonomicLib::AsyncHolonomicChassisController::chassis()'],['../main_8cpp.html#a2aaa5a2ecb33ce62d94d3be910e5e156',1,'chassis():&#160;main.cpp']]],
+  ['currentodomstate_163',['currentOdomState',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#ad2bf5ee58e0866db70a82dc68a67186d',1,'HolonomicLib::AsyncHolonomicChassisController']]],
+  ['currentpose_164',['currentPose',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a8ddc964faf9dd6942305e6fbb2a783c1',1,'HolonomicLib::AsyncHolonomicChassisController']]]
 ];

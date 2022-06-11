@@ -5,27 +5,31 @@
     <includes local="no">initializer_list</includes>
     <includes local="no">vector</includes>
     <includedby refid="API_8hpp" local="yes">include/HolonomicLib/API.hpp</includedby>
-    <includedby refid="AsyncHolonomicChassisController_8hpp" local="yes">include/HolonomicLib/AsyncHolonomicChassisController.hpp</includedby>
-    <includedby refid="Trajectory_8cpp" local="yes">src/HolonomicLib/Trajectory.cpp</includedby>
+    <includedby refid="AsyncHolonomicChassisController_8hpp" local="yes">include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp</includedby>
+    <includedby refid="Trajectory_8cpp" local="yes">src/HolonomicLib/Pathing/Trajectory.cpp</includedby>
     <incdepgraph>
+      <node id="3">
+        <label>vector</label>
+      </node>
       <node id="1">
-        <label>include/HolonomicLib/Trajectory.hpp</label>
+        <label>include/HolonomicLib/Pathing/Trajectory.hpp</label>
         <link refid="Trajectory_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>vector</label>
-      </node>
       <node id="2">
         <label>initializer_list</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="2">
+        <label>include/HolonomicLib/API.hpp</label>
+        <link refid="API_8hpp"/>
+      </node>
       <node id="1">
-        <label>include/HolonomicLib/Trajectory.hpp</label>
+        <label>include/HolonomicLib/Pathing/Trajectory.hpp</label>
         <link refid="Trajectory_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -34,25 +38,21 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp</label>
+        <link refid="AsyncHolonomicChassisController_8cpp"/>
+      </node>
       <node id="3">
-        <label>include/HolonomicLib/AsyncHolonomicChassisController.hpp</label>
+        <label>include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp</label>
         <link refid="AsyncHolonomicChassisController_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>include/HolonomicLib/API.hpp</label>
-        <link refid="API_8hpp"/>
-      </node>
       <node id="5">
-        <label>src/HolonomicLib/Trajectory.cpp</label>
+        <label>src/HolonomicLib/Pathing/Trajectory.cpp</label>
         <link refid="Trajectory_8cpp"/>
-      </node>
-      <node id="4">
-        <label>src/HolonomicLib/AsyncHolonomicChassisController.cpp</label>
-        <link refid="AsyncHolonomicChassisController_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structHolonomicLib_1_1TrajectoryState" prot="public">HolonomicLib::TrajectoryState</innerclass>
@@ -119,6 +119,6 @@
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
 <codeline lineno="133"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="include/HolonomicLib/Trajectory.hpp"/>
+    <location file="include/HolonomicLib/Pathing/Trajectory.hpp"/>
   </compounddef>
 </doxygen>

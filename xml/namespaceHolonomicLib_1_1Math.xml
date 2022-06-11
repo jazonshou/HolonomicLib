@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/HolonomicLib/Math.cpp" line="8" column="15" bodyfile="src/HolonomicLib/Math.cpp" bodystart="8" bodyend="10" declfile="include/HolonomicLib/Math.hpp" declline="23" declcolumn="15"/>
+        <location file="src/HolonomicLib/Utility/Math.cpp" line="8" column="15" bodyfile="src/HolonomicLib/Utility/Math.cpp" bodystart="8" bodyend="10" declfile="include/HolonomicLib/Utility/Math.hpp" declline="20" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="namespaceHolonomicLib_1_1Math_1ab5fb5c02303211011c1cf5988960f006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/HolonomicLib/Math.cpp" line="12" column="8" bodyfile="src/HolonomicLib/Math.cpp" bodystart="12" bodyend="14" declfile="include/HolonomicLib/Math.hpp" declline="31" declcolumn="8"/>
+        <location file="src/HolonomicLib/Utility/Math.cpp" line="12" column="8" bodyfile="src/HolonomicLib/Utility/Math.cpp" bodystart="12" bodyend="14" declfile="include/HolonomicLib/Utility/Math.hpp" declline="28" declcolumn="8"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -69,6 +69,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/HolonomicLib/Math.hpp" line="15" column="14"/>
+    <location file="include/HolonomicLib/Utility/Math.hpp" line="12" column="14"/>
   </compounddef>
 </doxygen>

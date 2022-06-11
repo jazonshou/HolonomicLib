@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_5e6def19b3608362ea57da89ed1514d2" kind="dir">
+    <compoundname>src/HolonomicLib/Utility</compoundname>
+    <innerfile refid="Math_8cpp">Math.cpp</innerfile>
+    <innerfile refid="TaskWrapper_8cpp">TaskWrapper.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/HolonomicLib/Utility/"/>
+  </compounddef>
+</doxygen>

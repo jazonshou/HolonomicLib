@@ -2,11 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="dir_f51c6f9d76a7c473e6c96ac38054188f" kind="dir">
     <compoundname>src/HolonomicLib</compoundname>
-    <innerfile refid="AsyncHolonomicChassisController_8cpp">AsyncHolonomicChassisController.cpp</innerfile>
-    <innerfile refid="Math_8cpp">Math.cpp</innerfile>
-    <innerfile refid="Pose2D_8cpp">Pose2D.cpp</innerfile>
-    <innerfile refid="TaskWrapper_8cpp">TaskWrapper.cpp</innerfile>
-    <innerfile refid="Trajectory_8cpp">Trajectory.cpp</innerfile>
+    <innerdir refid="dir_c984a0ffcee4cada7477a5ef74c38161">src/HolonomicLib/Chassis</innerdir>
+    <innerdir refid="dir_a2855eef7dfd24d890664d7e135acd60">src/HolonomicLib/Pathing</innerdir>
+    <innerdir refid="dir_5e6def19b3608362ea57da89ed1514d2">src/HolonomicLib/Utility</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

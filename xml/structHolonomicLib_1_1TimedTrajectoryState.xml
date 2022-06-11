@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Trajectory.hpp" line="53" column="12" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="53" bodyend="-1"/>
+        <location file="include/HolonomicLib/Pathing/Trajectory.hpp" line="53" column="12" bodyfile="include/HolonomicLib/Pathing/Trajectory.hpp" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structHolonomicLib_1_1TimedTrajectoryState_1a6575f178b64ccb9b2df3042488bf2cac" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Trajectory.hpp" line="53" column="17" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="53" bodyend="-1"/>
+        <location file="include/HolonomicLib/Pathing/Trajectory.hpp" line="53" column="17" bodyfile="include/HolonomicLib/Pathing/Trajectory.hpp" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structHolonomicLib_1_1TimedTrajectoryState_1a979bff025a498f73b7045ca03cef9e3d" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Trajectory.hpp" line="53" column="19" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="53" bodyend="-1"/>
+        <location file="include/HolonomicLib/Pathing/Trajectory.hpp" line="53" column="19" bodyfile="include/HolonomicLib/Pathing/Trajectory.hpp" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structHolonomicLib_1_1TimedTrajectoryState_1aaed13eb81625320ca9f6e65279456614" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Trajectory.hpp" line="53" column="21" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="53" bodyend="-1"/>
+        <location file="include/HolonomicLib/Pathing/Trajectory.hpp" line="53" column="21" bodyfile="include/HolonomicLib/Pathing/Trajectory.hpp" bodystart="53" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Trajectory.hpp" line="41" column="5"/>
+        <location file="include/HolonomicLib/Pathing/Trajectory.hpp" line="41" column="5"/>
       </memberdef>
       <memberdef kind="function" id="structHolonomicLib_1_1TimedTrajectoryState_1a2e6dc77b4d9fa2629581c52a211b8c21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Trajectory.hpp" line="51" column="5" bodyfile="src/HolonomicLib/Trajectory.cpp" bodystart="12" bodyend="14"/>
+        <location file="include/HolonomicLib/Pathing/Trajectory.hpp" line="51" column="5" bodyfile="src/HolonomicLib/Pathing/Trajectory.cpp" bodystart="12" bodyend="14"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -143,7 +143,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/HolonomicLib/Trajectory.hpp" line="36" column="1" bodyfile="include/HolonomicLib/Trajectory.hpp" bodystart="35" bodyend="54"/>
+    <location file="include/HolonomicLib/Pathing/Trajectory.hpp" line="36" column="1" bodyfile="include/HolonomicLib/Pathing/Trajectory.hpp" bodystart="35" bodyend="54"/>
     <listofallmembers>
       <member refid="structHolonomicLib_1_1TimedTrajectoryState_1aaed13eb81625320ca9f6e65279456614" prot="public" virt="non-virtual"><scope>HolonomicLib::TimedTrajectoryState</scope><name>theta</name></member>
       <member refid="structHolonomicLib_1_1TimedTrajectoryState_1ae2fb2ee9682d40f4f29759cd5ceb0d97" prot="public" virt="non-virtual"><scope>HolonomicLib::TimedTrajectoryState</scope><name>time</name></member>

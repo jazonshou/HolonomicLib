@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_a2855eef7dfd24d890664d7e135acd60" kind="dir">
+    <compoundname>src/HolonomicLib/Pathing</compoundname>
+    <innerfile refid="Pose2D_8cpp">Pose2D.cpp</innerfile>
+    <innerfile refid="Trajectory_8cpp">Trajectory.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/HolonomicLib/Pathing/"/>
+  </compounddef>
+</doxygen>

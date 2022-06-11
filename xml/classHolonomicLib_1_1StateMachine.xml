@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/StateMachine.hpp" line="21" column="11" bodyfile="include/HolonomicLib/StateMachine.hpp" bodystart="21" bodyend="-1"/>
+        <location file="include/HolonomicLib/Utility/StateMachine.hpp" line="21" column="11" bodyfile="include/HolonomicLib/Utility/StateMachine.hpp" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHolonomicLib_1_1StateMachine_1a4bd9da043aeb954d960cdd40ec340703" prot="private" static="no" mutable="no">
         <type>pros::Mutex</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/StateMachine.hpp" line="22" column="17" bodyfile="include/HolonomicLib/StateMachine.hpp" bodystart="22" bodyend="-1"/>
+        <location file="include/HolonomicLib/Utility/StateMachine.hpp" line="22" column="17" bodyfile="include/HolonomicLib/Utility/StateMachine.hpp" bodystart="22" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/StateMachine.hpp" line="29" column="5" bodyfile="include/HolonomicLib/StateMachine.hpp" bodystart="29" bodyend="29"/>
+        <location file="include/HolonomicLib/Utility/StateMachine.hpp" line="29" column="5" bodyfile="include/HolonomicLib/Utility/StateMachine.hpp" bodystart="29" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1StateMachine_1a7b4775f3279fd7004c2d6f6e46178639" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>State</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/StateMachine.hpp" line="36" column="11" bodyfile="include/HolonomicLib/StateMachine.hpp" bodystart="36" bodyend="41"/>
+        <location file="include/HolonomicLib/Utility/StateMachine.hpp" line="36" column="11" bodyfile="include/HolonomicLib/Utility/StateMachine.hpp" bodystart="36" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1StateMachine_1a9dbf72721774a28d20d5f38cc28f4016" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/StateMachine.hpp" line="48" column="10" bodyfile="include/HolonomicLib/StateMachine.hpp" bodystart="48" bodyend="52"/>
+        <location file="include/HolonomicLib/Utility/StateMachine.hpp" line="48" column="10" bodyfile="include/HolonomicLib/Utility/StateMachine.hpp" bodystart="48" bodyend="52"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -129,7 +129,7 @@
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="include/HolonomicLib/StateMachine.hpp" line="19" column="19" bodyfile="include/HolonomicLib/StateMachine.hpp" bodystart="19" bodyend="53"/>
+    <location file="include/HolonomicLib/Utility/StateMachine.hpp" line="19" column="19" bodyfile="include/HolonomicLib/Utility/StateMachine.hpp" bodystart="19" bodyend="53"/>
     <listofallmembers>
       <member refid="classHolonomicLib_1_1StateMachine_1a7b4775f3279fd7004c2d6f6e46178639" prot="public" virt="non-virtual"><scope>HolonomicLib::StateMachine</scope><name>getState</name></member>
       <member refid="classHolonomicLib_1_1StateMachine_1a9dbf72721774a28d20d5f38cc28f4016" prot="public" virt="non-virtual"><scope>HolonomicLib::StateMachine</scope><name>setState</name></member>

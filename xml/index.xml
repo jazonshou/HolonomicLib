@@ -131,28 +131,28 @@
   </compound>
   <compound refid="AsyncHolonomicChassisController_8hpp" kind="file"><name>AsyncHolonomicChassisController.hpp</name>
   </compound>
+  <compound refid="Pose2D_8hpp" kind="file"><name>Pose2D.hpp</name>
+  </compound>
+  <compound refid="Trajectory_8hpp" kind="file"><name>Trajectory.hpp</name>
+  </compound>
   <compound refid="Math_8hpp" kind="file"><name>Math.hpp</name>
     <member refid="Math_8hpp_1a525335710b53cb064ca56b936120431e" kind="define"><name>_USE_MATH_DEFINES</name></member>
-  </compound>
-  <compound refid="Pose2D_8hpp" kind="file"><name>Pose2D.hpp</name>
   </compound>
   <compound refid="StateMachine_8hpp" kind="file"><name>StateMachine.hpp</name>
   </compound>
   <compound refid="TaskWrapper_8hpp" kind="file"><name>TaskWrapper.hpp</name>
   </compound>
-  <compound refid="Trajectory_8hpp" kind="file"><name>Trajectory.hpp</name>
-  </compound>
   <compound refid="Units_8hpp" kind="file"><name>Units.hpp</name>
   </compound>
   <compound refid="AsyncHolonomicChassisController_8cpp" kind="file"><name>AsyncHolonomicChassisController.cpp</name>
   </compound>
-  <compound refid="Math_8cpp" kind="file"><name>Math.cpp</name>
-  </compound>
   <compound refid="Pose2D_8cpp" kind="file"><name>Pose2D.cpp</name>
   </compound>
-  <compound refid="TaskWrapper_8cpp" kind="file"><name>TaskWrapper.cpp</name>
-  </compound>
   <compound refid="Trajectory_8cpp" kind="file"><name>Trajectory.cpp</name>
+  </compound>
+  <compound refid="Math_8cpp" kind="file"><name>Math.cpp</name>
+  </compound>
+  <compound refid="TaskWrapper_8cpp" kind="file"><name>TaskWrapper.cpp</name>
   </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="main_8cpp_1a3a0f89da927d907fefeb553f0d8218e5" kind="variable"><name>leftFront</name></member>
@@ -170,12 +170,28 @@
     <member refid="main_8cpp_1a3c7ca506bbc071fa740de13805b7f376" kind="function"><name>autonomous</name></member>
     <member refid="main_8cpp_1ac57194c628bb97b849be48d79c99c4ac" kind="function"><name>opcontrol</name></member>
   </compound>
-  <compound refid="dir_767ba811b7d2db9d0b6ddfee0395e044" kind="dir"><name>include/HolonomicLib</name>
+  <compound refid="dir_048b6f85a3f4924dc3e2fcc53a322456" kind="dir"><name>include/HolonomicLib/Chassis</name>
+  </compound>
+  <compound refid="dir_c984a0ffcee4cada7477a5ef74c38161" kind="dir"><name>src/HolonomicLib/Chassis</name>
+  </compound>
+  <compound refid="dir_235f21a0358385b42228f96691a778fc" kind="dir"><name>include/HolonomicLib/Chassis/Controller</name>
+  </compound>
+  <compound refid="dir_ab1faa7b4ae3e358440fd32dfe9ad61d" kind="dir"><name>src/HolonomicLib/Chassis/Controller</name>
   </compound>
   <compound refid="dir_f51c6f9d76a7c473e6c96ac38054188f" kind="dir"><name>src/HolonomicLib</name>
   </compound>
+  <compound refid="dir_767ba811b7d2db9d0b6ddfee0395e044" kind="dir"><name>include/HolonomicLib</name>
+  </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
   </compound>
+  <compound refid="dir_97603173e74ddbc75eb30f31cf0e424d" kind="dir"><name>include/HolonomicLib/Pathing</name>
+  </compound>
+  <compound refid="dir_a2855eef7dfd24d890664d7e135acd60" kind="dir"><name>src/HolonomicLib/Pathing</name>
+  </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_5e6def19b3608362ea57da89ed1514d2" kind="dir"><name>src/HolonomicLib/Utility</name>
+  </compound>
+  <compound refid="dir_3cb4aec17e41dc73d2772eda912e516f" kind="dir"><name>include/HolonomicLib/Utility</name>
   </compound>
 </doxygenindex>

@@ -4,21 +4,29 @@
     <compoundname>StateMachine.hpp</compoundname>
     <includes local="yes">pros/rtos.hpp</includes>
     <includedby refid="API_8hpp" local="yes">include/HolonomicLib/API.hpp</includedby>
-    <includedby refid="AsyncHolonomicChassisController_8hpp" local="yes">include/HolonomicLib/AsyncHolonomicChassisController.hpp</includedby>
+    <includedby refid="AsyncHolonomicChassisController_8hpp" local="yes">include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp</includedby>
     <incdepgraph>
+      <node id="2">
+        <label>pros/rtos.hpp</label>
+      </node>
       <node id="1">
-        <label>include/HolonomicLib/StateMachine.hpp</label>
+        <label>include/HolonomicLib/Utility/StateMachine.hpp</label>
         <link refid="StateMachine_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>pros/rtos.hpp</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="2">
+        <label>include/HolonomicLib/API.hpp</label>
+        <link refid="API_8hpp"/>
+      </node>
+      <node id="4">
+        <label>src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp</label>
+        <link refid="AsyncHolonomicChassisController_8cpp"/>
+      </node>
       <node id="3">
-        <label>include/HolonomicLib/AsyncHolonomicChassisController.hpp</label>
+        <label>include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp</label>
         <link refid="AsyncHolonomicChassisController_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -26,20 +34,12 @@
         </childnode>
       </node>
       <node id="1">
-        <label>include/HolonomicLib/StateMachine.hpp</label>
+        <label>include/HolonomicLib/Utility/StateMachine.hpp</label>
         <link refid="StateMachine_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>include/HolonomicLib/API.hpp</label>
-        <link refid="API_8hpp"/>
-      </node>
-      <node id="4">
-        <label>src/HolonomicLib/AsyncHolonomicChassisController.cpp</label>
-        <link refid="AsyncHolonomicChassisController_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classHolonomicLib_1_1StateMachine" prot="public">HolonomicLib::StateMachine</innerclass>
@@ -79,6 +79,6 @@
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="include/HolonomicLib/StateMachine.hpp"/>
+    <location file="include/HolonomicLib/Utility/StateMachine.hpp"/>
   </compounddef>
 </doxygen>

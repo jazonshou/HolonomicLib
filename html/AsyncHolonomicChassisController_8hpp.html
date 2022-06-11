@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HolonomicLib: include/HolonomicLib/AsyncHolonomicChassisController.hpp File Reference</title>
+<title>HolonomicLib: include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_767ba811b7d2db9d0b6ddfee0395e044.html">HolonomicLib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_767ba811b7d2db9d0b6ddfee0395e044.html">HolonomicLib</a></li><li class="navelem"><a class="el" href="dir_048b6f85a3f4924dc3e2fcc53a322456.html">Chassis</a></li><li class="navelem"><a class="el" href="dir_235f21a0358385b42228f96691a778fc.html">Controller</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,25 +76,19 @@ $(function() {
 <div class="title">AsyncHolonomicChassisController.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;okapi/api/chassis/controller/odomChassisController.hpp&quot;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;okapi/api/chassis/controller/odomChassisController.hpp&quot;</code><br />
 <code>#include &quot;okapi/api/chassis/model/xDriveModel.hpp&quot;</code><br />
-<code>#include &quot;okapi/api/chassis/controller/chassisController.hpp&quot;</code><br />
 <code>#include &quot;okapi/api/control/iterative/iterativePosPidController.hpp&quot;</code><br />
 <code>#include &quot;okapi/api/util/timeUtil.hpp&quot;</code><br />
 <code>#include &quot;okapi/impl/util/timeUtilFactory.hpp&quot;</code><br />
 <code>#include &quot;okapi/api/device/motor/abstractMotor.hpp&quot;</code><br />
-<code>#include &quot;okapi/api/units/QAngle.hpp&quot;</code><br />
-<code>#include &quot;okapi/api/units/QLength.hpp&quot;</code><br />
-<code>#include &quot;okapi/api/units/QTime.hpp&quot;</code><br />
-<code>#include &quot;okapi/api/units/QSpeed.hpp&quot;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &quot;<a class="el" href="StateMachine_8hpp_source.html">StateMachine.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="TaskWrapper_8hpp_source.html">TaskWrapper.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Pose2D_8hpp_source.html">Pose2D.hpp</a>&quot;</code><br />
-<code>#include &quot;HolonomicWheelSpeeds.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="Math_8hpp_source.html">Math.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Trajectory_8hpp_source.html">Trajectory.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Units_8hpp_source.html">Units.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Units_8hpp_source.html">HolonomicLib/Utility/Units.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Math_8hpp_source.html">HolonomicLib/Utility/Math.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="StateMachine_8hpp_source.html">HolonomicLib/Utility/StateMachine.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="TaskWrapper_8hpp_source.html">HolonomicLib/Utility/TaskWrapper.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Pose2D_8hpp_source.html">HolonomicLib/Pathing/Pose2D.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Trajectory_8hpp_source.html">HolonomicLib/Pathing/Trajectory.hpp</a>&quot;</code><br />
 </div>
 <p><a href="AsyncHolonomicChassisController_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">

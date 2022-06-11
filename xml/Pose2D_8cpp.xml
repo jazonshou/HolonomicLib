@@ -10,18 +10,18 @@
       <node id="3">
         <label>okapi/api/units/QLength.hpp</label>
       </node>
-      <node id="1">
-        <label>src/HolonomicLib/Pose2D.cpp</label>
-        <link refid="Pose2D_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>Pose2D.hpp</label>
         <link refid="Pose2D_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/HolonomicLib/Pathing/Pose2D.cpp</label>
+        <link refid="Pose2D_8cpp"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -43,6 +43,6 @@
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/HolonomicLib/Pose2D.cpp"/>
+    <location file="src/HolonomicLib/Pathing/Pose2D.cpp"/>
   </compounddef>
 </doxygen>

@@ -4,14 +4,14 @@
     <compoundname>TaskWrapper.cpp</compoundname>
     <includes refid="TaskWrapper_8hpp" local="yes">TaskWrapper.hpp</includes>
     <incdepgraph>
-      <node id="3">
-        <label>pros/rtos.hpp</label>
-      </node>
       <node id="1">
-        <label>src/HolonomicLib/TaskWrapper.cpp</label>
+        <label>src/HolonomicLib/Utility/TaskWrapper.cpp</label>
         <link refid="TaskWrapper_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>pros/rtos.hpp</label>
       </node>
       <node id="2">
         <label>TaskWrapper.hpp</label>
@@ -67,6 +67,6 @@
 <codeline lineno="34"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/HolonomicLib/TaskWrapper.cpp"/>
+    <location file="src/HolonomicLib/Utility/TaskWrapper.cpp"/>
   </compounddef>
 </doxygen>

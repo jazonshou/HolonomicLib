@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_c984a0ffcee4cada7477a5ef74c38161" kind="dir">
+    <compoundname>src/HolonomicLib/Chassis</compoundname>
+    <innerdir refid="dir_ab1faa7b4ae3e358440fd32dfe9ad61d">src/HolonomicLib/Chassis/Controller</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/HolonomicLib/Chassis/"/>
+  </compounddef>
+</doxygen>

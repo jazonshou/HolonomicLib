@@ -3,8 +3,6 @@
   <compounddef id="dir_f51c6f9d76a7c473e6c96ac38054188f" kind="dir">
     <compoundname>src/HolonomicLib</compoundname>
     <innerfile refid="AsyncHolonomicChassisController_8cpp">AsyncHolonomicChassisController.cpp</innerfile>
-    <innerfile refid="ExpandedXDriveModel_8cpp">ExpandedXDriveModel.cpp</innerfile>
-    <innerfile refid="FeedforwardController_8cpp">FeedforwardController.cpp</innerfile>
     <innerfile refid="HolonomicWheelSpeeds_8cpp">HolonomicWheelSpeeds.cpp</innerfile>
     <innerfile refid="Math_8cpp">Math.cpp</innerfile>
     <innerfile refid="Pose2D_8cpp">Pose2D.cpp</innerfile>

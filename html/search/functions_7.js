@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['initialize_169',['initialize',['../main_8cpp.html#a25a40b6614565f755233080a384c35f1',1,'main.cpp']]],
-  ['issettled_170',['isSettled',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a0577b6fa6502e975d93b0ec96458351d',1,'HolonomicLib::AsyncHolonomicChassisController']]]
+  ['loop_144',['loop',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#ae24362f0e83484242658d5adc7c54304',1,'HolonomicLib::AsyncHolonomicChassisController::loop()'],['../classHolonomicLib_1_1TaskWrapper.html#aae903bdf162e10c1af03c2907e6056bb',1,'HolonomicLib::TaskWrapper::loop()']]]
 ];

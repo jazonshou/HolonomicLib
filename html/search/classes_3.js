@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['holonomicwheelspeeds_122',['HolonomicWheelSpeeds',['../structHolonomicLib_1_1HolonomicWheelSpeeds.html',1,'HolonomicLib']]]
+  ['statemachine_106',['StateMachine',['../classHolonomicLib_1_1StateMachine.html',1,'HolonomicLib']]],
+  ['statemachine_3c_20chassisstate_20_3e_107',['StateMachine&lt; ChassisState &gt;',['../classHolonomicLib_1_1StateMachine.html',1,'HolonomicLib']]]
 ];

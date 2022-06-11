@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['theta_232',['theta',['../structHolonomicLib_1_1Pose2D.html#aed8ee64b862a6f9fe28b624347db772a',1,'HolonomicLib::Pose2D::theta()'],['../structHolonomicLib_1_1TrajectoryState.html#a1c97729ca4d202938ab3efb39264b47d',1,'HolonomicLib::TrajectoryState::theta()'],['../structHolonomicLib_1_1TimedTrajectoryState.html#aaed13eb81625320ca9f6e65279456614',1,'HolonomicLib::TimedTrajectoryState::theta()']]],
-  ['time_233',['time',['../structHolonomicLib_1_1TimedTrajectoryState.html#ae2fb2ee9682d40f4f29759cd5ceb0d97',1,'HolonomicLib::TimedTrajectoryState']]],
-  ['timedtrajectory_234',['timedTrajectory',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a33367b32d444678c890b2c326f0c5a9a',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['timedtrajectoryenabled_235',['timedTrajectoryEnabled',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a8bbcf44d16d151ea5ea4846d745225c2',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['timer_236',['timer',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#ae926a61b5d1bb75d978914fe173f73ab',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['trajectory_237',['trajectory',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a3cc8ebdf34757bfbf44bb7f8799b466e',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['turncontroller_238',['turnController',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a35e7fb858907a0f69e5a8811180465cb',1,'HolonomicLib::AsyncHolonomicChassisController']]]
+  ['y_209',['y',['../structHolonomicLib_1_1Pose2D.html#a86bc4b9cc0d8b1de84b39caf757a35cf',1,'HolonomicLib::Pose2D::y()'],['../structHolonomicLib_1_1TrajectoryState.html#a1a5db51ff9cc12b334dd3b49b91bf6b2',1,'HolonomicLib::TrajectoryState::y()'],['../structHolonomicLib_1_1TimedTrajectoryState.html#a979bff025a498f73b7045ca03cef9e3d',1,'HolonomicLib::TimedTrajectoryState::y()']]],
+  ['ycontroller_210',['yController',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a6331d3e6176bbba4928397de53951587',1,'HolonomicLib::AsyncHolonomicChassisController']]]
 ];

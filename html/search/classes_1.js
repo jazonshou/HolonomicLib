@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['expandedxdrivemodel_119',['ExpandedXDriveModel',['../classHolonomicLib_1_1ExpandedXDriveModel.html',1,'HolonomicLib']]]
+  ['holonomicwheelspeeds_104',['HolonomicWheelSpeeds',['../structHolonomicLib_1_1HolonomicWheelSpeeds.html',1,'HolonomicLib']]]
 ];

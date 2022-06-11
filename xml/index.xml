@@ -2,7 +2,7 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
   <compound refid="classHolonomicLib_1_1AsyncHolonomicChassisController" kind="class"><name>HolonomicLib::AsyncHolonomicChassisController</name>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a39298643fed60a60698cf137a433a869" kind="friend"><name>AsyncHolonomicChassisControllerBuilder</name></member>
-    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1af3f45c6f5ab27d02c7a896e42de6bacf" kind="variable"><name>model</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a0fdec61410af96d89275473fca65894c" kind="variable"><name>model</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a9e957edd5ba5a6b97db19e5a35da3be1" kind="variable"><name>chassis</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1af1d95cc7acd8b3c10b83ffcb18763cbf" kind="variable"><name>xController</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a6331d3e6176bbba4928397de53951587" kind="variable"><name>yController</name></member>
@@ -19,10 +19,10 @@
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a33367b32d444678c890b2c326f0c5a9a" kind="variable"><name>timedTrajectory</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a8bbcf44d16d151ea5ea4846d745225c2" kind="variable"><name>timedTrajectoryEnabled</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1aa54abc5771999cf9d0308ee322a5ea6d" kind="variable"><name>index</name></member>
+    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a371df87b8aa3c38b89fbb45880d6b72a" kind="variable"><name>initialRun</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a876a5a913b687017ca4f99d44d37d1fb" kind="variable"><name>lock</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a8d7db6773963de4167e25363dfe8cd7d" kind="function"><name>AsyncHolonomicChassisController</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a7a5fbd5a7fc3b55392728563345dcb83" kind="function"><name>AsyncHolonomicChassisController</name></member>
-    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1ac3d0b081a3f22ad6bcff417b48cec3a2" kind="function"><name>AsyncHolonomicChassisController</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1ae24362f0e83484242658d5adc7c54304" kind="function"><name>loop</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a195be649bfac66424e54a4018c62c89b" kind="function"><name>setTarget</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisController_1a2e1f4ed7cdb6a3ccfb646dce52732bf7" kind="function"><name>setTarget</name></member>
@@ -39,7 +39,6 @@
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3fdabd718ae50ab35b0490c24002c91e" kind="variable"><name>chassis</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ab7642926450d3e9f283ec22bf9716aba" kind="variable"><name>pidTranslateGains</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1adb6401088d17a02bc47d46da18f55b88" kind="variable"><name>pidTurnGains</name></member>
-    <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1abd331dc0b016ddba117be410683a278d" kind="variable"><name>ffTranslateGains</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1af4077e21a886a0dcdfb3e3777e559ed5" kind="variable"><name>settleTolerance</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a4b1ab8878ce2eb6a6de132698807ba65" kind="variable"><name>pidInit</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a05a605134f0440ec65d9ba63114ddbeb" kind="variable"><name>outputInit</name></member>
@@ -49,27 +48,6 @@
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ae9757cff1ff7301d02a6b7ce87751986" kind="function"><name>withPIDGains</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a1f2d1aa80932b6e6ad17d17c2a7ce93e" kind="function"><name>withTolerance</name></member>
     <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a5b6a56ec82a7def66fc20910a09a819e" kind="function"><name>build</name></member>
-  </compound>
-  <compound refid="classHolonomicLib_1_1ExpandedXDriveModel" kind="class"><name>HolonomicLib::ExpandedXDriveModel</name>
-    <member refid="classHolonomicLib_1_1ExpandedXDriveModel_1ab6b7dce7bfc491336de1631944a662ea" kind="function"><name>cartesian</name></member>
-    <member refid="classHolonomicLib_1_1ExpandedXDriveModel_1ad283446428ec63ca9afdbd05b9e44d41" kind="function"><name>polar</name></member>
-  </compound>
-  <compound refid="classHolonomicLib_1_1FeedforwardController" kind="class"><name>HolonomicLib::FeedforwardController</name>
-    <member refid="classHolonomicLib_1_1FeedforwardController_1abb52150c8fa092207e41218b32c9f7a6" kind="variable"><name>kA</name></member>
-    <member refid="classHolonomicLib_1_1FeedforwardController_1a0bd9ec1d57efc5d757de339dfed379cc" kind="variable"><name>kV</name></member>
-    <member refid="classHolonomicLib_1_1FeedforwardController_1a74b4c8e3c0e4a480072484d21a05da6f" kind="function"><name>FeedforwardController</name></member>
-    <member refid="classHolonomicLib_1_1FeedforwardController_1a8e929ca036539f686e440047f1289a23" kind="function"><name>FeedforwardController</name></member>
-    <member refid="classHolonomicLib_1_1FeedforwardController_1ab6805ea869555e373c38f6b14a4671f2" kind="function"><name>FeedforwardController</name></member>
-    <member refid="classHolonomicLib_1_1FeedforwardController_1aa40ea1eaf0bfcbbc3ec271d08f2be542" kind="function"><name>setGain</name></member>
-    <member refid="classHolonomicLib_1_1FeedforwardController_1a0766ef6466040f1767744f5b4f78ef3b" kind="function"><name>getkA</name></member>
-    <member refid="classHolonomicLib_1_1FeedforwardController_1a26282c11b4a218fc9568466f33b3eb2d" kind="function"><name>getkV</name></member>
-    <member refid="classHolonomicLib_1_1FeedforwardController_1af0c7b1dfbd1d748670a984bec7b89592" kind="function"><name>step</name></member>
-  </compound>
-  <compound refid="structHolonomicLib_1_1FeedforwardGains" kind="struct"><name>HolonomicLib::FeedforwardGains</name>
-    <member refid="structHolonomicLib_1_1FeedforwardGains_1a8212e1fd81ad3596114faf38523f5b6e" kind="variable"><name>kV</name></member>
-    <member refid="structHolonomicLib_1_1FeedforwardGains_1ac1d1101ea2782188857ef06f97f18247" kind="variable"><name>kA</name></member>
-    <member refid="structHolonomicLib_1_1FeedforwardGains_1af36cd7005a92930c7c24a40e000912ae" kind="function"><name>FeedforwardGains</name></member>
-    <member refid="structHolonomicLib_1_1FeedforwardGains_1ad3ce50f61adc9b7fe4d43d6ce4d9bf7d" kind="function"><name>FeedforwardGains</name></member>
   </compound>
   <compound refid="structHolonomicLib_1_1HolonomicWheelSpeeds" kind="struct"><name>HolonomicLib::HolonomicWheelSpeeds</name>
     <member refid="structHolonomicLib_1_1HolonomicWheelSpeeds_1a069695b5397a1a278b143e6e028b29c1" kind="variable"><name>frontLeft</name></member>
@@ -161,10 +139,6 @@
   </compound>
   <compound refid="AsyncHolonomicChassisController_8hpp" kind="file"><name>AsyncHolonomicChassisController.hpp</name>
   </compound>
-  <compound refid="ExpandedXDriveModel_8hpp" kind="file"><name>ExpandedXDriveModel.hpp</name>
-  </compound>
-  <compound refid="FeedforwardController_8hpp" kind="file"><name>FeedforwardController.hpp</name>
-  </compound>
   <compound refid="HolonomicWheelSpeeds_8hpp" kind="file"><name>HolonomicWheelSpeeds.hpp</name>
   </compound>
   <compound refid="Math_8hpp" kind="file"><name>Math.hpp</name>
@@ -182,10 +156,6 @@
   </compound>
   <compound refid="AsyncHolonomicChassisController_8cpp" kind="file"><name>AsyncHolonomicChassisController.cpp</name>
   </compound>
-  <compound refid="ExpandedXDriveModel_8cpp" kind="file"><name>ExpandedXDriveModel.cpp</name>
-  </compound>
-  <compound refid="FeedforwardController_8cpp" kind="file"><name>FeedforwardController.cpp</name>
-  </compound>
   <compound refid="HolonomicWheelSpeeds_8cpp" kind="file"><name>HolonomicWheelSpeeds.cpp</name>
   </compound>
   <compound refid="Math_8cpp" kind="file"><name>Math.cpp</name>
@@ -197,7 +167,6 @@
   <compound refid="Trajectory_8cpp" kind="file"><name>Trajectory.cpp</name>
   </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
-    <member refid="main_8cpp_1a6fdf87a854d764e35055a6163e4ac9a2" kind="variable"><name>path</name></member>
     <member refid="main_8cpp_1a3a0f89da927d907fefeb553f0d8218e5" kind="variable"><name>leftFront</name></member>
     <member refid="main_8cpp_1a8e4548cfc3be44256bfae777fc70c79d" kind="variable"><name>rightFront</name></member>
     <member refid="main_8cpp_1a3f88bd50df9dd04b7994cd2afe3bc79f" kind="variable"><name>leftBack</name></member>
@@ -207,7 +176,6 @@
     <member refid="main_8cpp_1a2ad763499a239efc00359e22b53870df" kind="variable"><name>midEnc</name></member>
     <member refid="main_8cpp_1a047a89b0208974c18d5c49656240616a" kind="variable"><name>imu</name></member>
     <member refid="main_8cpp_1a2aaa5a2ecb33ce62d94d3be910e5e156" kind="variable"><name>chassis</name></member>
-    <member refid="main_8cpp_1a447d2702c6372345291f2ff4e3c95fc1" kind="variable"><name>model</name></member>
     <member refid="main_8cpp_1a25a40b6614565f755233080a384c35f1" kind="function"><name>initialize</name></member>
     <member refid="main_8cpp_1a4e1a74721457de1f01d41566400fb3e5" kind="function"><name>disabled</name></member>
     <member refid="main_8cpp_1a870462d80a8efe920f8c95ee313cb9e5" kind="function"><name>competition_initialize</name></member>

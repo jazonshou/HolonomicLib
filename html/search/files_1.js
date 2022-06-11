@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['expandedxdrivemodel_2ecpp_137',['ExpandedXDriveModel.cpp',['../ExpandedXDriveModel_8cpp.html',1,'']]],
-  ['expandedxdrivemodel_2ehpp_138',['ExpandedXDriveModel.hpp',['../ExpandedXDriveModel_8hpp.html',1,'']]]
+  ['holonomicwheelspeeds_2ecpp_119',['HolonomicWheelSpeeds.cpp',['../HolonomicWheelSpeeds_8cpp.html',1,'']]],
+  ['holonomicwheelspeeds_2ehpp_120',['HolonomicWheelSpeeds.hpp',['../HolonomicWheelSpeeds_8hpp.html',1,'']]]
 ];

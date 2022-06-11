@@ -4,8 +4,6 @@
     <compoundname>include/HolonomicLib</compoundname>
     <innerfile refid="API_8hpp">API.hpp</innerfile>
     <innerfile refid="AsyncHolonomicChassisController_8hpp">AsyncHolonomicChassisController.hpp</innerfile>
-    <innerfile refid="ExpandedXDriveModel_8hpp">ExpandedXDriveModel.hpp</innerfile>
-    <innerfile refid="FeedforwardController_8hpp">FeedforwardController.hpp</innerfile>
     <innerfile refid="HolonomicWheelSpeeds_8hpp">HolonomicWheelSpeeds.hpp</innerfile>
     <innerfile refid="Math_8hpp">Math.hpp</innerfile>
     <innerfile refid="Pose2D_8hpp">Pose2D.hpp</innerfile>

@@ -4,9 +4,6 @@
     <compoundname>HolonomicLib</compoundname>
     <innerclass refid="classHolonomicLib_1_1AsyncHolonomicChassisController" prot="public">HolonomicLib::AsyncHolonomicChassisController</innerclass>
     <innerclass refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" prot="public">HolonomicLib::AsyncHolonomicChassisControllerBuilder</innerclass>
-    <innerclass refid="classHolonomicLib_1_1ExpandedXDriveModel" prot="public">HolonomicLib::ExpandedXDriveModel</innerclass>
-    <innerclass refid="classHolonomicLib_1_1FeedforwardController" prot="public">HolonomicLib::FeedforwardController</innerclass>
-    <innerclass refid="structHolonomicLib_1_1FeedforwardGains" prot="public">HolonomicLib::FeedforwardGains</innerclass>
     <innerclass refid="structHolonomicLib_1_1HolonomicWheelSpeeds" prot="public">HolonomicLib::HolonomicWheelSpeeds</innerclass>
     <innerclass refid="structHolonomicLib_1_1Pose2D" prot="public">HolonomicLib::Pose2D</innerclass>
     <innerclass refid="classHolonomicLib_1_1StateMachine" prot="public">HolonomicLib::StateMachine</innerclass>
@@ -48,11 +45,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/AsyncHolonomicChassisController.hpp" line="35" column="24" bodyfile="include/HolonomicLib/AsyncHolonomicChassisController.hpp" bodystart="35" bodyend="37"/>
+        <location file="include/HolonomicLib/AsyncHolonomicChassisController.hpp" line="33" column="24" bodyfile="include/HolonomicLib/AsyncHolonomicChassisController.hpp" bodystart="33" bodyend="35"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Currently not used. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

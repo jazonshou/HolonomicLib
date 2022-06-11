@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['holonomicwheelspeeds_168',['HolonomicWheelSpeeds',['../structHolonomicLib_1_1HolonomicWheelSpeeds.html#a45dc2bf59e7a483157ed35a115627ef7',1,'HolonomicLib::HolonomicWheelSpeeds::HolonomicWheelSpeeds()=default'],['../structHolonomicLib_1_1HolonomicWheelSpeeds.html#ad396dd14708fd2a4f078211a56fd2892',1,'HolonomicLib::HolonomicWheelSpeeds::HolonomicWheelSpeeds(double frontleft, double frontRight, double backLeft, double backRight)']]]
+  ['initialize_142',['initialize',['../main_8cpp.html#a25a40b6614565f755233080a384c35f1',1,'main.cpp']]],
+  ['issettled_143',['isSettled',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a0577b6fa6502e975d93b0ec96458351d',1,'HolonomicLib::AsyncHolonomicChassisController']]]
 ];

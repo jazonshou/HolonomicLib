@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['path_65',['path',['../main_8cpp.html#a6fdf87a854d764e35055a6163e4ac9a2',1,'main.cpp']]],
-  ['pathing_66',['PATHING',['../namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763',1,'HolonomicLib']]],
-  ['pausetask_67',['pauseTask',['../classHolonomicLib_1_1TaskWrapper.html#ac0923845cff95c58e808e584dacff2ec',1,'HolonomicLib::TaskWrapper']]],
-  ['polar_68',['polar',['../classHolonomicLib_1_1ExpandedXDriveModel.html#ad283446428ec63ca9afdbd05b9e44d41',1,'HolonomicLib::ExpandedXDriveModel']]],
-  ['pose2d_69',['Pose2D',['../structHolonomicLib_1_1Pose2D.html',1,'HolonomicLib::Pose2D'],['../structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd',1,'HolonomicLib::Pose2D::Pose2D()=default'],['../structHolonomicLib_1_1Pose2D.html#a92c346fc3b144f908f1f1ea274f18799',1,'HolonomicLib::Pose2D::Pose2D(okapi::QLength ix, okapi::QLength iy, okapi::QAngle itheta)']]],
-  ['pose2d_2ecpp_70',['Pose2D.cpp',['../Pose2D_8cpp.html',1,'']]],
-  ['pose2d_2ehpp_71',['Pose2D.hpp',['../Pose2D_8hpp.html',1,'']]]
+  ['rate_59',['rate',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#ad0ac308bb0e13b1c5073331d73837c0e',1,'HolonomicLib::AsyncHolonomicChassisController']]],
+  ['rescale180_60',['rescale180',['../namespaceHolonomicLib_1_1Math.html#a0fb99343562aa2641143d2dc2b142a2e',1,'HolonomicLib::Math::rescale180(okapi::QAngle angle)'],['../namespaceHolonomicLib_1_1Math.html#ab5fb5c02303211011c1cf5988960f006',1,'HolonomicLib::Math::rescale180(double angle)']]],
+  ['resumetask_61',['resumeTask',['../classHolonomicLib_1_1TaskWrapper.html#ae7e853972219642cd24ab3e67fdb6066',1,'HolonomicLib::TaskWrapper']]],
+  ['rightback_62',['rightBack',['../main_8cpp.html#a15916928512f68450630a1c58594460b',1,'main.cpp']]],
+  ['rightenc_63',['rightEnc',['../main_8cpp.html#a1d247ea5729762fbcfdf5920dd96409d',1,'main.cpp']]],
+  ['rightfront_64',['rightFront',['../main_8cpp.html#a8e4548cfc3be44256bfae777fc70c79d',1,'main.cpp']]]
 ];

@@ -14,8 +14,3 @@ temp.log
 temp.errors
 *.ini
 .d/
-
-# Pathplanner
-*.csv
-*.path
-Pathplanner/

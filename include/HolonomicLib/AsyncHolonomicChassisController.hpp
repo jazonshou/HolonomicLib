@@ -20,8 +20,6 @@
 #include "Math.hpp"
 #include "Trajectory.hpp"
 #include "Units.hpp"
-#include "ExpandedXDriveModel.hpp"
-#include "FeedforwardController.hpp"
 
 namespace HolonomicLib {
 
@@ -70,22 +68,7 @@ class AsyncHolonomicChassisController : public TaskWrapper,
                                     const Pose2D &isettleTolerance,
                                     const okapi::TimeUtil& itimeUtil);
 
-    /**
-     * @brief Imagine this whole thing just doesn't exist...
-     *        in other words, don't use this constructor, im honestly just too lazy to delete it
-     * 
-     * @param ichassis dont
-     * @param itranslateGains use 
-     * @param iturnGains this
-     * @param itranslateFFGains please
-     * @param itimeUtil thanks
-     */
-    AsyncHolonomicChassisController(std::shared_ptr<okapi::OdomChassisController> ichassis,
-                                    const okapi::IterativePosPIDController::Gains &itranslateGains,
-                                    const okapi::IterativePosPIDController::Gains &iturnGains,
-                                    const FeedforwardGains &itranslateFFGains,
-                                    const okapi::TimeUtil& itimeUtil);
-    
+   
     friend class AsyncHolonomicChassisControllerBuilder;
 
     public: 
@@ -147,7 +130,7 @@ class AsyncHolonomicChassisController : public TaskWrapper,
     bool isSettled();
 
     protected:
-    std::shared_ptr<ExpandedXDriveModel> model;
+    std::shared_ptr<okapi::XDriveModel> model;
     std::shared_ptr<okapi::OdomChassisController> chassis;
 
     std::unique_ptr<okapi::IterativePosPIDController> xController{nullptr};
@@ -170,6 +153,8 @@ class AsyncHolonomicChassisController : public TaskWrapper,
     bool timedTrajectoryEnabled{false};
 
     int index{0};
+
+    bool initialRun{true};
 
     pros::Mutex lock;
 
@@ -217,7 +202,6 @@ class AsyncHolonomicChassisControllerBuilder {
     std::shared_ptr<okapi::OdomChassisController> chassis;
     okapi::IterativePosPIDController::Gains pidTranslateGains; 
     okapi::IterativePosPIDController::Gains pidTurnGains;
-    FeedforwardGains ffTranslateGains;
     Pose2D settleTolerance{1 * okapi::inch, 1 * okapi::inch, 1 * okapi::degree};
 
     bool pidInit{false};

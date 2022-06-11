@@ -322,19 +322,20 @@
 <codeline lineno="190"><highlight class="normal"></highlight></codeline>
 <codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref>&amp;<sp/>withTolerance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structHolonomicLib_1_1Pose2D" kindref="compound">Pose2D</ref><sp/>&amp;isettleTolerance);</highlight></codeline>
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>AsyncHolonomicChassisControllerBuilder&amp;<sp/>withFFGains(const<sp/>FeedforwardGains<sp/>&amp;itranslateGains);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;AsyncHolonomicChassisController&gt;<sp/>build();</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;okapi::OdomChassisController&gt;<sp/><ref refid="main_8cpp_1a2aaa5a2ecb33ce62d94d3be910e5e156" kindref="member">chassis</ref>;</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>okapi::IterativePosPIDController::Gains<sp/>pidTranslateGains;<sp/></highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>okapi::IterativePosPIDController::Gains<sp/>pidTurnGains;</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D" kindref="compound">Pose2D</ref><sp/>settleTolerance{1<sp/>*<sp/>okapi::inch,<sp/>1<sp/>*<sp/>okapi::inch,<sp/>1<sp/>*<sp/>okapi::degree};</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pidInit{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>outputInit{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
-<codeline lineno="209"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"></highlight></codeline>
-<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;AsyncHolonomicChassisController&gt;<sp/>build();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;okapi::OdomChassisController&gt;<sp/><ref refid="main_8cpp_1a2aaa5a2ecb33ce62d94d3be910e5e156" kindref="member">chassis</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>okapi::IterativePosPIDController::Gains<sp/>pidTranslateGains;<sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>okapi::IterativePosPIDController::Gains<sp/>pidTurnGains;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D" kindref="compound">Pose2D</ref><sp/>settleTolerance{1<sp/>*<sp/>okapi::inch,<sp/>1<sp/>*<sp/>okapi::inch,<sp/>1<sp/>*<sp/>okapi::degree};</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pidInit{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>outputInit{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="include/HolonomicLib/AsyncHolonomicChassisController.hpp"/>
   </compounddef>

@@ -1,211 +1,238 @@
 #pragma once
-#include <iostream>
 
 #include "okapi/api/chassis/controller/odomChassisController.hpp"
 #include "okapi/api/chassis/model/xDriveModel.hpp"
 #include "okapi/api/control/iterative/iterativePosPidController.hpp"
-#include "okapi/api/util/timeUtil.hpp"
 #include "okapi/impl/util/timeUtilFactory.hpp"
-#include "okapi/api/device/motor/abstractMotor.hpp"
 
 #include "HolonomicLib/Utility/Units.hpp"
 #include "HolonomicLib/Utility/Math.hpp"
 #include "HolonomicLib/Utility/StateMachine.hpp"
 #include "HolonomicLib/Utility/TaskWrapper.hpp"
 #include "HolonomicLib/Pathing/Pose2D.hpp"
-#include "HolonomicLib/Pathing/Trajectory.hpp"
 
-namespace HolonomicLib {
+namespace HolonomicLib{
 
 /**
- * @brief Enum for the different Chassis states 
+ * @brief Enum for the different Chassis states
  *        PATHING - The robot is following a path
- *        TRANSLATING - The robot is translating via PID
+ *        MOVING - The robot is moving toward a point
  *        IDLE - No robot movement
- * 
+ *
  */
-enum class ChassisState {
-    PATHING, TRANSLATING, IDLE
+enum class ChassisState
+{
+    MOVING,
+    PATHING,
+    IDLE
 };
 
 template class StateMachine<ChassisState>;
 
-class AsyncHolonomicChassisController : public TaskWrapper, 
-                                        public StateMachine<ChassisState> 
+class AsyncHolonomicChassisController : public TaskWrapper, public StateMachine<ChassisState>
 {
-    protected: 
+    protected:
     /**
-     * @brief Construct a new Async Holonomic Chassis Controller object
-     * 
+     * @brief Constructs a new Async Holonomic Chassis Controller object
+     *
      * @param ichassis output chassis
-     * @param itranslateGains movement PID gains
-     * @param iturnGains turn PID gains
+     * @param idistController the distance PID controller
+     * @param iturnController the turn PID Controller
      * @param itimeUtil okapi time utility
      */
     AsyncHolonomicChassisController(std::shared_ptr<okapi::OdomChassisController> ichassis,
-                                    const okapi::IterativePosPIDController::Gains &itranslateGains,
-                                    const okapi::IterativePosPIDController::Gains &iturnGains,
-                                    const okapi::TimeUtil& itimeUtil);
+                                    std::unique_ptr<okapi::IterativePosPIDController> idistController,
+                                    std::unique_ptr<okapi::IterativePosPIDController> iturnController,
+                                    const okapi::TimeUtil &itimeUtil);
 
-    /**
-     * @brief Construct a new Async Holonomic Chassis Controller object
-     * 
-     * @param ichassis output chassis
-     * @param itranslateGains movementPID gains
-     * @param iturnGains turn PID gains
-     * @param isettleTolerance settle tolerance
-     * @param itimeUtil okapi time utility
-     */
-    AsyncHolonomicChassisController(std::shared_ptr<okapi::OdomChassisController> ichassis,
-                                    const okapi::IterativePosPIDController::Gains &itranslateGains,
-                                    const okapi::IterativePosPIDController::Gains &iturnGains,
-                                    const Pose2D &isettleTolerance,
-                                    const okapi::TimeUtil& itimeUtil);
-
-   
     friend class AsyncHolonomicChassisControllerBuilder;
 
-    public: 
+    public:
     /**
      * @brief Sets desired controller target (Pose)
-     * 
-     * @param targetPose desired Pose
+     *
+     * @param ipose desired Pose
      * @param waitUntilSettled if true, the controller will delay until the chassis has settled
      */
-    void setTarget(Pose2D targetPose, bool waitUntilSettled = false);
+    void setTarget(const Pose2D &ipose, bool waitUntilSettled = false);
 
     /**
      * @brief Sets desired controller target (Trajectory - used with old Pathplanner)
-     * 
+     *
      * @param itrajectory trajectory to be followed
      * @param waitUntilSettled if true, the controller will delay until the chassis has settled
      */
-    void setTarget(Trajectory &itrajectory, bool waitUntilSettled = false);
+    void setTarget(const Trajectory &itrajectory, bool waitUntilSettled = false);
 
     /**
      * @brief Sets desired controller target (TimedTrajectory - used with new Pathplanner)
-     * 
+     *
      * @param itrajectory trajectory to be followed
      * @param waitUntilSettled if true, the controller will delay until the chassis has settled
      */
-    void setTarget(TimedTrajectory &itrajectory, bool waitUntilSettled = false);
+    void setTarget(const TimedTrajectory &itrajectory, bool waitUntilSettled = false);
 
     /**
      * @brief Stops chassis
-     * 
+     *
      */
     void stop();
 
     /**
-     * @brief delays until the chassis has settled
-     * 
+     * @brief Delays until the chassis has settled
+     *
      */
     void waitUntilSettled();
 
     /**
      * @brief Sets current odom pose
-     * 
+     *
      * @param ipose current pose
      */
-    void setPose(Pose2D &ipose);
+    void setPose(const Pose2D &ipose);
 
     /**
      * @brief Gets current odom pose
-     * 
+     *
      * @return current pose
      */
     Pose2D getPose();
 
     /**
      * @brief Checks if the chassis is settled
-     * 
+     *
      * @return if chassis is settled or not
      */
     bool isSettled();
 
     protected:
-    std::shared_ptr<okapi::XDriveModel> model;
-    std::shared_ptr<okapi::OdomChassisController> chassis;
+    /**
+     * @brief TPeriodic task loop
+     * 
+     */
+    void loop() override;
 
-    std::unique_ptr<okapi::IterativePosPIDController> xController{nullptr};
-    std::unique_ptr<okapi::IterativePosPIDController> yController{nullptr};
+    /**
+     * @brief Resets the two PID controllers
+     * 
+     */
+    void resetControllers();
+
+    /**
+     * @brief Set the loop time of the two PID controllers
+     * 
+     * @param itime the loop time
+     */
+    void setControllerSampleTime(okapi::QTime itime);
+
+
+    std::shared_ptr<okapi::XDriveModel> model{nullptr};
+    std::shared_ptr<okapi::OdomChassisController> chassis{nullptr};
+
+    std::unique_ptr<okapi::IterativePosPIDController> distController{nullptr};
     std::unique_ptr<okapi::IterativePosPIDController> turnController{nullptr};
 
     std::unique_ptr<okapi::AbstractRate> rate;
     std::unique_ptr<okapi::AbstractTimer> timer;
-    okapi::QTime delayTime{0.0};
 
-    Trajectory trajectory; 
-    Pose2D initialPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
-    okapi::OdomState currentOdomState{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
-    Pose2D currentPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
-    
-    Pose2D endPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
-    Pose2D settleTolerance{1 * okapi::inch, 1 * okapi::inch, 1 * okapi::degree};
-
+    Trajectory trajectory;
     TimedTrajectory timedTrajectory;
-    bool timedTrajectoryEnabled{false};
+    Pose2D endPose;
 
+    Pose2D currentPose;
+    bool isTimedTrajectory{false};
     int index{0};
-
-    bool initialRun{true};
+    okapi::QTime delayTime;
 
     pros::Mutex lock;
-
-    void loop() override;
-
-    private: 
-    void resetControllers();
-    void controllerFlipDisabled(bool isDisabled);
 };
 
-class AsyncHolonomicChassisControllerBuilder {
-    public: 
-    AsyncHolonomicChassisControllerBuilder();
+class AsyncHolonomicChassisControllerBuilder
+{
+    public:
+    /**
+     * @brief Constructs a new AsyncHolonomicChassisControllerBuilder object
+     * 
+     * @param ichassis the chassis to output to
+     */
+    AsyncHolonomicChassisControllerBuilder(std::shared_ptr<okapi::OdomChassisController> ichassis);
+
+    /**
+     * @brief Destroys the AsyncHolonomicChassisControllerBuilder object
+     * 
+     */
     ~AsyncHolonomicChassisControllerBuilder() = default;
 
     /**
-     * @brief Adds output controller
+     * @brief sets the distance PID controller directly. Note that settling parameters must be given.
      * 
-     * @param ichassis output controller (MUST BE okapi::OdomChassisController)
-     * @return 
+     * @param idistController the supplied PID controller
+     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
      */
-    AsyncHolonomicChassisControllerBuilder& withOutput(std::shared_ptr<okapi::OdomChassisController> ichassis);
+    AsyncHolonomicChassisControllerBuilder& withDistPID(std::unique_ptr<okapi::IterativePosPIDController> idistController);
 
     /**
-     * @brief Adds PID gains
+     * @brief sets the turn PID controller directly. Note that settling parameters must be given.
      * 
-     * @param itranslateGains movement gains
-     * @param iturnGains turn gains
-     * @return 
+     * @param iturnController the supplied turn PID controller
+     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
      */
-    AsyncHolonomicChassisControllerBuilder& withPIDGains(const okapi::IterativePosPIDController::Gains &itranslateGains, 
-                                                         const okapi::IterativePosPIDController::Gains &iturnGains);
+    AsyncHolonomicChassisControllerBuilder& withTurnPID(std::unique_ptr<okapi::IterativePosPIDController> iturnController);
 
     /**
-     * @brief Adds tolerance 
+     * @brief sets the distance PID gains
      * 
-     * @param isettleTolerance pose tolerance
-     * @return 
+     * @param idistGains the supplied distance PID gains
+     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
      */
-    AsyncHolonomicChassisControllerBuilder& withTolerance(const Pose2D &isettleTolerance);
-    // AsyncHolonomicChassisControllerBuilder& withFFGains(const FeedforwardGains &itranslateGains);
+    AsyncHolonomicChassisControllerBuilder& withDistGains(const okapi::IterativePosPIDController::Gains &idistGains);
+
+    /**
+     * @brief sets the turn PID gains
+     * 
+     * @param iturnGains the supplied turn PID gains
+     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
+     */
+    AsyncHolonomicChassisControllerBuilder& withTurnGains(const okapi::IterativePosPIDController::Gains &iturnGains);
+
+    /**
+     * @brief sets the settling parameters of the distance PID 
+     * 
+     * @param imaxError maximun error (tolerance)
+     * @param imaxDerivative maximun derivative
+     * @param iwaitTime the minimun time to be within imaxError to be considered settled 
+     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
+     */
+    AsyncHolonomicChassisControllerBuilder& withDistSettleParameters(okapi::QLength imaxError, 
+                                                                     okapi::QSpeed imaxDerivative = 2 * okapi::inch / okapi::second, 
+                                                                     okapi::QTime iwaitTime = 0.1 * okapi::second);
     
     /**
-     * @brief Create AsyncHolonomicChassisController object
+     * @brief 
      * 
-     * @return controller
+     * @param imaxError maximun error (tolerance)
+     * @param imaxDerivative maximun derivative
+     * @param iwaitTime the minimun time to be within imaxError to be considered settled 
+     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
+     */
+    AsyncHolonomicChassisControllerBuilder& withTurnSettleParameters(okapi::QAngle imaxError, 
+                                                                     okapi::QAngularSpeed imaxDerivative = 10 * okapi::degree / okapi::second, 
+                                                                     okapi::QTime iwaitTime = 0.1 * okapi::second);
+
+    /**
+     * @brief Builds the AsyncHolonomicChassisController object
+     *
+     * @return The built async controller with the given parameters
      */
     std::shared_ptr<AsyncHolonomicChassisController> build();
-    
+
     private:
     std::shared_ptr<okapi::OdomChassisController> chassis;
-    okapi::IterativePosPIDController::Gains pidTranslateGains; 
-    okapi::IterativePosPIDController::Gains pidTurnGains;
-    Pose2D settleTolerance{1 * okapi::inch, 1 * okapi::inch, 1 * okapi::degree};
+    std::unique_ptr<okapi::IterativePosPIDController> distController;
+    std::unique_ptr<okapi::IterativePosPIDController> turnController;
 
-    bool pidInit{false};
-    bool outputInit{false};
+    bool distPIDInit{false};
+    bool turnPIDInit{false};
 };
 
 }

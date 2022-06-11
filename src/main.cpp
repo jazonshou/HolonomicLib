@@ -33,14 +33,9 @@ std::shared_ptr<OdomChassisController> chassis = ChassisControllerBuilder()
 
 
 void opcontrol() {
-    std::shared_ptr<AsyncHolonomicChassisController> hol = 
-    AsyncHolonomicChassisControllerBuilder()
-        .withOutput(chassis)
-        .withPIDGains(
-            {0.05, 0.0, 0.00065, 0.0}, 
-            {0.05, 0.0, 0.00065, 0.0}
-        )
-        .withTolerance({2_in, 2_in, 1_deg})
+    std::shared_ptr<AsyncHolonomicChassisController> hol = AsyncHolonomicChassisControllerBuilder(chassis)
+        .withDistPID(std::make_unique<IterativePosPIDController>(0.05, 0.0, 0.00065, 0.0, TimeUtilFactory::withSettledUtilParams(0.5, 10, 100_ms)))
+        .withTurnPID(std::make_unique<IterativePosPIDController>(0.05, 0.0, 0.00065, 0.0, TimeUtilFactory::withSettledUtilParams(1, 30, 100_ms)))
         .build();
 
 	hol->setTarget({2_ft, 2_ft, 45_deg}, true);

@@ -8,17 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install ARM toolchain
-        run: |
-          ARM_TOOLCHAIN_VERSION=$(curl -s https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads | grep -Po '<h3>Version \K.+(?= <span)')
-          curl -Lo gcc-arm-none-eabi.tar.bz2 "https://developer.arm.com/-/media/Files/downloads/gnu-rm/${ARM_TOOLCHAIN_VERSION}/gcc-arm-none-eabi-${ARM_TOOLCHAIN_VERSION}-x86_64-linux.tar.bz2"
-          sudo mkdir /opt/gcc-arm-none-eabi
-          sudo tar xf gcc-arm-none-eabi.tar.bz2 --strip-components=1 -C /opt/gcc-arm-none-eabi
-          echo 'export PATH=$PATH:/opt/gcc-arm-none-eabi/bin' | sudo tee -a /etc/profile.d/gcc-arm-none-eabi.sh
-          source /etc/profile
-          arm-none-eabi-gcc --version
-          arm-none-eabi-g++ --version
-          rm -rf gcc-arm-none-eabi.tar.bz2
+      - name: GNU Arm Embedded Toolchain
+        # You may pin to the exact commit or the version.
+        # uses: ryanwinter/arm-none-eabi-gcc@0386a959c4de20e2d8700eebf332e790a1ad5af5
+        uses: ryanwinter/arm-none-eabi-gcc@v2.0.4
+        with:
+          # GNU Arm Embedded Toolchain release name, in the V-YYYY-qZ format (e.g. "9-2019-q4")
+          release: 10.3-2021.10
       - name: Install PROS
         run: pip install pros-cli
       - name: Build Project

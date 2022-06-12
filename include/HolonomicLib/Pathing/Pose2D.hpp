@@ -31,6 +31,7 @@ struct Pose2D
 
     /**
      * @brief Converts an okapi OdomState into a Pose2D
+     *        This is done by negating y coordinate and constraining theta to be between -180 and 180
      * 
      * @param iState the supplied OdomState
      */
@@ -38,6 +39,7 @@ struct Pose2D
 
     /**
      * @brief Converts a TrajectoryState into a Pose2D
+     *        This is done by adding units (feet / degree) to the trajectory state's x, y and theta
      * 
      * @param iState the supplied TrajectoryStaet
      */
@@ -45,6 +47,7 @@ struct Pose2D
 
     /**
      * @brief Converts a TimedTrajectoryState into a Pose2D
+     *        This is done by adding units (feet / degree) to the trajectory state's x, y and theta
      * 
      * @param iState the suppliedTimeTrajectoryState
      */
@@ -54,7 +57,7 @@ struct Pose2D
      * @brief Computes the euclidean distance between two poses
      * 
      * @param other the pose to calculate distance between
-     * @return okapi::QLength the distance between the two pose
+     * @return distance between the two pose
      */
     okapi::QLength distanceTo(const Pose2D &other);
 
@@ -62,7 +65,7 @@ struct Pose2D
      * @brief Computes the euclidean angle between two poses
      * 
      * @param other the pose to calculate angle between
-     * @return okapi::QAngle angle to the other pose
+     * @return angle to the other pose
      */
     okapi::QAngle angleTo(const Pose2D &other);
 };

@@ -15,21 +15,22 @@ namespace HolonomicLib{
 
 /**
  * @brief Enum for the different Chassis states
- *        PATHING - The robot is following a path
- *        MOVING - The robot is moving toward a point
+ *        FOLLOWING_PATH - The robot is following a path
+ *        MOVING_TO_POINT - The robot is moving toward a point
  *        IDLE - No robot movement
  *
  */
 enum class ChassisState
 {
-    MOVING,
-    PATHING,
+    MOVING_TO_POINT,
+    FOLLOWING_PATH,
     IDLE
 };
 
 template class StateMachine<ChassisState>;
 
-class AsyncHolonomicChassisController : public TaskWrapper, public StateMachine<ChassisState>
+class AsyncHolonomicChassisController : public TaskWrapper, 
+                                        public StateMachine<ChassisState>
 {
     protected:
     /**
@@ -164,39 +165,41 @@ class AsyncHolonomicChassisControllerBuilder
     ~AsyncHolonomicChassisControllerBuilder() = default;
 
     /**
-     * @brief sets the distance PID controller directly. Note that settling parameters must be given.
+     * @brief Sets the distance PID controller. 
+     *             (Note: settling parameters must be given)
      * 
      * @param idistController the supplied PID controller
-     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
+     * @return ongoing builder
      */
     AsyncHolonomicChassisControllerBuilder& withDistPID(std::unique_ptr<okapi::IterativePosPIDController> idistController);
 
     /**
-     * @brief sets the turn PID controller directly. Note that settling parameters must be given.
+     * @brief Sets the turn PID controller. 
+     *             (Note: settling parameters must be given)
      * 
      * @param iturnController the supplied turn PID controller
-     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
+     * @return ongoing builder
      */
     AsyncHolonomicChassisControllerBuilder& withTurnPID(std::unique_ptr<okapi::IterativePosPIDController> iturnController);
 
     /**
-     * @brief sets the distance PID gains
+     * @brief Sets distance PID gains
      * 
      * @param idistGains the supplied distance PID gains
-     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
+     * @return ongoing builder
      */
     AsyncHolonomicChassisControllerBuilder& withDistGains(const okapi::IterativePosPIDController::Gains &idistGains);
 
     /**
-     * @brief sets the turn PID gains
+     * @brief Sets turn PID gains
      * 
      * @param iturnGains the supplied turn PID gains
-     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
+     * @return ongoing builder
      */
     AsyncHolonomicChassisControllerBuilder& withTurnGains(const okapi::IterativePosPIDController::Gains &iturnGains);
 
     /**
-     * @brief sets the settling parameters of the distance PID 
+     * @brief Sets settle parameters of the distance PID controller
      * 
      * @param imaxError maximun error (tolerance)
      * @param imaxDerivative maximun derivative
@@ -208,19 +211,20 @@ class AsyncHolonomicChassisControllerBuilder
                                                                      okapi::QTime iwaitTime = 0.1 * okapi::second);
     
     /**
-     * @brief 
+     * @brief Sets settle parameters of the turn PID controller
      * 
      * @param imaxError maximun error (tolerance)
      * @param imaxDerivative maximun derivative
      * @param iwaitTime the minimun time to be within imaxError to be considered settled 
-     * @return AsyncHolonomicChassisControllerBuilder& ongoing builder
+     * @return ongoing builder
      */
     AsyncHolonomicChassisControllerBuilder& withTurnSettleParameters(okapi::QAngle imaxError, 
                                                                      okapi::QAngularSpeed imaxDerivative = 10 * okapi::degree / okapi::second, 
                                                                      okapi::QTime iwaitTime = 0.1 * okapi::second);
 
     /**
-     * @brief Builds the AsyncHolonomicChassisController object
+     * @brief Builds the AsyncHolonomicChassisController object. Note that in order to build, both
+     *        the distance and the turn PID gains need to be supplied (or you can just pass a PID controller)
      *
      * @return The built async controller with the given parameters
      */

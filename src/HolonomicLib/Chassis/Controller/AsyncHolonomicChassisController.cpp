@@ -23,7 +23,7 @@ AsyncHolonomicChassisController::AsyncHolonomicChassisController(
 void AsyncHolonomicChassisController::setTarget(const Pose2D &ipose, bool waitUntilSettled)
 {
     lock.take(5);
-    setState(ChassisState::MOVING);
+    setState(ChassisState::MOVING_TO_POINT);
     resetControllers();
     endPose = ipose;
     lock.give();
@@ -36,7 +36,7 @@ void AsyncHolonomicChassisController::setTarget(const Pose2D &ipose, bool waitUn
 void AsyncHolonomicChassisController::setTarget(const Trajectory &itrajectory, bool waitUntilSettled)
 {
     lock.take(5);
-    setState(ChassisState::PATHING);
+    setState(ChassisState::FOLLOWING_PATH);
     resetControllers();
     trajectory = itrajectory;
     isTimedTrajectory = false;
@@ -51,7 +51,7 @@ void AsyncHolonomicChassisController::setTarget(const Trajectory &itrajectory, b
 void AsyncHolonomicChassisController::setTarget(const TimedTrajectory &itrajectory, bool waitUntilSettled)
 {
     lock.take(5);
-    setState(ChassisState::PATHING);
+    setState(ChassisState::FOLLOWING_PATH);
     resetControllers();
     timedTrajectory = itrajectory;
     isTimedTrajectory = true;
@@ -113,10 +113,10 @@ void AsyncHolonomicChassisController::loop() {
         Pose2D targetPose = currentPose; 
         delayTime = 10 * okapi::millisecond;
 
-        if(getState() == ChassisState::MOVING){
+        if(getState() == ChassisState::MOVING_TO_POINT){
             targetPose = endPose;
         }
-        else if(getState() == ChassisState::PATHING){
+        else if(getState() == ChassisState::FOLLOWING_PATH){
             if(isTimedTrajectory){
                 targetPose = timedTrajectory[std::min(index, timedTrajectory.size()-1)];
                 if(index < timedTrajectory.size()-1){

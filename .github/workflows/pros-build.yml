@@ -1,7 +1,6 @@
 name: PROS Build Action
 
-on: 
-  push:
+on: [push, pull_request]
 
 jobs:
   deploy:

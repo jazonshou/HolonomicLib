@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: sudo apt-get install gcc-arm-linux-eabi
+      - run: sudo apt install gcc-arm-linux-eabi
       - run: pip install pros-cli
       - run: pros make --verbose

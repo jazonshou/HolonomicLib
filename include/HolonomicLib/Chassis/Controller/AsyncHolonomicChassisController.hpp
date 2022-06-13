@@ -138,7 +138,7 @@ class AsyncHolonomicChassisController : public TaskWrapper,
 
     Trajectory trajectory;
     TimedTrajectory timedTrajectory;
-    Pose2D endPose;
+    Pose2D endPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
 
     Pose2D currentPose;
     bool isTimedTrajectory{false};

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['asyncholonomicchassiscontroller_122',['AsyncHolonomicChassisController',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a8d7db6773963de4167e25363dfe8cd7d',1,'HolonomicLib::AsyncHolonomicChassisController::AsyncHolonomicChassisController(std::shared_ptr&lt; okapi::OdomChassisController &gt; ichassis, const okapi::IterativePosPIDController::Gains &amp;itranslateGains, const okapi::IterativePosPIDController::Gains &amp;iturnGains, const okapi::TimeUtil &amp;itimeUtil)'],['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a7a5fbd5a7fc3b55392728563345dcb83',1,'HolonomicLib::AsyncHolonomicChassisController::AsyncHolonomicChassisController(std::shared_ptr&lt; okapi::OdomChassisController &gt; ichassis, const okapi::IterativePosPIDController::Gains &amp;itranslateGains, const okapi::IterativePosPIDController::Gains &amp;iturnGains, const Pose2D &amp;isettleTolerance, const okapi::TimeUtil &amp;itimeUtil)']]],
-  ['asyncholonomicchassiscontrollerbuilder_123',['AsyncHolonomicChassisControllerBuilder',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#a20e0ec6814a2c7c5611ae09127b7a4e9',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
-  ['autonomous_124',['autonomous',['../main_8cpp.html#a3c7ca506bbc071fa740de13805b7f376',1,'main.cpp']]]
+  ['angleto_124',['angleTo',['../structHolonomicLib_1_1Pose2D.html#a74c1e70295f615f9d07a062333a96bb0',1,'HolonomicLib::Pose2D']]],
+  ['asyncholonomicchassiscontroller_125',['AsyncHolonomicChassisController',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a204d6180f23ff817e415f57867c0cee5',1,'HolonomicLib::AsyncHolonomicChassisController']]],
+  ['asyncholonomicchassiscontrollerbuilder_126',['AsyncHolonomicChassisControllerBuilder',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#affd083073e228af2c7bda234cc191936',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
+  ['autonomous_127',['autonomous',['../main_8cpp.html#a3c7ca506bbc071fa740de13805b7f376',1,'main.cpp']]]
 ];

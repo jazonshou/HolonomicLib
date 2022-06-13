@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['x_192',['x',['../structHolonomicLib_1_1Pose2D.html#a3d6358038f364d1481fdfcae68ec3703',1,'HolonomicLib::Pose2D::x()'],['../structHolonomicLib_1_1TrajectoryState.html#afc62ff7bc58e49b33cd5ffc30725f2a9',1,'HolonomicLib::TrajectoryState::x()'],['../structHolonomicLib_1_1TimedTrajectoryState.html#a6575f178b64ccb9b2df3042488bf2cac',1,'HolonomicLib::TimedTrajectoryState::x()']]],
-  ['xcontroller_193',['xController',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#af1d95cc7acd8b3c10b83ffcb18763cbf',1,'HolonomicLib::AsyncHolonomicChassisController']]]
+  ['y_199',['y',['../structHolonomicLib_1_1Pose2D.html#a86bc4b9cc0d8b1de84b39caf757a35cf',1,'HolonomicLib::Pose2D::y()'],['../structHolonomicLib_1_1TrajectoryState.html#a1a5db51ff9cc12b334dd3b49b91bf6b2',1,'HolonomicLib::TrajectoryState::y()'],['../structHolonomicLib_1_1TimedTrajectoryState.html#a979bff025a498f73b7045ca03cef9e3d',1,'HolonomicLib::TimedTrajectoryState::y()']]]
 ];

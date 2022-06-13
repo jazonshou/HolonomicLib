@@ -15,53 +15,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="202" column="21" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="202" bodyend="-1"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="234" column="21" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="234" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ab7642926450d3e9f283ec22bf9716aba" prot="private" static="no" mutable="no">
-        <type>okapi::IterativePosPIDController::Gains</type>
-        <definition>okapi::IterativePosPIDController::Gains HolonomicLib::AsyncHolonomicChassisControllerBuilder::pidTranslateGains</definition>
+      <memberdef kind="variable" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a41bf20ba1003ac3a59a458edff73ebf5" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; okapi::IterativePosPIDController &gt;</type>
+        <definition>std::unique_ptr&lt;okapi::IterativePosPIDController&gt; HolonomicLib::AsyncHolonomicChassisControllerBuilder::distController</definition>
         <argsstring></argsstring>
-        <name>pidTranslateGains</name>
+        <name>distController</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="203" column="45" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="203" bodyend="-1"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="235" column="21" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="235" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1adb6401088d17a02bc47d46da18f55b88" prot="private" static="no" mutable="no">
-        <type>okapi::IterativePosPIDController::Gains</type>
-        <definition>okapi::IterativePosPIDController::Gains HolonomicLib::AsyncHolonomicChassisControllerBuilder::pidTurnGains</definition>
+      <memberdef kind="variable" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a410a16a9dea8277cc13bde54d5dd48c7" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; okapi::IterativePosPIDController &gt;</type>
+        <definition>std::unique_ptr&lt;okapi::IterativePosPIDController&gt; HolonomicLib::AsyncHolonomicChassisControllerBuilder::turnController</definition>
         <argsstring></argsstring>
-        <name>pidTurnGains</name>
+        <name>turnController</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="204" column="45" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="204" bodyend="-1"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="236" column="21" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="236" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1af4077e21a886a0dcdfb3e3777e559ed5" prot="private" static="no" mutable="no">
-        <type><ref refid="structHolonomicLib_1_1Pose2D" kindref="compound">Pose2D</ref></type>
-        <definition>Pose2D HolonomicLib::AsyncHolonomicChassisControllerBuilder::settleTolerance</definition>
-        <argsstring></argsstring>
-        <name>settleTolerance</name>
-        <initializer>{1 * okapi::inch, 1 * okapi::inch, 1 * okapi::degree}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="205" column="12" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="205" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a4b1ab8878ce2eb6a6de132698807ba65" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1abe2d54f4eefb279e4e2e94a3ff94bcb4" prot="private" static="no" mutable="no">
         <type>bool</type>
-        <definition>bool HolonomicLib::AsyncHolonomicChassisControllerBuilder::pidInit</definition>
+        <definition>bool HolonomicLib::AsyncHolonomicChassisControllerBuilder::distPIDInit</definition>
         <argsstring></argsstring>
-        <name>pidInit</name>
+        <name>distPIDInit</name>
         <initializer>{false}</initializer>
         <briefdescription>
         </briefdescription>
@@ -69,13 +55,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="207" column="10" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="207" bodyend="-1"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="238" column="10" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="238" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a05a605134f0440ec65d9ba63114ddbeb" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ad2fa6b314c19198717174f0303c1d474" prot="private" static="no" mutable="no">
         <type>bool</type>
-        <definition>bool HolonomicLib::AsyncHolonomicChassisControllerBuilder::outputInit</definition>
+        <definition>bool HolonomicLib::AsyncHolonomicChassisControllerBuilder::turnPIDInit</definition>
         <argsstring></argsstring>
-        <name>outputInit</name>
+        <name>turnPIDInit</name>
         <initializer>{false}</initializer>
         <briefdescription>
         </briefdescription>
@@ -83,47 +69,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="208" column="10" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="208" bodyend="-1"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="239" column="10" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="239" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a20e0ec6814a2c7c5611ae09127b7a4e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1affd083073e228af2c7bda234cc191936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>HolonomicLib::AsyncHolonomicChassisControllerBuilder::AsyncHolonomicChassisControllerBuilder</definition>
-        <argsstring>()</argsstring>
-        <name>AsyncHolonomicChassisControllerBuilder</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="164" column="5" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="206" bodyend="207"/>
-      </memberdef>
-      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3d7f66586749bc1c714921677ba1080d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>HolonomicLib::AsyncHolonomicChassisControllerBuilder::~AsyncHolonomicChassisControllerBuilder</definition>
-        <argsstring>()=default</argsstring>
-        <name>~AsyncHolonomicChassisControllerBuilder</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="165" column="5"/>
-      </memberdef>
-      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a1310698fb52b0b241824432cb71db553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
-        <definition>AsyncHolonomicChassisControllerBuilder &amp; HolonomicLib::AsyncHolonomicChassisControllerBuilder::withOutput</definition>
         <argsstring>(std::shared_ptr&lt; okapi::OdomChassisController &gt; ichassis)</argsstring>
-        <name>withOutput</name>
+        <name>AsyncHolonomicChassisControllerBuilder</name>
         <param>
           <type>std::shared_ptr&lt; okapi::OdomChassisController &gt;</type>
           <declname>ichassis</declname>
         </param>
         <briefdescription>
-<para>Adds output controller. </para>
+<para>Constructs a new <ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> object. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -131,89 +91,263 @@
 <parametername>ichassis</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>output controller (MUST BE okapi::OdomChassisController) </para>
+<para>the chassis to output to </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para></para>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="159" column="5" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="160" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3d7f66586749bc1c714921677ba1080d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HolonomicLib::AsyncHolonomicChassisControllerBuilder::~AsyncHolonomicChassisControllerBuilder</definition>
+        <argsstring>()=default</argsstring>
+        <name>~AsyncHolonomicChassisControllerBuilder</name>
+        <briefdescription>
+<para>Destroys the <ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="165" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3e99a89731240d25a5779d5972820a8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
+        <definition>AsyncHolonomicChassisControllerBuilder &amp; HolonomicLib::AsyncHolonomicChassisControllerBuilder::withDistPID</definition>
+        <argsstring>(std::unique_ptr&lt; okapi::IterativePosPIDController &gt; idistController)</argsstring>
+        <name>withDistPID</name>
+        <param>
+          <type>std::unique_ptr&lt; okapi::IterativePosPIDController &gt;</type>
+          <declname>idistController</declname>
+        </param>
+        <briefdescription>
+<para>Sets the distance PID controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>(Note: settling parameters must be given)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idistController</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the supplied PID controller </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ongoing builder </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="173" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="210" bodyend="214"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="174" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="169" bodyend="173"/>
       </memberdef>
-      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ae9757cff1ff7301d02a6b7ce87751986" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a6e7eea3f786704ca1211f379842a2667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
-        <definition>AsyncHolonomicChassisControllerBuilder &amp; HolonomicLib::AsyncHolonomicChassisControllerBuilder::withPIDGains</definition>
-        <argsstring>(const okapi::IterativePosPIDController::Gains &amp;itranslateGains, const okapi::IterativePosPIDController::Gains &amp;iturnGains)</argsstring>
-        <name>withPIDGains</name>
+        <definition>AsyncHolonomicChassisControllerBuilder &amp; HolonomicLib::AsyncHolonomicChassisControllerBuilder::withTurnPID</definition>
+        <argsstring>(std::unique_ptr&lt; okapi::IterativePosPIDController &gt; iturnController)</argsstring>
+        <name>withTurnPID</name>
+        <param>
+          <type>std::unique_ptr&lt; okapi::IterativePosPIDController &gt;</type>
+          <declname>iturnController</declname>
+        </param>
+        <briefdescription>
+<para>Sets the turn PID controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>(Note: settling parameters must be given)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iturnController</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the supplied turn PID controller </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ongoing builder </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="183" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="176" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a8b3888c8dc7ff07980e4bc545e29a695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
+        <definition>AsyncHolonomicChassisControllerBuilder &amp; HolonomicLib::AsyncHolonomicChassisControllerBuilder::withDistGains</definition>
+        <argsstring>(const okapi::IterativePosPIDController::Gains &amp;idistGains)</argsstring>
+        <name>withDistGains</name>
         <param>
           <type>const okapi::IterativePosPIDController::Gains &amp;</type>
-          <declname>itranslateGains</declname>
+          <declname>idistGains</declname>
         </param>
+        <briefdescription>
+<para>Sets distance PID gains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idistGains</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the supplied distance PID gains </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ongoing builder </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="191" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="183" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a81124efd9fabcba41971ff46c98b1b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
+        <definition>AsyncHolonomicChassisControllerBuilder &amp; HolonomicLib::AsyncHolonomicChassisControllerBuilder::withTurnGains</definition>
+        <argsstring>(const okapi::IterativePosPIDController::Gains &amp;iturnGains)</argsstring>
+        <name>withTurnGains</name>
         <param>
           <type>const okapi::IterativePosPIDController::Gains &amp;</type>
           <declname>iturnGains</declname>
         </param>
         <briefdescription>
-<para>Adds PID gains. </para>
+<para>Sets turn PID gains. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>itranslateGains</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>movement gains </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
 <parameternamelist>
 <parametername>iturnGains</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>turn gains </para>
+<para>the supplied turn PID gains </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para></para>
+<simplesect kind="return"><para>ongoing builder </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="182" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="217" bodyend="224"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="199" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="190" bodyend="194"/>
       </memberdef>
-      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a1f2d1aa80932b6e6ad17d17c2a7ce93e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1affcf4fd14b4957384871672efc6822be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
-        <definition>AsyncHolonomicChassisControllerBuilder &amp; HolonomicLib::AsyncHolonomicChassisControllerBuilder::withTolerance</definition>
-        <argsstring>(const Pose2D &amp;isettleTolerance)</argsstring>
-        <name>withTolerance</name>
+        <definition>AsyncHolonomicChassisControllerBuilder &amp; HolonomicLib::AsyncHolonomicChassisControllerBuilder::withDistSettleParameters</definition>
+        <argsstring>(okapi::QLength imaxError, okapi::QSpeed imaxDerivative=2 *okapi::inch/okapi::second, okapi::QTime iwaitTime=0.1 *okapi::second)</argsstring>
+        <name>withDistSettleParameters</name>
         <param>
-          <type>const <ref refid="structHolonomicLib_1_1Pose2D" kindref="compound">Pose2D</ref> &amp;</type>
-          <declname>isettleTolerance</declname>
+          <type>okapi::QLength</type>
+          <declname>imaxError</declname>
+        </param>
+        <param>
+          <type>okapi::QSpeed</type>
+          <declname>imaxDerivative</declname>
+          <defval>2 *okapi::inch/okapi::second</defval>
+        </param>
+        <param>
+          <type>okapi::QTime</type>
+          <declname>iwaitTime</declname>
+          <defval>0.1 *okapi::second</defval>
         </param>
         <briefdescription>
-<para>Adds tolerance. </para>
+<para>Sets settle parameters of the distance PID controller. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>isettleTolerance</parametername>
+<parametername>imaxError</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pose tolerance </para>
+<para>maximun error (tolerance) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imaxDerivative</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximun derivative </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iwaitTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the minimun time to be within imaxError to be considered settled </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para></para>
+<simplesect kind="return"><para><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref>&amp; ongoing builder </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="191" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="227" bodyend="231"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="209" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="196" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1af4cb4f036b2fe76fd46b414dbad27ad5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
+        <definition>AsyncHolonomicChassisControllerBuilder &amp; HolonomicLib::AsyncHolonomicChassisControllerBuilder::withTurnSettleParameters</definition>
+        <argsstring>(okapi::QAngle imaxError, okapi::QAngularSpeed imaxDerivative=10 *okapi::degree/okapi::second, okapi::QTime iwaitTime=0.1 *okapi::second)</argsstring>
+        <name>withTurnSettleParameters</name>
+        <param>
+          <type>okapi::QAngle</type>
+          <declname>imaxError</declname>
+        </param>
+        <param>
+          <type>okapi::QAngularSpeed</type>
+          <declname>imaxDerivative</declname>
+          <defval>10 *okapi::degree/okapi::second</defval>
+        </param>
+        <param>
+          <type>okapi::QTime</type>
+          <declname>iwaitTime</declname>
+          <defval>0.1 *okapi::second</defval>
+        </param>
+        <briefdescription>
+<para>Sets settle parameters of the turn PID controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imaxError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximun error (tolerance) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imaxDerivative</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximun derivative </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iwaitTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the minimun time to be within imaxError to be considered settled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ongoing builder </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="221" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="208" bodyend="218"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a5b6a56ec82a7def66fc20910a09a819e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classHolonomicLib_1_1AsyncHolonomicChassisController" kindref="compound">AsyncHolonomicChassisController</ref> &gt;</type>
@@ -221,35 +355,38 @@
         <argsstring>()</argsstring>
         <name>build</name>
         <briefdescription>
-<para>Create <ref refid="classHolonomicLib_1_1AsyncHolonomicChassisController" kindref="compound">AsyncHolonomicChassisController</ref> object. </para>
+<para>Builds the <ref refid="classHolonomicLib_1_1AsyncHolonomicChassisController" kindref="compound">AsyncHolonomicChassisController</ref> object. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>controller </para>
+<para>Note that in order to build, both the distance and the turn PID gains need to be supplied (or you can just pass a PID controller)</para>
+<para><simplesect kind="return"><para>The built async controller with the given parameters </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="199" column="21" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="234" bodyend="251"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="231" column="21" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="220" bodyend="242"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="162" column="45" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="162" bodyend="209"/>
+    <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="152" column="1" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="151" bodyend="240"/>
     <listofallmembers>
-      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a20e0ec6814a2c7c5611ae09127b7a4e9" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>AsyncHolonomicChassisControllerBuilder</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1affd083073e228af2c7bda234cc191936" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>AsyncHolonomicChassisControllerBuilder</name></member>
       <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a5b6a56ec82a7def66fc20910a09a819e" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>build</name></member>
       <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3fdabd718ae50ab35b0490c24002c91e" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>chassis</name></member>
-      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a05a605134f0440ec65d9ba63114ddbeb" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>outputInit</name></member>
-      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a4b1ab8878ce2eb6a6de132698807ba65" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>pidInit</name></member>
-      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ab7642926450d3e9f283ec22bf9716aba" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>pidTranslateGains</name></member>
-      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1adb6401088d17a02bc47d46da18f55b88" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>pidTurnGains</name></member>
-      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1af4077e21a886a0dcdfb3e3777e559ed5" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>settleTolerance</name></member>
-      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a1310698fb52b0b241824432cb71db553" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>withOutput</name></member>
-      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ae9757cff1ff7301d02a6b7ce87751986" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>withPIDGains</name></member>
-      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a1f2d1aa80932b6e6ad17d17c2a7ce93e" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>withTolerance</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a41bf20ba1003ac3a59a458edff73ebf5" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>distController</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1abe2d54f4eefb279e4e2e94a3ff94bcb4" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>distPIDInit</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a410a16a9dea8277cc13bde54d5dd48c7" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>turnController</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1ad2fa6b314c19198717174f0303c1d474" prot="private" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>turnPIDInit</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a8b3888c8dc7ff07980e4bc545e29a695" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>withDistGains</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3e99a89731240d25a5779d5972820a8f" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>withDistPID</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1affcf4fd14b4957384871672efc6822be" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>withDistSettleParameters</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a81124efd9fabcba41971ff46c98b1b77" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>withTurnGains</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a6e7eea3f786704ca1211f379842a2667" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>withTurnPID</name></member>
+      <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1af4cb4f036b2fe76fd46b414dbad27ad5" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>withTurnSettleParameters</name></member>
       <member refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3d7f66586749bc1c714921677ba1080d" prot="public" virt="non-virtual"><scope>HolonomicLib::AsyncHolonomicChassisControllerBuilder</scope><name>~AsyncHolonomicChassisControllerBuilder</name></member>
     </listofallmembers>
   </compounddef>

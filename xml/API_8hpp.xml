@@ -10,16 +10,19 @@
     <includes refid="TaskWrapper_8hpp" local="yes">HolonomicLib/Utility/TaskWrapper.hpp</includes>
     <includes refid="StateMachine_8hpp" local="yes">HolonomicLib/Utility/StateMachine.hpp</includes>
     <incdepgraph>
-      <node id="11">
+      <node id="8">
         <label>okapi/api/units/QAcceleration.hpp</label>
       </node>
-      <node id="12">
+      <node id="9">
         <label>okapi/api/units/QSpeed.hpp</label>
       </node>
-      <node id="17">
+      <node id="15">
         <label>okapi/api/units/QAngle.hpp</label>
       </node>
-      <node id="13">
+      <node id="12">
+        <label>okapi/api/units/QAngularSpeed.hpp</label>
+      </node>
+      <node id="10">
         <label>okapi/api/units/QLength.hpp</label>
       </node>
       <node id="1">
@@ -27,77 +30,73 @@
         <link refid="API_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-      </node>
-      <node id="9">
-        <label>okapi/api/device/motor/abstractMotor.hpp</label>
-      </node>
-      <node id="22">
-        <label>HolonomicLib/Pathing/Pose2D.hpp</label>
-        <link refid="Pose2D_8hpp"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>HolonomicLib/Utility/Math.hpp</label>
-        <link refid="Math_8hpp"/>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-      </node>
-      <node id="25">
-        <label>vector</label>
-      </node>
-      <node id="14">
-        <label>okapi/api/units/QTime.hpp</label>
-      </node>
-      <node id="7">
-        <label>okapi/api/util/timeUtil.hpp</label>
-      </node>
-      <node id="23">
-        <label>HolonomicLib/Pathing/Trajectory.hpp</label>
-        <link refid="Trajectory_8hpp"/>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-      </node>
-      <node id="16">
-        <label>utility</label>
-      </node>
-      <node id="19">
-        <label>pros/rtos.hpp</label>
-      </node>
-      <node id="4">
-        <label>okapi/api/chassis/controller/odomChassisController.hpp</label>
-      </node>
-      <node id="5">
-        <label>okapi/api/chassis/model/xDriveModel.hpp</label>
       </node>
       <node id="20">
-        <label>HolonomicLib/Utility/TaskWrapper.hpp</label>
-        <link refid="TaskWrapper_8hpp"/>
-        <childnode refid="19" relation="include">
-        </childnode>
+        <label>HolonomicLib/Pathing/Pose2D.hpp</label>
+        <link refid="Pose2D_8hpp"/>
         <childnode refid="21" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>HolonomicLib/Utility/Math.hpp</label>
+        <link refid="Math_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>okapi/api/odometry/odomState.hpp</label>
+      </node>
+      <node id="24">
+        <label>vector</label>
+      </node>
+      <node id="11">
+        <label>okapi/api/units/QTime.hpp</label>
+      </node>
+      <node id="22">
+        <label>HolonomicLib/Pathing/Trajectory.hpp</label>
+        <link refid="Trajectory_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>utility</label>
+      </node>
+      <node id="17">
+        <label>pros/rtos.hpp</label>
       </node>
       <node id="3">
-        <label>iostream</label>
+        <label>okapi/api/chassis/controller/odomChassisController.hpp</label>
+      </node>
+      <node id="4">
+        <label>okapi/api/chassis/model/xDriveModel.hpp</label>
+      </node>
+      <node id="18">
+        <label>HolonomicLib/Utility/TaskWrapper.hpp</label>
+        <link refid="TaskWrapper_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp</label>
@@ -112,51 +111,45 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>HolonomicLib/Utility/StateMachine.hpp</label>
+        <link refid="StateMachine_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>okapi/api/control/iterative/iterativePosPidController.hpp</label>
+      </node>
+      <node id="7">
+        <label>HolonomicLib/Utility/Units.hpp</label>
+        <link refid="Units_8hpp"/>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>HolonomicLib/Utility/StateMachine.hpp</label>
-        <link refid="StateMachine_8hpp"/>
-        <childnode refid="19" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>okapi/api/control/iterative/iterativePosPidController.hpp</label>
-      </node>
-      <node id="10">
-        <label>HolonomicLib/Utility/Units.hpp</label>
-        <link refid="Units_8hpp"/>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
       </node>
-      <node id="21">
+      <node id="19">
         <label>memory</label>
       </node>
-      <node id="24">
+      <node id="23">
         <label>initializer_list</label>
       </node>
-      <node id="8">
+      <node id="6">
         <label>okapi/impl/util/timeUtilFactory.hpp</label>
       </node>
     </incdepgraph>

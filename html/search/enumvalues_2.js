@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['translating_199',['TRANSLATING',['../namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3',1,'HolonomicLib']]]
+  ['moving_5fto_5fpoint_203',['MOVING_TO_POINT',['../namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bdaf219b2ab91a60a48dd0edb233d375a11',1,'HolonomicLib']]]
 ];

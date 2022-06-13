@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="159" column="5" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="160" bodyend="166"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="159" column="5" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="169" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a3d7f66586749bc1c714921677ba1080d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="174" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="169" bodyend="173"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="174" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="179" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a6e7eea3f786704ca1211f379842a2667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="183" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="176" bodyend="180"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="183" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="187" bodyend="192"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a8b3888c8dc7ff07980e4bc545e29a695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="191" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="183" bodyend="187"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="191" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="195" bodyend="200"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a81124efd9fabcba41971ff46c98b1b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
@@ -235,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="199" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="190" bodyend="194"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="199" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="203" bodyend="208"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1affcf4fd14b4957384871672efc6822be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
@@ -291,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="209" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="196" bodyend="206"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="209" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="210" bodyend="221"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1af4cb4f036b2fe76fd46b414dbad27ad5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder" kindref="compound">AsyncHolonomicChassisControllerBuilder</ref> &amp;</type>
@@ -347,7 +347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="221" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="208" bodyend="218"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="221" column="44" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="223" bodyend="234"/>
       </memberdef>
       <memberdef kind="function" id="classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder_1a5b6a56ec82a7def66fc20910a09a819e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classHolonomicLib_1_1AsyncHolonomicChassisController" kindref="compound">AsyncHolonomicChassisController</ref> &gt;</type>
@@ -365,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="231" column="21" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="220" bodyend="242"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="231" column="21" bodyfile="src/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.cpp" bodystart="236" bodyend="260"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

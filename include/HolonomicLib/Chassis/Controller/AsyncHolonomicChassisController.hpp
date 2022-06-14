@@ -9,7 +9,7 @@
 #include "HolonomicLib/Utility/Math.hpp"
 #include "HolonomicLib/Utility/StateMachine.hpp"
 #include "HolonomicLib/Utility/TaskWrapper.hpp"
-#include "HolonomicLib/Pathing/Pose2D.hpp"
+#include "HolonomicLib/Pathing/Geometry/Pose.hpp"
 
 namespace HolonomicLib{
 
@@ -55,7 +55,7 @@ class AsyncHolonomicChassisController : public TaskWrapper,
      * @param ipose desired Pose
      * @param waitUntilSettled if true, the controller will delay until the chassis has settled
      */
-    void setTarget(const Pose2D &ipose, bool waitUntilSettled = false);
+    void setTarget(const Pose &ipose, bool waitUntilSettled = false);
 
     /**
      * @brief Sets desired controller target (Trajectory - used with old Pathplanner)
@@ -90,14 +90,14 @@ class AsyncHolonomicChassisController : public TaskWrapper,
      *
      * @param ipose current pose
      */
-    void setPose(const Pose2D &ipose);
+    void setPose(const Pose &ipose);
 
     /**
      * @brief Gets current odom pose
      *
      * @return current pose
      */
-    Pose2D getPose();
+    Pose getPose();
 
     /**
      * @brief Checks if the chassis is settled
@@ -138,9 +138,9 @@ class AsyncHolonomicChassisController : public TaskWrapper,
 
     Trajectory trajectory;
     TimedTrajectory timedTrajectory;
-    Pose2D endPose;
+    Pose endPose{0 * okapi::inch, 0 * okapi::inch, 0 * okapi::degree};
 
-    Pose2D currentPose;
+    Pose currentPose;
     bool isTimedTrajectory{false};
     int index{0};
     okapi::QTime delayTime;

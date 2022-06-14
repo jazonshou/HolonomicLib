@@ -8,19 +8,28 @@ AsyncHolonomicChassisController::AsyncHolonomicChassisController(
                                     std::unique_ptr<okapi::IterativePosPIDController> iturnController,
                                     const okapi::TimeUtil& itimeUtil)
 {
+    std::cout << "\t [AsyncHolonomicChassisController::CONSTRUCTOR]" << std::endl;
     chassis = std::move(ichassis);
-    model = std::static_pointer_cast<okapi::XDriveModel>(ichassis->getModel());
+    std::cout << "\t\t Chassis: [OK]" << std::endl;
+    model = std::static_pointer_cast<okapi::XDriveModel>(chassis->getModel());
+    std::cout << "\t\t Model: [OK]" << std::endl;
 
     rate = std::move(itimeUtil.getRate());
+    std::cout << "\t\t Rate: [OK]" << std::endl;
     timer = std::move(itimeUtil.getTimer());
+    std::cout << "\t\t Timer: [OK]" << std::endl;
 
-    distController = std::move(distController);
-    turnController = std::move(turnController);
+    distController = std::move(idistController);
+    std::cout << "\t\t DistController: [OK]" << std::endl;
+    turnController = std::move(iturnController);
+    std::cout << "\t\t TurnController: [OK]" << std::endl;
     
     chassis->setDefaultStateMode(okapi::StateMode::FRAME_TRANSFORMATION);
+    chassis->startOdomThread();
+    std::cout << "\t\t OdomThread: [OK]" << std::endl;
 }
 
-void AsyncHolonomicChassisController::setTarget(const Pose2D &ipose, bool waitUntilSettled)
+void AsyncHolonomicChassisController::setTarget(const Pose &ipose, bool waitUntilSettled)
 {
     lock.take(5);
     setState(ChassisState::MOVING_TO_POINT);
@@ -76,20 +85,20 @@ void AsyncHolonomicChassisController::waitUntilSettled() {
     }
 }
 
-void AsyncHolonomicChassisController::setPose(const Pose2D &ipose) {
+void AsyncHolonomicChassisController::setPose(const Pose &ipose) {
     lock.take(5);
-    chassis->setState({ipose.x, ipose.y, ipose.theta});
+    chassis->setState({ipose.X(), -ipose.Y(), ipose.Theta()});
     lock.give();
 }
 
-Pose2D AsyncHolonomicChassisController::getPose() {
+Pose AsyncHolonomicChassisController::getPose(){
     lock.take(5);
     auto ret = currentPose;
     lock.give();
     return ret;
 }
 
-bool AsyncHolonomicChassisController::isSettled() {
+bool AsyncHolonomicChassisController::isSettled(){
     return distController->isSettled() && turnController->isSettled();
 }
 
@@ -110,7 +119,7 @@ void AsyncHolonomicChassisController::loop() {
         }
 
         currentPose = chassis->getState();    
-        Pose2D targetPose = currentPose; 
+        Pose targetPose = currentPose; 
         delayTime = 10 * okapi::millisecond;
 
         if(getState() == ChassisState::MOVING_TO_POINT){
@@ -129,18 +138,18 @@ void AsyncHolonomicChassisController::loop() {
 
             index++;
         }
-
-        auto distError = currentPose.distanceTo(endPose);
-        auto angleError = Math::rescale180(endPose.theta - currentPose.theta); 
-        double angleToTarget = currentPose.angleTo(targetPose).convert(okapi::radian);
+        
+        auto distError = currentPose.getTranslation().distTo(targetPose.getTranslation());
+        auto angleError = Math::rescale180(targetPose.Theta() - currentPose.Theta()); 
+        auto angleToTarget = currentPose.getTranslation().angleTo(targetPose.getTranslation());
 
         setControllerSampleTime(delayTime);
         double distOutput = distController->step(-distError.convert(okapi::inch));
         double turnOutput = turnController->step(-angleError.convert(okapi::degree));
-        double xOutput = distOutput * cos(angleToTarget);
-        double yOutput = turnOutput * sin(angleToTarget);
+        double xOutput = distOutput * cos(angleToTarget.convert(okapi::radian));
+        double yOutput = turnOutput * sin(angleToTarget.convert(okapi::radian));
 
-        model->fieldOrientedXArcade(xOutput, yOutput, turnOutput, currentPose.theta);
+        model->fieldOrientedXArcade(xOutput, yOutput, turnOutput, currentPose.Theta());
 
         lock.give();
         rate->delayUntil(delayTime);
@@ -163,12 +172,14 @@ AsyncHolonomicChassisControllerBuilder::AsyncHolonomicChassisControllerBuilder(s
                     (0.0, 0.0, 0.0, 0.0, okapi::TimeUtilFactory::withSettledUtilParams(0.5, 2.0, 100 * okapi::millisecond));
     turnController = std::make_unique<okapi::IterativePosPIDController>
                     (0.0, 0.0, 0.0, 0.0, okapi::TimeUtilFactory::withSettledUtilParams(1.0, 10.0, 100 * okapi::millisecond));
+    std::cout << "[AsyncHolonomicChassisControllerBuilder]: CONSTRUCTED" << std::endl;
 }
 
 AsyncHolonomicChassisControllerBuilder& AsyncHolonomicChassisControllerBuilder::withDistPID
                         (std::unique_ptr<okapi::IterativePosPIDController> idistController){
     distPIDInit = true;
     distController = std::move(idistController);
+    std::cout << "[AsyncHolonomicChassisControllerBuilder] .withDistPID: [OK]" << std::endl;
     return *this;
 }
 
@@ -176,6 +187,7 @@ AsyncHolonomicChassisControllerBuilder& AsyncHolonomicChassisControllerBuilder::
                         (std::unique_ptr<okapi::IterativePosPIDController> iturnController){
     turnPIDInit = true;
     turnController = std::move(iturnController);
+    std::cout << "[AsyncHolonomicChassisControllerBuilder] .withTurnPID: [OK]" << std::endl;
     return *this;
 }
 
@@ -183,6 +195,7 @@ AsyncHolonomicChassisControllerBuilder& AsyncHolonomicChassisControllerBuilder::
                         (const okapi::IterativePosPIDController::Gains &idistGains){
     distPIDInit = true;
     turnController->setGains(idistGains);
+    std::cout << "[AsyncHolonomicChassisControllerBuilder] .withDistGains: [OK]" << std::endl;
     return *this;
 }
 
@@ -190,6 +203,7 @@ AsyncHolonomicChassisControllerBuilder& AsyncHolonomicChassisControllerBuilder::
                         (const okapi::IterativePosPIDController::Gains &iturnGains){
     turnPIDInit = true;
     turnController->setGains(iturnGains);
+    std::cout << "[AsyncHolonomicChassisControllerBuilder] .withTurnGains: [OK]" << std::endl;
     return *this;
 }
 
@@ -202,6 +216,7 @@ AsyncHolonomicChassisControllerBuilder& AsyncHolonomicChassisControllerBuilder::
                                                                             imaxError.convert(okapi::inch),
                                                                             imaxDerivative.convert(okapi::inch / okapi::second),
                                                                             iwaitTime));
+    std::cout << "[AsyncHolonomicChassisControllerBuilder] .withDistSettleParameters: [OK]" << std::endl;
     return *this;
 }
 
@@ -214,6 +229,7 @@ AsyncHolonomicChassisControllerBuilder& AsyncHolonomicChassisControllerBuilder::
                                                                             imaxError.convert(okapi::degree),
                                                                             imaxDerivative.convert(okapi::degree / okapi::second),
                                                                             iwaitTime));
+    std::cout << "[AsyncHolonomicChassisControllerBuilder] .withTurnSettleParameters: [OK]" << std::endl;
     return *this;
 }
 
@@ -230,6 +246,7 @@ std::shared_ptr<AsyncHolonomicChassisController> AsyncHolonomicChassisController
         throw std::runtime_error("AsyncHolonomicChassisControllerBuilder: The supplied ChassisController is not built with an X Drive");
     }
 
+    std::cout << "[AsyncHolonomicChassisControllerBuilder] BUILDING......." << std::endl;
 
     std::shared_ptr<AsyncHolonomicChassisController> ret(new AsyncHolonomicChassisController(
         std::move(chassis),
@@ -238,6 +255,7 @@ std::shared_ptr<AsyncHolonomicChassisController> AsyncHolonomicChassisController
         okapi::TimeUtilFactory::createDefault()));
 
     ret->startTask();
+    std::cout << "[AsyncHolonomicChassisControllerBuilder] .build: [OK]" << std::endl;
     return std::move(ret);
 }
 

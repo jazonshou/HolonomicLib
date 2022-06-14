@@ -29,7 +29,7 @@ AsyncHolonomicChassisController::AsyncHolonomicChassisController(
     std::cout << "\t\t OdomThread: [OK]" << std::endl;
 }
 
-void AsyncHolonomicChassisController::setTarget(const Pose2D &ipose, bool waitUntilSettled)
+void AsyncHolonomicChassisController::setTarget(const Pose &ipose, bool waitUntilSettled)
 {
     lock.take(5);
     setState(ChassisState::MOVING_TO_POINT);
@@ -85,20 +85,20 @@ void AsyncHolonomicChassisController::waitUntilSettled() {
     }
 }
 
-void AsyncHolonomicChassisController::setPose(const Pose2D &ipose) {
+void AsyncHolonomicChassisController::setPose(const Pose &ipose) {
     lock.take(5);
-    chassis->setState({ipose.x, ipose.y, ipose.theta});
+    chassis->setState({ipose.X(), -ipose.Y(), ipose.Theta()});
     lock.give();
 }
 
-Pose2D AsyncHolonomicChassisController::getPose() {
+Pose AsyncHolonomicChassisController::getPose(){
     lock.take(5);
     auto ret = currentPose;
     lock.give();
     return ret;
 }
 
-bool AsyncHolonomicChassisController::isSettled() {
+bool AsyncHolonomicChassisController::isSettled(){
     return distController->isSettled() && turnController->isSettled();
 }
 
@@ -119,7 +119,7 @@ void AsyncHolonomicChassisController::loop() {
         }
 
         currentPose = chassis->getState();    
-        Pose2D targetPose = currentPose; 
+        Pose targetPose = currentPose; 
         delayTime = 10 * okapi::millisecond;
 
         if(getState() == ChassisState::MOVING_TO_POINT){
@@ -138,18 +138,18 @@ void AsyncHolonomicChassisController::loop() {
 
             index++;
         }
-
-        auto distError = currentPose.distanceTo(targetPose);
-        auto angleError = Math::rescale180(targetPose.theta - currentPose.theta); 
-        double angleToTarget = currentPose.angleTo(targetPose).convert(okapi::radian);
+        
+        auto distError = currentPose.getTranslation().distTo(targetPose.getTranslation());
+        auto angleError = Math::rescale180(targetPose.Theta() - currentPose.Theta()); 
+        auto angleToTarget = currentPose.getTranslation().angleTo(targetPose.getTranslation());
 
         setControllerSampleTime(delayTime);
         double distOutput = distController->step(-distError.convert(okapi::inch));
         double turnOutput = turnController->step(-angleError.convert(okapi::degree));
-        double xOutput = distOutput * cos(angleToTarget);
-        double yOutput = turnOutput * sin(angleToTarget);
+        double xOutput = distOutput * cos(angleToTarget.convert(okapi::radian));
+        double yOutput = turnOutput * sin(angleToTarget.convert(okapi::radian));
 
-        model->fieldOrientedXArcade(xOutput, yOutput, turnOutput, currentPose.theta);
+        model->fieldOrientedXArcade(xOutput, yOutput, turnOutput, currentPose.Theta());
 
         lock.give();
         rate->delayUntil(delayTime);

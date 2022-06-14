@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Utility/Units.hpp" line="10" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="10" bodyend="-1"/>
+        <location file="include/HolonomicLib/Utility/Units.hpp" line="9" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="9" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceokapi_1a3b08571da937064af1863c3e67a035e3" prot="public" static="no" constexpr="yes" mutable="no">
         <type>constexpr QSpeed</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Utility/Units.hpp" line="11" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="11" bodyend="-1"/>
+        <location file="include/HolonomicLib/Utility/Units.hpp" line="10" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceokapi_1adf30f5ceb33ac8b226604addd84c1c10" prot="public" static="no" constexpr="yes" mutable="no">
         <type>constexpr QAcceleration</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Utility/Units.hpp" line="12" column="25" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="12" bodyend="-1"/>
+        <location file="include/HolonomicLib/Utility/Units.hpp" line="11" column="25" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="11" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Utility/Units.hpp" line="14" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="14" bodyend="16"/>
+        <location file="include/HolonomicLib/Utility/Units.hpp" line="13" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="13" bodyend="15"/>
       </memberdef>
       <memberdef kind="function" id="namespaceokapi_1a7165d0b1f642bbfb971cecf05b55e65d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr QSpeed</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Utility/Units.hpp" line="17" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="17" bodyend="19"/>
+        <location file="include/HolonomicLib/Utility/Units.hpp" line="16" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="16" bodyend="18"/>
       </memberdef>
       <memberdef kind="function" id="namespaceokapi_1a84bc5ae52babd0fb406274f8f510a353" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr QSpeed</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Utility/Units.hpp" line="20" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="20" bodyend="22"/>
+        <location file="include/HolonomicLib/Utility/Units.hpp" line="19" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="19" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="namespaceokapi_1a1ec6697a6730118f316e6bf0f85cde8f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr QSpeed</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Utility/Units.hpp" line="23" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="23" bodyend="25"/>
+        <location file="include/HolonomicLib/Utility/Units.hpp" line="22" column="18" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="22" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="namespaceokapi_1ad4bde7551a338ff4e04e21e485ba77c4" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr QAcceleration</type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Utility/Units.hpp" line="26" column="25" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="26" bodyend="28"/>
+        <location file="include/HolonomicLib/Utility/Units.hpp" line="25" column="25" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="25" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="namespaceokapi_1a0edb749f3b45df9ad37b1fd6627901de" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr QAcceleration</type>
@@ -147,13 +147,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Utility/Units.hpp" line="29" column="25" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="29" bodyend="31"/>
+        <location file="include/HolonomicLib/Utility/Units.hpp" line="28" column="25" bodyfile="include/HolonomicLib/Utility/Units.hpp" bodystart="28" bodyend="30"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/HolonomicLib/Utility/Units.hpp" line="8" column="15"/>
+    <location file="include/HolonomicLib/Utility/Units.hpp" line="7" column="15"/>
   </compounddef>
 </doxygen>

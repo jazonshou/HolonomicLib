@@ -76,15 +76,19 @@ $(function() {
 <div class="title">AsyncHolonomicChassisController.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;okapi/api/chassis/controller/odomChassisController.hpp&quot;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;okapi/api/chassis/controller/odomChassisController.hpp&quot;</code><br />
 <code>#include &quot;okapi/api/chassis/model/xDriveModel.hpp&quot;</code><br />
 <code>#include &quot;okapi/api/control/iterative/iterativePosPidController.hpp&quot;</code><br />
+<code>#include &quot;okapi/api/util/timeUtil.hpp&quot;</code><br />
 <code>#include &quot;okapi/impl/util/timeUtilFactory.hpp&quot;</code><br />
+<code>#include &quot;okapi/api/device/motor/abstractMotor.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="Units_8hpp_source.html">HolonomicLib/Utility/Units.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Math_8hpp_source.html">HolonomicLib/Utility/Math.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="StateMachine_8hpp_source.html">HolonomicLib/Utility/StateMachine.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TaskWrapper_8hpp_source.html">HolonomicLib/Utility/TaskWrapper.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Pose2D_8hpp_source.html">HolonomicLib/Pathing/Pose2D.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Trajectory_8hpp_source.html">HolonomicLib/Pathing/Trajectory.hpp</a>&quot;</code><br />
 </div>
 <p><a href="AsyncHolonomicChassisController_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -102,11 +106,11 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:afed0dfbd97b270c1dc11f0b884f915bd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bd">HolonomicLib::ChassisState</a> { <a class="el" href="namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bdaf219b2ab91a60a48dd0edb233d375a11">HolonomicLib::ChassisState::MOVING_TO_POINT</a>, 
-<a class="el" href="namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bda5cdbc4c2cee73eb47090aa3d96684406">HolonomicLib::ChassisState::FOLLOWING_PATH</a>, 
+<tr class="memitem:afed0dfbd97b270c1dc11f0b884f915bd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bd">HolonomicLib::ChassisState</a> { <a class="el" href="namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763">HolonomicLib::ChassisState::PATHING</a>, 
+<a class="el" href="namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3">HolonomicLib::ChassisState::TRANSLATING</a>, 
 <a class="el" href="namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bdaa5daf7f2ebbba4975d61dab1c40188c7">HolonomicLib::ChassisState::IDLE</a>
  }</td></tr>
-<tr class="memdesc:afed0dfbd97b270c1dc11f0b884f915bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for the different Chassis states FOLLOWING_PATH - The robot is following a path MOVING_TO_POINT - The robot is moving toward a point IDLE - No robot movement.  <a href="namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bd">More...</a><br /></td></tr>
+<tr class="memdesc:afed0dfbd97b270c1dc11f0b884f915bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for the different Chassis states PATHING - The robot is following a path TRANSLATING - The robot is translating via PID IDLE - No robot movement.  <a href="namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bd">More...</a><br /></td></tr>
 <tr class="separator:afed0dfbd97b270c1dc11f0b884f915bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

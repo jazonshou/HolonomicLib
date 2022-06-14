@@ -90,21 +90,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92c346fc3b144f908f1f1ea274f18799"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHolonomicLib_1_1Pose2D.html#a92c346fc3b144f908f1f1ea274f18799">Pose2D</a> (okapi::QLength ix, okapi::QLength iy, okapi::QAngle itheta)</td></tr>
 <tr class="memdesc:a92c346fc3b144f908f1f1ea274f18799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Pose 2D object.  <a href="structHolonomicLib_1_1Pose2D.html#a92c346fc3b144f908f1f1ea274f18799">More...</a><br /></td></tr>
 <tr class="separator:a92c346fc3b144f908f1f1ea274f18799"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840a717045c6bf1d4b703c9359606fb5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHolonomicLib_1_1Pose2D.html#a840a717045c6bf1d4b703c9359606fb5">Pose2D</a> (const okapi::OdomState &amp;iState)</td></tr>
-<tr class="memdesc:a840a717045c6bf1d4b703c9359606fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an okapi OdomState into a <a class="el" href="structHolonomicLib_1_1Pose2D.html" title="Struct for position.">Pose2D</a> This is done by negating y coordinate and constraining theta to be between -180 and 180.  <a href="structHolonomicLib_1_1Pose2D.html#a840a717045c6bf1d4b703c9359606fb5">More...</a><br /></td></tr>
-<tr class="separator:a840a717045c6bf1d4b703c9359606fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb6db88b63e6b29abcfbefc9f39db8ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHolonomicLib_1_1Pose2D.html#afb6db88b63e6b29abcfbefc9f39db8ad">Pose2D</a> (const <a class="el" href="structHolonomicLib_1_1TrajectoryState.html">TrajectoryState</a> &amp;iState)</td></tr>
-<tr class="memdesc:afb6db88b63e6b29abcfbefc9f39db8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <a class="el" href="structHolonomicLib_1_1TrajectoryState.html" title="Struct for trajectory states.">TrajectoryState</a> into a <a class="el" href="structHolonomicLib_1_1Pose2D.html" title="Struct for position.">Pose2D</a> This is done by adding units (feet / degree) to the trajectory state's x, y and theta.  <a href="structHolonomicLib_1_1Pose2D.html#afb6db88b63e6b29abcfbefc9f39db8ad">More...</a><br /></td></tr>
-<tr class="separator:afb6db88b63e6b29abcfbefc9f39db8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac334e2029753ac43ff165c3832fac854"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHolonomicLib_1_1Pose2D.html#ac334e2029753ac43ff165c3832fac854">Pose2D</a> (const <a class="el" href="structHolonomicLib_1_1TimedTrajectoryState.html">TimedTrajectoryState</a> &amp;iState)</td></tr>
-<tr class="memdesc:ac334e2029753ac43ff165c3832fac854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <a class="el" href="structHolonomicLib_1_1TimedTrajectoryState.html" title="Struct for timed trajectory states (used with new Pathplanner)">TimedTrajectoryState</a> into a <a class="el" href="structHolonomicLib_1_1Pose2D.html" title="Struct for position.">Pose2D</a> This is done by adding units (feet / degree) to the trajectory state's x, y and theta.  <a href="structHolonomicLib_1_1Pose2D.html#ac334e2029753ac43ff165c3832fac854">More...</a><br /></td></tr>
-<tr class="separator:ac334e2029753ac43ff165c3832fac854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac60e5df86ba3e7d8b64a393fca703dbf"><td class="memItemLeft" align="right" valign="top">okapi::QLength&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHolonomicLib_1_1Pose2D.html#ac60e5df86ba3e7d8b64a393fca703dbf">distanceTo</a> (const <a class="el" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a> &amp;other)</td></tr>
-<tr class="memdesc:ac60e5df86ba3e7d8b64a393fca703dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the euclidean distance between two poses.  <a href="structHolonomicLib_1_1Pose2D.html#ac60e5df86ba3e7d8b64a393fca703dbf">More...</a><br /></td></tr>
-<tr class="separator:ac60e5df86ba3e7d8b64a393fca703dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74c1e70295f615f9d07a062333a96bb0"><td class="memItemLeft" align="right" valign="top">okapi::QAngle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHolonomicLib_1_1Pose2D.html#a74c1e70295f615f9d07a062333a96bb0">angleTo</a> (const <a class="el" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a> &amp;other)</td></tr>
-<tr class="memdesc:a74c1e70295f615f9d07a062333a96bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the euclidean angle between two poses.  <a href="structHolonomicLib_1_1Pose2D.html#a74c1e70295f615f9d07a062333a96bb0">More...</a><br /></td></tr>
-<tr class="separator:a74c1e70295f615f9d07a062333a96bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -119,7 +104,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Struct for position. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a1e4b3ce6e1f8f7c12608807b7e92bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a1e4b3ce6e1f8f7c12608807b7e92bd">&#9670;&nbsp;</a></span>Pose2D() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a1e4b3ce6e1f8f7c12608807b7e92bd">&#9670;&nbsp;</a></span>Pose2D() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +131,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a92c346fc3b144f908f1f1ea274f18799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92c346fc3b144f908f1f1ea274f18799">&#9670;&nbsp;</a></span>Pose2D() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c346fc3b144f908f1f1ea274f18799">&#9670;&nbsp;</a></span>Pose2D() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,139 +171,6 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a840a717045c6bf1d4b703c9359606fb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a840a717045c6bf1d4b703c9359606fb5">&#9670;&nbsp;</a></span>Pose2D() <span class="overload">[3/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">HolonomicLib::Pose2D::Pose2D </td>
-          <td>(</td>
-          <td class="paramtype">const okapi::OdomState &amp;&#160;</td>
-          <td class="paramname"><em>iState</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts an okapi OdomState into a <a class="el" href="structHolonomicLib_1_1Pose2D.html" title="Struct for position.">Pose2D</a> This is done by negating y coordinate and constraining theta to be between -180 and 180. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">iState</td><td>the supplied OdomState </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="afb6db88b63e6b29abcfbefc9f39db8ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb6db88b63e6b29abcfbefc9f39db8ad">&#9670;&nbsp;</a></span>Pose2D() <span class="overload">[4/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">HolonomicLib::Pose2D::Pose2D </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structHolonomicLib_1_1TrajectoryState.html">TrajectoryState</a> &amp;&#160;</td>
-          <td class="paramname"><em>iState</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts a <a class="el" href="structHolonomicLib_1_1TrajectoryState.html" title="Struct for trajectory states.">TrajectoryState</a> into a <a class="el" href="structHolonomicLib_1_1Pose2D.html" title="Struct for position.">Pose2D</a> This is done by adding units (feet / degree) to the trajectory state's x, y and theta. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">iState</td><td>the supplied TrajectoryStaet </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac334e2029753ac43ff165c3832fac854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac334e2029753ac43ff165c3832fac854">&#9670;&nbsp;</a></span>Pose2D() <span class="overload">[5/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">HolonomicLib::Pose2D::Pose2D </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structHolonomicLib_1_1TimedTrajectoryState.html">TimedTrajectoryState</a> &amp;&#160;</td>
-          <td class="paramname"><em>iState</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts a <a class="el" href="structHolonomicLib_1_1TimedTrajectoryState.html" title="Struct for timed trajectory states (used with new Pathplanner)">TimedTrajectoryState</a> into a <a class="el" href="structHolonomicLib_1_1Pose2D.html" title="Struct for position.">Pose2D</a> This is done by adding units (feet / degree) to the trajectory state's x, y and theta. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">iState</td><td>the suppliedTimeTrajectoryState </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a74c1e70295f615f9d07a062333a96bb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74c1e70295f615f9d07a062333a96bb0">&#9670;&nbsp;</a></span>angleTo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">okapi::QAngle HolonomicLib::Pose2D::angleTo </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes the euclidean angle between two poses. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>the pose to calculate angle between </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>angle to the other pose </dd></dl>
-
-</div>
-</div>
-<a id="ac60e5df86ba3e7d8b64a393fca703dbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac60e5df86ba3e7d8b64a393fca703dbf">&#9670;&nbsp;</a></span>distanceTo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">okapi::QLength HolonomicLib::Pose2D::distanceTo </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes the euclidean distance between two poses. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>the pose to calculate distance between </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>distance between the two pose </dd></dl>
 
 </div>
 </div>

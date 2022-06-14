@@ -16,15 +16,15 @@
       <memberdef kind="enum" id="namespaceHolonomicLib_1afed0dfbd97b270c1dc11f0b884f915bd" prot="public" static="no" strong="yes">
         <type></type>
         <name>ChassisState</name>
-        <enumvalue id="namespaceHolonomicLib_1afed0dfbd97b270c1dc11f0b884f915bdaf219b2ab91a60a48dd0edb233d375a11" prot="public">
-          <name>MOVING_TO_POINT</name>
+        <enumvalue id="namespaceHolonomicLib_1afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763" prot="public">
+          <name>PATHING</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="namespaceHolonomicLib_1afed0dfbd97b270c1dc11f0b884f915bda5cdbc4c2cee73eb47090aa3d96684406" prot="public">
-          <name>FOLLOWING_PATH</name>
+        <enumvalue id="namespaceHolonomicLib_1afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3" prot="public">
+          <name>TRANSLATING</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -38,13 +38,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>Enum for the different Chassis states FOLLOWING_PATH - The robot is following a path MOVING_TO_POINT - The robot is moving toward a point IDLE - No robot movement. </para>
+<para>Enum for the different Chassis states PATHING - The robot is following a path TRANSLATING - The robot is translating via PID IDLE - No robot movement. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="24" column="1" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="23" bodyend="28"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="27" column="24" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="27" bodyend="29"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

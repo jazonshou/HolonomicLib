@@ -33,7 +33,7 @@ void AsyncHolonomicChassisController::setTarget(const Pose &ipose, bool waitUnti
 {
     lock.take(5);
     setState(ChassisState::MOVING_TO_POINT);
-    resetControllers();
+    this->resetControllers();
     endPose = ipose;
     lock.give();
 

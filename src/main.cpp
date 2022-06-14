@@ -38,6 +38,8 @@ void opcontrol() {
         .withTurnPID(std::make_unique<IterativePosPIDController>(0.05, 0.0, 0.00065, 0.0, TimeUtilFactory::withSettledUtilParams(1, 30, 100_ms)))
         .build();
 
+    std::cout << "here" << std::endl;
+
 	hol->setTarget({2_ft, 2_ft, 45_deg}, true);
 
     while(true) {

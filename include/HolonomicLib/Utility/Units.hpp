@@ -3,6 +3,7 @@
 #include "okapi/api/units/QSpeed.hpp"
 #include "okapi/api/units/QLength.hpp"
 #include "okapi/api/units/QTime.hpp"
+#include "okapi/api/units/QAngularSpeed.hpp"
 
 namespace okapi {
 

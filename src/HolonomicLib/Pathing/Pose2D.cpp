@@ -27,7 +27,7 @@ Pose2D::Pose2D(const TimedTrajectoryState &iState){
 }
 
 okapi::QLength Pose2D::distanceTo(const Pose2D &other){
-    return sqrt((x - other.x) * (x-other.x) + (y-other.y) * (y-other.y));
+    return hypot(x - other.x, y-other.y);
 }
 
 okapi::QAngle Pose2D::angleTo(const Pose2D &other){

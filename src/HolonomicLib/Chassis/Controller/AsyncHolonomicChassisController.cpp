@@ -147,10 +147,10 @@ void AsyncHolonomicChassisController::loop() {
         double distOutput = distController->step(-distError.convert(okapi::inch));
         double turnOutput = turnController->step(-angleError.convert(okapi::degree));
         double xOutput = distOutput * cos(angleToTarget);
-        double yOutput = turnOutput * sin(angleToTarget);
+        double yOutput = distOutput * sin(angleToTarget);
 
-        model->fieldOrientedXArcade(xOutput, yOutput, turnOutput, currentPose.theta);
-
+        model->fieldOrientedXArcade(xOutput, -yOutput, turnOutput, currentPose.theta);
+        
         lock.give();
         rate->delayUntil(delayTime);
     }

@@ -29,11 +29,11 @@ struct \mbox{\hyperlink{structHolonomicLib_1_1TrajectoryState}{Trajectory\+State
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bd}{Chassis\+State}} \{ \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763}{Chassis\+State\+::\+P\+A\+T\+H\+I\+NG}}, 
-\mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3}{Chassis\+State\+::\+T\+R\+A\+N\+S\+L\+A\+T\+I\+NG}}, 
+enum \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bd}{Chassis\+State}} \{ \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaf219b2ab91a60a48dd0edb233d375a11}{Chassis\+State\+::\+M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT}}, 
+\mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bda5cdbc4c2cee73eb47090aa3d96684406}{Chassis\+State\+::\+F\+O\+L\+L\+O\+W\+I\+N\+G\+\_\+\+P\+A\+TH}}, 
 \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaa5daf7f2ebbba4975d61dab1c40188c7}{Chassis\+State\+::\+I\+D\+LE}}
  \}
-\begin{DoxyCompactList}\small\item\em Enum for the different Chassis states P\+A\+T\+H\+I\+NG -\/ The robot is following a path T\+R\+A\+N\+S\+L\+A\+T\+I\+NG -\/ The robot is translating via P\+ID I\+D\+LE -\/ No robot movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enum for the different Chassis states F\+O\+L\+L\+O\+W\+I\+N\+G\+\_\+\+P\+A\+TH -\/ The robot is following a path M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT -\/ The robot is moving toward a point I\+D\+LE -\/ No robot movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Enumeration Type Documentation}
@@ -45,15 +45,15 @@ enum \mbox{\hyperlink{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bd}{C
 
 
 
-Enum for the different Chassis states P\+A\+T\+H\+I\+NG -\/ The robot is following a path T\+R\+A\+N\+S\+L\+A\+T\+I\+NG -\/ The robot is translating via P\+ID I\+D\+LE -\/ No robot movement. 
+Enum for the different Chassis states F\+O\+L\+L\+O\+W\+I\+N\+G\+\_\+\+P\+A\+TH -\/ The robot is following a path M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT -\/ The robot is moving toward a point I\+D\+LE -\/ No robot movement. 
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{PATHING@{PATHING}!HolonomicLib@{HolonomicLib}}\index{HolonomicLib@{HolonomicLib}!PATHING@{PATHING}}}\mbox{\Hypertarget{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763}\label{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763}} 
-P\+A\+T\+H\+I\+NG&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVING\_TO\_POINT@{MOVING\_TO\_POINT}!HolonomicLib@{HolonomicLib}}\index{HolonomicLib@{HolonomicLib}!MOVING\_TO\_POINT@{MOVING\_TO\_POINT}}}\mbox{\Hypertarget{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaf219b2ab91a60a48dd0edb233d375a11}\label{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaf219b2ab91a60a48dd0edb233d375a11}} 
+M\+O\+V\+I\+N\+G\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSLATING@{TRANSLATING}!HolonomicLib@{HolonomicLib}}\index{HolonomicLib@{HolonomicLib}!TRANSLATING@{TRANSLATING}}}\mbox{\Hypertarget{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3}\label{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdafa2c1ab8021afcb8b7769e98eb0c09e3}} 
-T\+R\+A\+N\+S\+L\+A\+T\+I\+NG&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FOLLOWING\_PATH@{FOLLOWING\_PATH}!HolonomicLib@{HolonomicLib}}\index{HolonomicLib@{HolonomicLib}!FOLLOWING\_PATH@{FOLLOWING\_PATH}}}\mbox{\Hypertarget{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bda5cdbc4c2cee73eb47090aa3d96684406}\label{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bda5cdbc4c2cee73eb47090aa3d96684406}} 
+F\+O\+L\+L\+O\+W\+I\+N\+G\+\_\+\+P\+A\+TH&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{IDLE@{IDLE}!HolonomicLib@{HolonomicLib}}\index{HolonomicLib@{HolonomicLib}!IDLE@{IDLE}}}\mbox{\Hypertarget{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaa5daf7f2ebbba4975d61dab1c40188c7}\label{namespaceHolonomicLib_afed0dfbd97b270c1dc11f0b884f915bdaa5daf7f2ebbba4975d61dab1c40188c7}} 

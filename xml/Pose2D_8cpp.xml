@@ -4,11 +4,8 @@
     <compoundname>Pose2D.cpp</compoundname>
     <includes refid="Pose2D_8hpp" local="yes">Pose2D.hpp</includes>
     <incdepgraph>
-      <node id="4">
+      <node id="6">
         <label>okapi/api/units/QAngle.hpp</label>
-      </node>
-      <node id="3">
-        <label>okapi/api/units/QLength.hpp</label>
       </node>
       <node id="2">
         <label>Pose2D.hpp</label>
@@ -17,12 +14,42 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>HolonomicLib/Utility/Math.hpp</label>
+        <link refid="Math_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>okapi/api/odometry/odomState.hpp</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>HolonomicLib/Pathing/Trajectory.hpp</label>
+        <link refid="Trajectory_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>src/HolonomicLib/Pathing/Pose2D.cpp</label>
         <link refid="Pose2D_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="5">
+        <label>utility</label>
+      </node>
+      <node id="8">
+        <label>initializer_list</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespaceHolonomicLib">HolonomicLib</innernamespace>
@@ -41,7 +68,35 @@
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" kindref="member">theta</ref><sp/>=<sp/>itheta;</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="structHolonomicLib_1_1Pose2D_1a1a1e4b3ce6e1f8f7c12608807b7e92bd" kindref="member">Pose2D::Pose2D</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>okapi::OdomState<sp/>&amp;iState){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" kindref="member">x</ref><sp/>=<sp/>iState.x;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" kindref="member">y</ref><sp/>=<sp/>-1<sp/>*<sp/>iState.y;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" kindref="member">theta</ref><sp/>=<sp/><ref refid="namespaceHolonomicLib_1_1Math_1a0fb99343562aa2641143d2dc2b142a2e" kindref="member">Math::rescale180</ref>(iState.theta);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="structHolonomicLib_1_1Pose2D_1a1a1e4b3ce6e1f8f7c12608807b7e92bd" kindref="member">Pose2D::Pose2D</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TrajectoryState<sp/>&amp;iState){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" kindref="member">x</ref><sp/>=<sp/>iState.x<sp/>*<sp/>okapi::foot;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" kindref="member">y</ref><sp/>=<sp/>iState.y<sp/>*<sp/>okapi::foot;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" kindref="member">theta</ref><sp/>=<sp/>iState.theta<sp/>*<sp/>okapi::degree;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="structHolonomicLib_1_1Pose2D_1a1a1e4b3ce6e1f8f7c12608807b7e92bd" kindref="member">Pose2D::Pose2D</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TimedTrajectoryState<sp/>&amp;iState){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" kindref="member">x</ref><sp/>=<sp/>iState.x<sp/>*<sp/>okapi::foot;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" kindref="member">y</ref><sp/>=<sp/>iState.y<sp/>*<sp/>okapi::foot;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structHolonomicLib_1_1Pose2D_1aed8ee64b862a6f9fe28b624347db772a" kindref="member">theta</ref><sp/>=<sp/>iState.theta<sp/>*<sp/>okapi::degree;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">okapi::QLength<sp/><ref refid="structHolonomicLib_1_1Pose2D_1ac60e5df86ba3e7d8b64a393fca703dbf" kindref="member">Pose2D::distanceTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Pose2D<sp/>&amp;other){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hypot(<ref refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" kindref="member">x</ref><sp/>-<sp/>other.x,<sp/><ref refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" kindref="member">y</ref>-other.y);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">okapi::QAngle<sp/><ref refid="structHolonomicLib_1_1Pose2D_1a74c1e70295f615f9d07a062333a96bb0" kindref="member">Pose2D::angleTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Pose2D<sp/>&amp;other){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>other.x<sp/>-<sp/><ref refid="structHolonomicLib_1_1Pose2D_1a3d6358038f364d1481fdfcae68ec3703" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dy<sp/>=<sp/>other.y<sp/>-<sp/><ref refid="structHolonomicLib_1_1Pose2D_1a86bc4b9cc0d8b1de84b39caf757a35cf" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>atan2(dy,<sp/>dx);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/HolonomicLib/Pathing/Pose2D.cpp"/>
   </compounddef>

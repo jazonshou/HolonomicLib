@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['pathing_47',['PATHING',['../namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bdac75bfd8cd96916d9604beadd22b43763',1,'HolonomicLib']]],
-  ['pausetask_48',['pauseTask',['../classHolonomicLib_1_1TaskWrapper.html#ac0923845cff95c58e808e584dacff2ec',1,'HolonomicLib::TaskWrapper']]],
-  ['pose2d_49',['Pose2D',['../structHolonomicLib_1_1Pose2D.html',1,'HolonomicLib::Pose2D'],['../structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd',1,'HolonomicLib::Pose2D::Pose2D()=default'],['../structHolonomicLib_1_1Pose2D.html#a92c346fc3b144f908f1f1ea274f18799',1,'HolonomicLib::Pose2D::Pose2D(okapi::QLength ix, okapi::QLength iy, okapi::QAngle itheta)']]],
-  ['pose2d_2ecpp_50',['Pose2D.cpp',['../Pose2D_8cpp.html',1,'']]],
-  ['pose2d_2ehpp_51',['Pose2D.hpp',['../Pose2D_8hpp.html',1,'']]]
+  ['okapi_45',['okapi',['../namespaceokapi.html',1,'']]],
+  ['opcontrol_46',['opcontrol',['../main_8cpp.html#ac57194c628bb97b849be48d79c99c4ac',1,'main.cpp']]],
+  ['operator_22_22_5fftps_47',['operator&quot;&quot;_ftps',['../namespaceokapi.html#af974a5bd83071b61bd61d60ba770e00b',1,'okapi::operator&quot;&quot;_ftps(long double x)'],['../namespaceokapi.html#a7165d0b1f642bbfb971cecf05b55e65d',1,'okapi::operator&quot;&quot;_ftps(unsigned long long int x)']]],
+  ['operator_22_22_5fftps2_48',['operator&quot;&quot;_ftps2',['../namespaceokapi.html#ad4bde7551a338ff4e04e21e485ba77c4',1,'okapi::operator&quot;&quot;_ftps2(long double x)'],['../namespaceokapi.html#a0edb749f3b45df9ad37b1fd6627901de',1,'okapi::operator&quot;&quot;_ftps2(unsigned long long int x)']]],
+  ['operator_22_22_5finps_49',['operator&quot;&quot;_inps',['../namespaceokapi.html#a84bc5ae52babd0fb406274f8f510a353',1,'okapi::operator&quot;&quot;_inps(long double x)'],['../namespaceokapi.html#a1ec6697a6730118f316e6bf0f85cde8f',1,'okapi::operator&quot;&quot;_inps(unsigned long long int x)']]],
+  ['operator_5b_5d_50',['operator[]',['../classHolonomicLib_1_1Trajectory.html#a1218f6d4c7fb44b66696800eeb156165',1,'HolonomicLib::Trajectory::operator[]()'],['../classHolonomicLib_1_1TimedTrajectory.html#a21dff7b36c119897caa558c5951fd0bf',1,'HolonomicLib::TimedTrajectory::operator[]()']]]
 ];

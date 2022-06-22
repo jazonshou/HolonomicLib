@@ -79,7 +79,9 @@ okapi::QLength Translation::distTo(const Translation &rhs) const{
 }
 
 okapi::QAngle Translation::angleTo(const Translation &rhs) const{
-    return acos(((*this) * rhs) / mag() / rhs.mag());
+    auto dx = other.x - x;
+    auto dy = other.y - y;
+    return atan2(dy, dx);
 }
 
 okapi::QLength Translation::mag() const{

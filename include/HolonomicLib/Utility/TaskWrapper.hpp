@@ -6,15 +6,15 @@ namespace HolonomicLib {
 
 /**
  * @brief All credit for this class goes to the lib7842
- * 
+ *
  */
 class TaskWrapper {
-protected:
+    protected:
     TaskWrapper() = default;
-    TaskWrapper(const TaskWrapper& itask) = delete;
-    TaskWrapper(TaskWrapper&& itask) = default;
+    TaskWrapper(const TaskWrapper &itask) = delete;
+    TaskWrapper(TaskWrapper &&itask) = default;
     virtual ~TaskWrapper() = default;
-    
+
     /**
      * Override this function to implement a custom task loop.
      * Will throw if not overridden.
@@ -22,12 +22,12 @@ protected:
     virtual void loop();
 
     public:
-    /**   
+    /**
      * Start the task.
      *
      * @param iname The task name, optional.
      */
-    virtual void startTask(const char*  iname = "TaskWrapper");
+    virtual void startTask(const char *iname = "TaskWrapper");
 
     virtual void resumeTask();
 
@@ -43,10 +43,10 @@ protected:
      *
      * @return The name.
      */
-    virtual char const* getName();
+    virtual char const *getName();
 
     private:
-    static void trampoline(void* iparam);
-    std::unique_ptr<pros::Task> task {nullptr};
+    static void trampoline(void *iparam);
+    std::unique_ptr<pros::Task> task{nullptr};
 };
-}
+} // namespace HolonomicLib

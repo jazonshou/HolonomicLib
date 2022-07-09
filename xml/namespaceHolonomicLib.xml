@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="24" column="1" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="23" bodyend="28"/>
+        <location file="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" line="24" column="24" bodyfile="include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp" bodystart="24" bodyend="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

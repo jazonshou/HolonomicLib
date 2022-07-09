@@ -2,14 +2,14 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="Math_8hpp" kind="file" language="C++">
     <compoundname>Math.hpp</compoundname>
-    <includes local="no">utility</includes>
     <includes local="yes">okapi/api/units/QAngle.hpp</includes>
+    <includes local="no">utility</includes>
     <includedby refid="API_8hpp" local="yes">include/HolonomicLib/API.hpp</includedby>
     <includedby refid="AsyncHolonomicChassisController_8hpp" local="yes">include/HolonomicLib/Chassis/Controller/AsyncHolonomicChassisController.hpp</includedby>
     <includedby refid="Pose2D_8hpp" local="yes">include/HolonomicLib/Pathing/Pose2D.hpp</includedby>
     <includedby refid="Math_8cpp" local="yes">src/HolonomicLib/Utility/Math.cpp</includedby>
     <incdepgraph>
-      <node id="3">
+      <node id="2">
         <label>okapi/api/units/QAngle.hpp</label>
       </node>
       <node id="1">
@@ -20,7 +20,7 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="2">
+      <node id="3">
         <label>utility</label>
       </node>
     </incdepgraph>
@@ -93,20 +93,21 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2" refid="Math_8hpp_1a525335710b53cb064ca56b936120431e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_USE_MATH_DEFINES</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QAngle.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;okapi/api/units/QAngle.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHolonomicLib" kindref="compound">HolonomicLib</ref><sp/>{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="namespaceHolonomicLib_1_1Math" refkind="compound"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Math<sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal">okapi::QAngle<sp/><ref refid="namespaceHolonomicLib_1_1Math_1a0fb99343562aa2641143d2dc2b142a2e" kindref="member">rescale180</ref>(okapi::QAngle<sp/>angle);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceHolonomicLib_1_1Math_1a0fb99343562aa2641143d2dc2b142a2e" kindref="member">rescale180</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHolonomicLib" kindref="compound">HolonomicLib</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="namespaceHolonomicLib_1_1Math" refkind="compound"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Math<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">okapi::QAngle<sp/><ref refid="namespaceHolonomicLib_1_1Math_1a0fb99343562aa2641143d2dc2b142a2e" kindref="member">rescale180</ref>(okapi::QAngle<sp/>angle);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceHolonomicLib_1_1Math_1a0fb99343562aa2641143d2dc2b142a2e" kindref="member">rescale180</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Math</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>HolonomicLib</highlight></codeline>
     </programlisting>
     <location file="include/HolonomicLib/Utility/Math.hpp"/>
   </compounddef>

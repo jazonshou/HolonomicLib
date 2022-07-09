@@ -35,37 +35,37 @@
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHolonomicLib" kindref="compound">HolonomicLib</ref><sp/>{</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1aae903bdf162e10c1af03c2907e6056bb" kindref="member">TaskWrapper::loop</ref>(){</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1aae903bdf162e10c1af03c2907e6056bb" kindref="member">TaskWrapper::loop</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;task<sp/>loop<sp/>isn&apos;t<sp/>overridden!&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a089e272b1a57bacb73fd8641d45e37ef" kindref="member">TaskWrapper::startTask</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/>iname){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a089e272b1a57bacb73fd8641d45e37ef" kindref="member">TaskWrapper::startTask</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iname)<sp/>{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>task<sp/>=<sp/>std::move(std::make_unique&lt;pros::Task&gt;(trampoline,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>iname));</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1ac0923845cff95c58e808e584dacff2ec" kindref="member">TaskWrapper::pauseTask</ref>(){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1ac0923845cff95c58e808e584dacff2ec" kindref="member">TaskWrapper::pauseTask</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>task-&gt;suspend();</highlight></codeline>
 <codeline lineno="15"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1ae7e853972219642cd24ab3e67fdb6066" kindref="member">TaskWrapper::resumeTask</ref>(){</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1ae7e853972219642cd24ab3e67fdb6066" kindref="member">TaskWrapper::resumeTask</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>task-&gt;resume();</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a754156c423dcfb09dc4342e2833f3bef" kindref="member">TaskWrapper::stopTask</ref>(){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a754156c423dcfb09dc4342e2833f3bef" kindref="member">TaskWrapper::stopTask</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>task-&gt;remove();</highlight></codeline>
 <codeline lineno="23"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1af58e45d5f1fca9352d755f5b4d5024e2" kindref="member">TaskWrapper::getName</ref>(){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<ref refid="classHolonomicLib_1_1TaskWrapper_1aa7e1b2112ef72d9c160f84504694be52" kindref="member">TaskWrapper::getName</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>task-&gt;get_name();</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TaskWrapper::trampoline(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>iparam){</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(iparam){</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a7c86cdfa2cb0c99bf7169b820aa078eb" kindref="member">TaskWrapper</ref>*<sp/>that<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classHolonomicLib_1_1TaskWrapper_1a7c86cdfa2cb0c99bf7169b820aa078eb" kindref="member">TaskWrapper</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(iparam);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TaskWrapper::trampoline(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*iparam)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iparam)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHolonomicLib_1_1TaskWrapper_1a7c86cdfa2cb0c99bf7169b820aa078eb" kindref="member">TaskWrapper</ref><sp/>*that<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classHolonomicLib_1_1TaskWrapper_1a7c86cdfa2cb0c99bf7169b820aa078eb" kindref="member">TaskWrapper</ref><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(iparam);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>that-&gt;loop();</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>HolonomicLib</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/HolonomicLib/Utility/TaskWrapper.cpp"/>
   </compounddef>

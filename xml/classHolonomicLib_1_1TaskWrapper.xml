@@ -168,9 +168,9 @@
         </inbodydescription>
         <location file="include/HolonomicLib/Utility/TaskWrapper.hpp" line="39" column="18" bodyfile="src/HolonomicLib/Utility/TaskWrapper.cpp" bodystart="21" bodyend="23"/>
       </memberdef>
-      <memberdef kind="function" id="classHolonomicLib_1_1TaskWrapper_1af58e45d5f1fca9352d755f5b4d5024e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>char const  *</type>
-        <definition>char const  * HolonomicLib::TaskWrapper::getName</definition>
+      <memberdef kind="function" id="classHolonomicLib_1_1TaskWrapper_1aa7e1b2112ef72d9c160f84504694be52" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * HolonomicLib::TaskWrapper::getName</definition>
         <argsstring>()</argsstring>
         <name>getName</name>
         <briefdescription>
@@ -224,7 +224,7 @@
     </inheritancegraph>
     <location file="include/HolonomicLib/Utility/TaskWrapper.hpp" line="11" column="18" bodyfile="include/HolonomicLib/Utility/TaskWrapper.hpp" bodystart="11" bodyend="51"/>
     <listofallmembers>
-      <member refid="classHolonomicLib_1_1TaskWrapper_1af58e45d5f1fca9352d755f5b4d5024e2" prot="public" virt="virtual"><scope>HolonomicLib::TaskWrapper</scope><name>getName</name></member>
+      <member refid="classHolonomicLib_1_1TaskWrapper_1aa7e1b2112ef72d9c160f84504694be52" prot="public" virt="virtual"><scope>HolonomicLib::TaskWrapper</scope><name>getName</name></member>
       <member refid="classHolonomicLib_1_1TaskWrapper_1aae903bdf162e10c1af03c2907e6056bb" prot="protected" virt="virtual"><scope>HolonomicLib::TaskWrapper</scope><name>loop</name></member>
       <member refid="classHolonomicLib_1_1TaskWrapper_1ac0923845cff95c58e808e584dacff2ec" prot="public" virt="virtual"><scope>HolonomicLib::TaskWrapper</scope><name>pauseTask</name></member>
       <member refid="classHolonomicLib_1_1TaskWrapper_1ae7e853972219642cd24ab3e67fdb6066" prot="public" virt="virtual"><scope>HolonomicLib::TaskWrapper</scope><name>resumeTask</name></member>

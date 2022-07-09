@@ -73,14 +73,14 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="Pose2D_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;okapi/api/odometry/odomState.hpp&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Trajectory_8hpp.html">HolonomicLib/Pathing/Trajectory.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Math_8hpp.html">HolonomicLib/Utility/Math.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Trajectory_8hpp.html">HolonomicLib/Pathing/Trajectory.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;okapi/api/odometry/odomState.hpp&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceHolonomicLib.html">HolonomicLib</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structHolonomicLib_1_1Pose2D.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceHolonomicLib.html">HolonomicLib</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structHolonomicLib_1_1Pose2D.html">   13</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structHolonomicLib_1_1Pose2D.html#a86bc4b9cc0d8b1de84b39caf757a35cf">   14</a></span>&#160;    okapi::QLength <a class="code" href="structHolonomicLib_1_1Pose2D.html#a3d6358038f364d1481fdfcae68ec3703">x</a>, <a class="code" href="structHolonomicLib_1_1Pose2D.html#a86bc4b9cc0d8b1de84b39caf757a35cf">y</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structHolonomicLib_1_1Pose2D.html#aed8ee64b862a6f9fe28b624347db772a">   15</a></span>&#160;    okapi::QAngle <a class="code" href="structHolonomicLib_1_1Pose2D.html#aed8ee64b862a6f9fe28b624347db772a">theta</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
@@ -88,18 +88,18 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd">Pose2D</a>(okapi::QLength ix, okapi::QLength iy, okapi::QAngle itheta);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd">Pose2D</a>(<span class="keyword">const</span> okapi::OdomState &amp;iState);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd">Pose2D</a>(<span class="keyword">const</span> <a class="code" href="structHolonomicLib_1_1TrajectoryState.html">TrajectoryState</a> &amp;iState);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd">Pose2D</a>(<span class="keyword">const</span> <a class="code" href="structHolonomicLib_1_1TimedTrajectoryState.html">TimedTrajectoryState</a> &amp;iState);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    okapi::QLength <a class="code" href="structHolonomicLib_1_1Pose2D.html#ac60e5df86ba3e7d8b64a393fca703dbf">distanceTo</a>(<span class="keyword">const</span> <a class="code" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a> &amp;other);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    okapi::QAngle <a class="code" href="structHolonomicLib_1_1Pose2D.html#a74c1e70295f615f9d07a062333a96bb0">angleTo</a>(<span class="keyword">const</span> <a class="code" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a> &amp;other);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd">Pose2D</a>(<span class="keyword">const</span> okapi::OdomState &amp;iState);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd">Pose2D</a>(<span class="keyword">const</span> <a class="code" href="structHolonomicLib_1_1TrajectoryState.html">TrajectoryState</a> &amp;iState);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd">Pose2D</a>(<span class="keyword">const</span> <a class="code" href="structHolonomicLib_1_1TimedTrajectoryState.html">TimedTrajectoryState</a> &amp;iState);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    okapi::QLength <a class="code" href="structHolonomicLib_1_1Pose2D.html#ac60e5df86ba3e7d8b64a393fca703dbf">distanceTo</a>(<span class="keyword">const</span> <a class="code" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a> &amp;other);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    okapi::QAngle <a class="code" href="structHolonomicLib_1_1Pose2D.html#a74c1e70295f615f9d07a062333a96bb0">angleTo</a>(<span class="keyword">const</span> <a class="code" href="structHolonomicLib_1_1Pose2D.html">Pose2D</a> &amp;other);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;} <span class="comment">// namespace HolonomicLib</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructHolonomicLib_1_1Pose2D_html_a1a1e4b3ce6e1f8f7c12608807b7e92bd"><div class="ttname"><a href="structHolonomicLib_1_1Pose2D.html#a1a1e4b3ce6e1f8f7c12608807b7e92bd">HolonomicLib::Pose2D::Pose2D</a></div><div class="ttdeci">Pose2D()=default</div><div class="ttdoc">Construct a new Pose 2D object.</div></div>
 <div class="ttc" id="astructHolonomicLib_1_1TrajectoryState_html"><div class="ttname"><a href="structHolonomicLib_1_1TrajectoryState.html">HolonomicLib::TrajectoryState</a></div><div class="ttdoc">Struct for trajectory states.</div><div class="ttdef"><b>Definition:</b> Trajectory.hpp:11</div></div>
@@ -109,10 +109,10 @@ $(function() {
 <div class="ttc" id="astructHolonomicLib_1_1Pose2D_html_ac60e5df86ba3e7d8b64a393fca703dbf"><div class="ttname"><a href="structHolonomicLib_1_1Pose2D.html#ac60e5df86ba3e7d8b64a393fca703dbf">HolonomicLib::Pose2D::distanceTo</a></div><div class="ttdeci">okapi::QLength distanceTo(const Pose2D &amp;other)</div><div class="ttdoc">Computes the euclidean distance between two poses.</div><div class="ttdef"><b>Definition:</b> Pose2D.cpp:29</div></div>
 <div class="ttc" id="aTrajectory_8hpp_html"><div class="ttname"><a href="Trajectory_8hpp.html">Trajectory.hpp</a></div></div>
 <div class="ttc" id="aMath_8hpp_html"><div class="ttname"><a href="Math_8hpp.html">Math.hpp</a></div></div>
-<div class="ttc" id="astructHolonomicLib_1_1Pose2D_html"><div class="ttname"><a href="structHolonomicLib_1_1Pose2D.html">HolonomicLib::Pose2D</a></div><div class="ttdoc">Struct for position.</div><div class="ttdef"><b>Definition:</b> Pose2D.hpp:12</div></div>
+<div class="ttc" id="astructHolonomicLib_1_1Pose2D_html"><div class="ttname"><a href="structHolonomicLib_1_1Pose2D.html">HolonomicLib::Pose2D</a></div><div class="ttdoc">Struct for position.</div><div class="ttdef"><b>Definition:</b> Pose2D.hpp:13</div></div>
 <div class="ttc" id="astructHolonomicLib_1_1Pose2D_html_a3d6358038f364d1481fdfcae68ec3703"><div class="ttname"><a href="structHolonomicLib_1_1Pose2D.html#a3d6358038f364d1481fdfcae68ec3703">HolonomicLib::Pose2D::x</a></div><div class="ttdeci">okapi::QLength x</div><div class="ttdef"><b>Definition:</b> Pose2D.hpp:14</div></div>
 <div class="ttc" id="astructHolonomicLib_1_1Pose2D_html_aed8ee64b862a6f9fe28b624347db772a"><div class="ttname"><a href="structHolonomicLib_1_1Pose2D.html#aed8ee64b862a6f9fe28b624347db772a">HolonomicLib::Pose2D::theta</a></div><div class="ttdeci">okapi::QAngle theta</div><div class="ttdef"><b>Definition:</b> Pose2D.hpp:15</div></div>
-<div class="ttc" id="astructHolonomicLib_1_1TimedTrajectoryState_html"><div class="ttname"><a href="structHolonomicLib_1_1TimedTrajectoryState.html">HolonomicLib::TimedTrajectoryState</a></div><div class="ttdoc">Struct for timed trajectory states (used with new Pathplanner)</div><div class="ttdef"><b>Definition:</b> Trajectory.hpp:35</div></div>
+<div class="ttc" id="astructHolonomicLib_1_1TimedTrajectoryState_html"><div class="ttname"><a href="structHolonomicLib_1_1TimedTrajectoryState.html">HolonomicLib::TimedTrajectoryState</a></div><div class="ttdoc">Struct for timed trajectory states (used with new Pathplanner)</div><div class="ttdef"><b>Definition:</b> Trajectory.hpp:34</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

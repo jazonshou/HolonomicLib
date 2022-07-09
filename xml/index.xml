@@ -75,7 +75,7 @@
     <member refid="classHolonomicLib_1_1TaskWrapper_1ae7e853972219642cd24ab3e67fdb6066" kind="function"><name>resumeTask</name></member>
     <member refid="classHolonomicLib_1_1TaskWrapper_1ac0923845cff95c58e808e584dacff2ec" kind="function"><name>pauseTask</name></member>
     <member refid="classHolonomicLib_1_1TaskWrapper_1a754156c423dcfb09dc4342e2833f3bef" kind="function"><name>stopTask</name></member>
-    <member refid="classHolonomicLib_1_1TaskWrapper_1af58e45d5f1fca9352d755f5b4d5024e2" kind="function"><name>getName</name></member>
+    <member refid="classHolonomicLib_1_1TaskWrapper_1aa7e1b2112ef72d9c160f84504694be52" kind="function"><name>getName</name></member>
     <member refid="classHolonomicLib_1_1TaskWrapper_1a28e60f47edfca4d94c5484aaac72af61" kind="function"><name>trampoline</name></member>
   </compound>
   <compound refid="classHolonomicLib_1_1TimedTrajectory" kind="class"><name>HolonomicLib::TimedTrajectory</name>

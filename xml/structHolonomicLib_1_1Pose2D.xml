@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="38" column="5" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="11" bodyend="15"/>
+        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="39" column="5" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="11" bodyend="15"/>
       </memberdef>
       <memberdef kind="function" id="structHolonomicLib_1_1Pose2D_1afb6db88b63e6b29abcfbefc9f39db8ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="46" column="5" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="17" bodyend="21"/>
+        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="47" column="5" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="17" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="structHolonomicLib_1_1Pose2D_1ac334e2029753ac43ff165c3832fac854" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="54" column="5" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="23" bodyend="27"/>
+        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="55" column="5" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="23" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="structHolonomicLib_1_1Pose2D_1ac60e5df86ba3e7d8b64a393fca703dbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>okapi::QLength</type>
@@ -223,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="62" column="20" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="29" bodyend="31"/>
+        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="63" column="20" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="29" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="structHolonomicLib_1_1Pose2D_1a74c1e70295f615f9d07a062333a96bb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>okapi::QAngle</type>
@@ -253,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="70" column="19" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="33" bodyend="37"/>
+        <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="71" column="19" bodyfile="src/HolonomicLib/Pathing/Pose2D.cpp" bodystart="33" bodyend="37"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -261,7 +261,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="13" column="1" bodyfile="include/HolonomicLib/Pathing/Pose2D.hpp" bodystart="12" bodyend="71"/>
+    <location file="include/HolonomicLib/Pathing/Pose2D.hpp" line="13" column="13" bodyfile="include/HolonomicLib/Pathing/Pose2D.hpp" bodystart="13" bodyend="72"/>
     <listofallmembers>
       <member refid="structHolonomicLib_1_1Pose2D_1a74c1e70295f615f9d07a062333a96bb0" prot="public" virt="non-virtual"><scope>HolonomicLib::Pose2D</scope><name>angleTo</name></member>
       <member refid="structHolonomicLib_1_1Pose2D_1ac60e5df86ba3e7d8b64a393fca703dbf" prot="public" virt="non-virtual"><scope>HolonomicLib::Pose2D</scope><name>distanceTo</name></member>

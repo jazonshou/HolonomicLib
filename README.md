@@ -28,7 +28,8 @@ For step-by-step usage, follow the [documentation](https://holonomiclibdocs.read
 For more specific usage, follow the [API](https://yessir120.github.io/HolonomicLib/html/index.html). 
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. For both issues and PRs, 
+please follow the issues/PR template. 
 
 Please make sure to update tests as appropriate (that is, if tests get made).
 

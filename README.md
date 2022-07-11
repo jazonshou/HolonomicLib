@@ -19,25 +19,18 @@ pros conductor apply HolonomicLib
 
 3. Add ``#include "HolonomicLib/API.hpp"`` to your header file
 
+Installation steps are also found in the [documentation](https://holonomiclibdocs.readthedocs.io/en/latest/Docs/Intro/GettingStarted.html#installing-holonomiclib). 
+
 ## Usage
 
-```python
-import foobar
+For step-by-step usage, follow the [documentation](https://holonomiclibdocs.readthedocs.io/en/latest/Docs/Programming/Setup.html). 
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
+For more specific usage, follow the [API](https://yessir120.github.io/HolonomicLib/html/index.html). 
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
+Please make sure to update tests as appropriate (that is, if tests get made).
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/)

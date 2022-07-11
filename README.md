@@ -6,11 +6,18 @@ HolonomicLib is an open-source PROS (C++) library for VEX robots. The library sp
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the [PROS CLI](https://pros.cs.purdue.edu/v5/cli/conductor.html) to install HolonomicLib (if you installed PROS correctly, 
+you do not need to install the CLI separately). 
+
+1. Download the latest version of [HolonomicLib](https://github.com/Yessir120/HolonomicLib/releases) (it should be ``HolonomicLib@<VERSION_#>.zip``).
+2. Run the following in the root of your project: 
 
 ```bash
-pip install foobar
+pros conductor fetch HolonomicLib@<VERSION_#>.zip
+pros conductor apply HolonomicLib
 ```
+
+3. Add ``#include "HolonomicLib/API.hpp"`` to your header file
 
 ## Usage
 

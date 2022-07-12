@@ -1,10 +1,9 @@
+![GitHub](https://img.shields.io/github/license/Yessir120/HolonomicLib?logo=Github)
 ![GitHub all releases](https://img.shields.io/github/downloads/Yessir120/HolonomicLib/total?logo=Github)
 ![GitHub issues](https://img.shields.io/github/issues-raw/Yessir120/HolonomicLib?logo=Github)
-![GitHub](https://img.shields.io/github/license/Yessir120/HolonomicLib?logo=Github)
+![Website](https://img.shields.io/website?down_color=lightred&down_message=offline&label=api&logo=github&up_color=green&up_message=online&url=https%3A%2F%2Fyessir120.github.io%2FHolonomicLib%2Fhtml%2Findex.html)
 ![Website](https://img.shields.io/website?down_color=lightred&down_message=offline&label=docs&logo=readthedocs&up_color=green&up_message=online&url=http%3A%2F%2Fholonomiclibdocs.rtfd.io%2F)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
-<!-- ALL-CONTRIBUTORS-BADGE:END --> 
+
 # HolonomicLib
 
 HolonomicLib is an open-source PROS (C++) library for VEX robots. The library specializes with holonomic drivetrains 

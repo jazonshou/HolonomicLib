@@ -28,9 +28,9 @@ Installation steps are also found in the [documentation](https://holonomiclibdoc
 
 ## Usage
 
-For step-by-step usage, follow the [documentation](https://holonomiclibdocs.readthedocs.io/en/latest/Docs/Programming/Setup.html). 
+For step-by-step usage, follow the [**documentation**](https://holonomiclibdocs.readthedocs.io/en/latest/index.html). 
 
-For more specific usage, follow the [API](https://yessir120.github.io/HolonomicLib/html/index.html). 
+For more specific usage, follow the [**API**](https://yessir120.github.io/HolonomicLib/html/index.html). 
 
 ## Contributing
 Pull requests are welcome. Experimental changes should go to the development branch until deemed stable. For major changes, please open an issue first to discuss 

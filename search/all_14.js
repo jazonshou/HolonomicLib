@@ -1,10 +1,4 @@
 var searchData=
 [
-  ['waituntilsettled_111',['waitUntilSettled',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a0816021af47ab98099d2944712c8d35c',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['withdistgains_112',['withDistGains',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#a8b3888c8dc7ff07980e4bc545e29a695',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
-  ['withdistpid_113',['withDistPID',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#a3e99a89731240d25a5779d5972820a8f',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
-  ['withdistsettleparameters_114',['withDistSettleParameters',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#affcf4fd14b4957384871672efc6822be',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
-  ['withturngains_115',['withTurnGains',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#a81124efd9fabcba41971ff46c98b1b77',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
-  ['withturnpid_116',['withTurnPID',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#a6e7eea3f786704ca1211f379842a2667',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
-  ['withturnsettleparameters_117',['withTurnSettleParameters',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#af4cb4f036b2fe76fd46b414dbad27ad5',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]]
+  ['x_94',['x',['../structHolonomicLib_1_1Pose2D.html#a3d6358038f364d1481fdfcae68ec3703',1,'HolonomicLib::Pose2D::x()'],['../structHolonomicLib_1_1TrajectoryState.html#afc62ff7bc58e49b33cd5ffc30725f2a9',1,'HolonomicLib::TrajectoryState::x()'],['../structHolonomicLib_1_1TimedTrajectoryState.html#a6575f178b64ccb9b2df3042488bf2cac',1,'HolonomicLib::TimedTrajectoryState::x()']]]
 ];

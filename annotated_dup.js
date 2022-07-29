@@ -1,5 +1,4 @@
 var annotated_dup =
 [
-    [ "HolonomicLib", "namespaceHolonomicLib.html", "namespaceHolonomicLib" ],
-    [ "MyLibrary", "namespaceMyLibrary.html", "namespaceMyLibrary" ]
+    [ "HolonomicLib", "namespaceHolonomicLib.html", "namespaceHolonomicLib" ]
 ];

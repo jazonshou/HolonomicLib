@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/Yessir120/HolonomicLib?logo=Github)
 ![GitHub all releases](https://img.shields.io/github/downloads/Yessir120/HolonomicLib/total?logo=Github)
-![Website](https://img.shields.io/website?down_color=lightred&down_message=offline&label=api&logo=github&up_color=green&up_message=online&url=https%3A%2F%2Fyessir120.github.io%2FHolonomicLib%2Fhtml%2Findex.html)
-![Website](https://img.shields.io/website?down_color=lightred&down_message=offline&label=docs&logo=readthedocs&up_color=green&up_message=online&url=http%3A%2F%2Fholonomiclibdocs.rtfd.io%2F)
+![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=api&logo=github&up_color=green&up_message=online&url=https%3A%2F%2Fyessir120.github.io%2FHolonomicLib%2Fhtml%2Findex.html)
+![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=docs&logo=readthedocs&up_color=green&up_message=online&url=http%3A%2F%2Fholonomiclibdocs.rtfd.io%2F)
 
 # HolonomicLib
 
@@ -30,7 +30,7 @@ Installation steps are also found in the [documentation](https://holonomiclibdoc
 
 For step-by-step usage, follow the [**documentation**](https://holonomiclibdocs.readthedocs.io/en/latest/index.html). 
 
-For more specific usage, follow the [**API**](https://yessir120.github.io/HolonomicLib/html/index.html). 
+For more specific usage, follow the [**API**](https://yessir120.github.io/HolonomicLib/index.html). 
 
 ## Contributing
 Pull requests are welcome. Experimental changes should go to the development branch until deemed stable. For major changes, please open an issue first to discuss 

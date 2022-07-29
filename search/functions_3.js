@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['getname_104',['getName',['../classHolonomicLib_1_1TaskWrapper.html#a80f6a42e1b1c8ca6c9f65ec190688b85',1,'HolonomicLib::TaskWrapper']]],
-  ['getpose_105',['getPose',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a3d0965b11e7593e2bd83116fcf17815d',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['getstate_106',['getState',['../classHolonomicLib_1_1StateMachine.html#a7b4775f3279fd7004c2d6f6e46178639',1,'HolonomicLib::StateMachine']]]
+  ['disabled_164',['disabled',['../main_8cpp.html#a4e1a74721457de1f01d41566400fb3e5',1,'main.cpp']]],
+  ['distanceto_165',['distanceTo',['../structHolonomicLib_1_1Pose2D.html#ac60e5df86ba3e7d8b64a393fca703dbf',1,'HolonomicLib::Pose2D']]]
 ];

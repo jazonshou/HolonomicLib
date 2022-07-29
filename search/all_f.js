@@ -1,14 +1,12 @@
 var searchData=
 [
-  ['setcontrollersampletime_44',['setControllerSampleTime',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#ac19e10d15a6a3662094b5913c98fcd48',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['setpose_45',['setPose',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#ac24f421fceda62040124c2fcfa61e394',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['setstate_46',['setState',['../classHolonomicLib_1_1StateMachine.html#a9dbf72721774a28d20d5f38cc28f4016',1,'HolonomicLib::StateMachine']]],
-  ['settarget_47',['setTarget',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#abe2b624eb3ec3efb0f5715d826ad93c1',1,'HolonomicLib::AsyncHolonomicChassisController::setTarget(const Pose2D &amp;ipose, bool waitUntilSettled=false)'],['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a3609f4c1c91dfee3f12b41b620ff0a82',1,'HolonomicLib::AsyncHolonomicChassisController::setTarget(const Trajectory &amp;itrajectory, bool waitUntilSettled=false)'],['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a388a64ffd23b7a3f3d8d38fb247ae6ab',1,'HolonomicLib::AsyncHolonomicChassisController::setTarget(const TimedTrajectory &amp;itrajectory, bool waitUntilSettled=false)']]],
-  ['size_48',['size',['../classHolonomicLib_1_1Trajectory.html#a7cee92f600642bffc139ecd966f49681',1,'HolonomicLib::Trajectory::size()'],['../classHolonomicLib_1_1TimedTrajectory.html#aff4b60640c1e19add4d1752dbe0e0bb5',1,'HolonomicLib::TimedTrajectory::size()']]],
-  ['starttask_49',['startTask',['../classHolonomicLib_1_1TaskWrapper.html#a85c9a5b19cab6c8caf342ae2566825d0',1,'HolonomicLib::TaskWrapper']]],
-  ['statemachine_50',['StateMachine',['../classHolonomicLib_1_1StateMachine.html',1,'HolonomicLib::StateMachine&lt; State, initState &gt;'],['../classHolonomicLib_1_1StateMachine.html#a6f0aa72f5b506a45f1ca137ccb2a24e4',1,'HolonomicLib::StateMachine::StateMachine()']]],
-  ['statemachine_2ehpp_51',['StateMachine.hpp',['../StateMachine_8hpp.html',1,'']]],
-  ['statemachine_3c_20chassisstate_20_3e_52',['StateMachine&lt; ChassisState &gt;',['../classHolonomicLib_1_1StateMachine.html',1,'HolonomicLib']]],
-  ['stop_53',['stop',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#a2cbd8303b80c220e95c1a7cb72fcf78d',1,'HolonomicLib::AsyncHolonomicChassisController']]],
-  ['stoptask_54',['stopTask',['../classHolonomicLib_1_1TaskWrapper.html#a20aacb9231a00a298a3a95abf34a345b',1,'HolonomicLib::TaskWrapper']]]
+  ['rate_69',['rate',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#ad0ac308bb0e13b1c5073331d73837c0e',1,'HolonomicLib::AsyncHolonomicChassisController']]],
+  ['readme_2emd_70',['README.md',['../README_8md.html',1,'']]],
+  ['red_71',['red',['../namespaceMyLibrary.html#a79a9f4bbb675f6c082b09249c5a95ceda82b4a54f6fbf39698c2a6982d75f4f0c',1,'MyLibrary']]],
+  ['rescale180_72',['rescale180',['../namespaceHolonomicLib_1_1Math.html#a0fb99343562aa2641143d2dc2b142a2e',1,'HolonomicLib::Math::rescale180(okapi::QAngle angle)'],['../namespaceHolonomicLib_1_1Math.html#ab5fb5c02303211011c1cf5988960f006',1,'HolonomicLib::Math::rescale180(double angle)']]],
+  ['resetcontrollers_73',['resetControllers',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#ae1edcd9d7d6bd7ebaef38acc0096bbb7',1,'HolonomicLib::AsyncHolonomicChassisController']]],
+  ['resumetask_74',['resumeTask',['../classHolonomicLib_1_1TaskWrapper.html#ae7e853972219642cd24ab3e67fdb6066',1,'HolonomicLib::TaskWrapper']]],
+  ['rightback_75',['rightBack',['../main_8cpp.html#a15916928512f68450630a1c58594460b',1,'main.cpp']]],
+  ['rightenc_76',['rightEnc',['../main_8cpp.html#a1d247ea5729762fbcfdf5920dd96409d',1,'main.cpp']]],
+  ['rightfront_77',['rightFront',['../main_8cpp.html#a8e4548cfc3be44256bfae777fc70c79d',1,'main.cpp']]]
 ];

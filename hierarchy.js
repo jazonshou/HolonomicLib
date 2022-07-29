@@ -1,6 +1,9 @@
 var hierarchy =
 [
     [ "HolonomicLib::AsyncHolonomicChassisControllerBuilder", "classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html", null ],
+    [ "MyLibrary::Example", "classMyLibrary_1_1Example.html", [
+      [ "MyLibrary::SubclassExample", "classMyLibrary_1_1SubclassExample.html", null ]
+    ] ],
     [ "HolonomicLib::Pose2D", "structHolonomicLib_1_1Pose2D.html", null ],
     [ "HolonomicLib::StateMachine< State, initState >", "classHolonomicLib_1_1StateMachine.html", null ],
     [ "HolonomicLib::StateMachine< ChassisState >", "classHolonomicLib_1_1StateMachine.html", [

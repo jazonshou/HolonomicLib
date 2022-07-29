@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7easyncholonomicchassiscontrollerbuilder_139',['~AsyncHolonomicChassisControllerBuilder',['../classHolonomicLib_1_1AsyncHolonomicChassisControllerBuilder.html#a3d7f66586749bc1c714921677ba1080d',1,'HolonomicLib::AsyncHolonomicChassisControllerBuilder']]],
-  ['_7etaskwrapper_140',['~TaskWrapper',['../classHolonomicLib_1_1TaskWrapper.html#a5499e201e0a8d84717ff10ee78cbeaa4',1,'HolonomicLib::TaskWrapper']]]
+  ['virtualfunc_199',['virtualfunc',['../classMyLibrary_1_1Example.html#a8431ef1c10c4e2a36302b8e8556514f6',1,'MyLibrary::Example::virtualfunc()'],['../classMyLibrary_1_1SubclassExample.html#a6c1b7e5c6e56d31a169ddd42e8992300',1,'MyLibrary::SubclassExample::virtualfunc()']]]
 ];

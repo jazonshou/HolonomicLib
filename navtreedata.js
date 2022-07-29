@@ -23,13 +23,21 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "HolonomicLib", "index.html", [
+    [ "Customization", "md_doxygen-awesome-css_docs_customization.html", null ],
+    [ "Extensions", "md_doxygen-awesome-css_docs_extensions.html", null ],
+    [ "Tips & Tricks", "md_doxygen-awesome-css_docs_tricks.html", null ],
+    [ "Doxygen Awesome", "md_doxygen-awesome-css_README.html", null ],
+    [ "Todo List", "todo.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
+    [ "Bug List", "bug.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ]
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -47,6 +55,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]

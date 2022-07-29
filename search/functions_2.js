@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['distanceto_103',['distanceTo',['../structHolonomicLib_1_1Pose2D.html#ac60e5df86ba3e7d8b64a393fca703dbf',1,'HolonomicLib::Pose2D']]]
+  ['competition_5finitialize_163',['competition_initialize',['../main_8cpp.html#a870462d80a8efe920f8c95ee313cb9e5',1,'main.cpp']]]
 ];

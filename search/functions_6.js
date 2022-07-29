@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['operator_22_22_5fftps_109',['operator&quot;&quot;_ftps',['../namespaceokapi.html#af974a5bd83071b61bd61d60ba770e00b',1,'okapi::operator&quot;&quot;_ftps(long double x)'],['../namespaceokapi.html#a7165d0b1f642bbfb971cecf05b55e65d',1,'okapi::operator&quot;&quot;_ftps(unsigned long long int x)']]],
-  ['operator_22_22_5fftps2_110',['operator&quot;&quot;_ftps2',['../namespaceokapi.html#ad4bde7551a338ff4e04e21e485ba77c4',1,'okapi::operator&quot;&quot;_ftps2(long double x)'],['../namespaceokapi.html#a0edb749f3b45df9ad37b1fd6627901de',1,'okapi::operator&quot;&quot;_ftps2(unsigned long long int x)']]],
-  ['operator_22_22_5finps_111',['operator&quot;&quot;_inps',['../namespaceokapi.html#a84bc5ae52babd0fb406274f8f510a353',1,'okapi::operator&quot;&quot;_inps(long double x)'],['../namespaceokapi.html#a1ec6697a6730118f316e6bf0f85cde8f',1,'okapi::operator&quot;&quot;_inps(unsigned long long int x)']]],
-  ['operator_5b_5d_112',['operator[]',['../classHolonomicLib_1_1Trajectory.html#a1218f6d4c7fb44b66696800eeb156165',1,'HolonomicLib::Trajectory::operator[]()'],['../classHolonomicLib_1_1TimedTrajectory.html#a21dff7b36c119897caa558c5951fd0bf',1,'HolonomicLib::TimedTrajectory::operator[]()']]]
+  ['long_5ffunction_5fwith_5fmany_5fparameters_171',['long_function_with_many_parameters',['../classMyLibrary_1_1SubclassExample.html#ab9b6757c11771e490e157b01fc0f925f',1,'MyLibrary::SubclassExample']]],
+  ['loop_172',['loop',['../classHolonomicLib_1_1AsyncHolonomicChassisController.html#ae24362f0e83484242658d5adc7c54304',1,'HolonomicLib::AsyncHolonomicChassisController::loop()'],['../classHolonomicLib_1_1TaskWrapper.html#aae903bdf162e10c1af03c2907e6056bb',1,'HolonomicLib::TaskWrapper::loop()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['following_5fpath_163',['FOLLOWING_PATH',['../namespaceHolonomicLib.html#afed0dfbd97b270c1dc11f0b884f915bda5cdbc4c2cee73eb47090aa3d96684406',1,'HolonomicLib']]]
+  ['blue_241',['blue',['../namespaceMyLibrary.html#a79a9f4bbb675f6c082b09249c5a95ceda3d4a113e58853e5d81725d92fbfceb4d',1,'MyLibrary']]]
 ];

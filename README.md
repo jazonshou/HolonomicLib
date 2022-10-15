@@ -30,7 +30,7 @@ Installation steps are also found in the [documentation](https://holonomiclibdoc
 
 For step-by-step usage, follow the [**documentation**](https://holonomiclibdocs.readthedocs.io/en/latest/index.html). 
 
-For more specific usage, follow the [**API**](https://yessir120.github.io/HolonomicLib/index.html). 
+For more specific usage, follow the [**API**](https://jazonshou.github.io/HolonomicLib/index.html). 
 
 ## Contributing
 Pull requests are welcome. Experimental changes should go to the development branch until deemed stable. For major changes, please open an issue first to discuss 
